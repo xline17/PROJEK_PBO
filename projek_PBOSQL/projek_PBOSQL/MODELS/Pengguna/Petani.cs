@@ -6,12 +6,14 @@ namespace projek_PBOSQL.MODELS.Pengguna
 {
     internal class Petani : User
     {
-        public Petani(int id, string username, string role) : base(id, username, "Petani")
+        public Petani(string pass, string username, string role) : base(pass, username, "Petani")
         {
+            pass = "petani123";
+            username = "petani";
         }
-        public override void Dapatkanhakakses()
-        {
-            Console.WriteLine("Petani memiliki akses terbatas ke sistem.");
-        }
+        //public override void Dapatkanhakakses()
+        //{
+        //    Console.WriteLine("Petani memiliki akses terbatas ke sistem.");
+        //}
     }
 }

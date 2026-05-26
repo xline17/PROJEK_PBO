@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amien\\source\\repos\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj": {}
+    "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amien\\source\\repos\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj": {
+    "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amien\\source\\repos\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj",
+        "projectUniqueName": "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj",
         "projectName": "projek_PBOSQL",
-        "projectPath": "C:\\Users\\amien\\source\\repos\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj",
+        "projectPath": "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj",
         "packagesPath": "C:\\Users\\amien\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amien\\source\\repos\\projek_PBOSQL\\projek_PBOSQL\\obj\\",
+        "outputPath": "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
