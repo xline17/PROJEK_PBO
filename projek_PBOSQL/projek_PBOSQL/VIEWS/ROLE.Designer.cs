@@ -34,7 +34,9 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.BackColor = Color.DarkGreen;
+            button1.BackgroundImageLayout = ImageLayout.None;
             button1.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold);
             button1.ForeColor = Color.White;
             button1.Location = new Point(475, 207);
@@ -47,6 +49,7 @@
             // 
             // button2
             // 
+            button2.Anchor = AnchorStyles.None;
             button2.BackColor = Color.DarkGreen;
             button2.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.White;

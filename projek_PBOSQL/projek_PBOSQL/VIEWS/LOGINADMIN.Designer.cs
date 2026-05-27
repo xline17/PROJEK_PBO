@@ -35,6 +35,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.BackColor = Color.DarkGreen;
             button1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
@@ -48,6 +49,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.Location = new Point(472, 239);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(204, 23);
@@ -56,6 +58,7 @@
             // 
             // textBox2
             // 
+            textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(472, 289);
             textBox2.Name = "textBox2";
             textBox2.ScrollBars = ScrollBars.Vertical;

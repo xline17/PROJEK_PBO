@@ -31,18 +31,20 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             button1 = new Button();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(472, 239);
+            textBox1.Location = new Point(18, 102);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(204, 23);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(472, 289);
+            textBox2.Location = new Point(18, 152);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(204, 23);
             textBox2.TabIndex = 1;
@@ -52,12 +54,25 @@
             button1.BackColor = Color.DarkGreen;
             button1.Font = new Font("Arial", 15.75F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(509, 325);
+            button1.Location = new Point(55, 188);
             button1.Name = "button1";
             button1.Size = new Size(136, 30);
             button1.TabIndex = 2;
             button1.Text = "LOGIN";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(textBox1);
+            panel1.Location = new Point(454, 137);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(247, 229);
+            panel1.TabIndex = 3;
             // 
             // LOGINPETANI
             // 
@@ -66,13 +81,12 @@
             BackgroundImage = Properties.Resources.Form_Login_1;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(panel1);
             Name = "LOGINPETANI";
             Text = "LOGINPETANI";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -80,5 +94,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Button button1;
+        private Panel panel1;
     }
 }

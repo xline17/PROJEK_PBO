@@ -13,27 +13,45 @@ namespace projek_PBOSQL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "admin" && textBox2.Text == "admin123")
+            string connString = "Host=localhost;Port=5432;Username=postgres;Password=bombigaul123;Database=projek_pbo";
+
+            string query = "SELECT username, password, id_role from akun WHERE username = @username AND password = @password AND id_role = 1";
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
             {
-                Admin admin = new Admin(textBox2.Text, textBox1.Text, "Admin");
-                MessageBox.Show("Login berhasil! Selamat datang, " + admin.Username);
-                //Form2 form2 = new Form2();
-                //form2.Show();
-                //this.Hide();
-            }
-            else if (textBox1.Text == "petani" && textBox2.Text == "petani123")
-            {
-                Petani petani = new Petani(textBox2.Text, textBox1.Text, "Petani");
-                MessageBox.Show("Login berhasil! Selamat datang, " + petani.Username);
-                //Form3 form3 = new Form3();
-                //form3.Show();
-                //this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Login gagal! Pastikan username dan password benar.");
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@password", textBox2.Text);
+                    try
+                    {
+                        conn.Open();
+
+                        using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader != null && reader.HasRows)
+                            {
+                                MessageBox.Show("Login Berhasil!");
+
+                                projek_PBOSQL.VIEWS.ADMIN adminForm = new projek_PBOSQL.VIEWS.ADMIN();
+                                adminForm.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Username atau Password Admin salah!");
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                }
             }
         }
+                
+        
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
