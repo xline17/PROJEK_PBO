@@ -1,6 +1,6 @@
 ﻿namespace projek_PBOSQL
 {
-    partial class LOGIN
+    partial class LOGINADMIN
     {
         /// <summary>
         ///  Required designer variable.
@@ -35,10 +35,10 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.Green;
+            button1.BackColor = Color.DarkGreen;
             button1.Font = new Font("Arial", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(509, 290);
+            button1.Location = new Point(509, 325);
             button1.Name = "button1";
             button1.Size = new Size(136, 30);
             button1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(472, 212);
+            textBox1.Location = new Point(472, 239);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(204, 23);
             textBox1.TabIndex = 1;
@@ -56,25 +56,25 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(472, 256);
+            textBox2.Location = new Point(472, 289);
             textBox2.Name = "textBox2";
             textBox2.ScrollBars = ScrollBars.Vertical;
             textBox2.Size = new Size(204, 23);
             textBox2.TabIndex = 2;
             textBox2.TextChanged += textBox2_TextChanged_1;
             // 
-            // Form1
+            // LOGINADMIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.Form_Login_1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 401);
+            ClientSize = new Size(800, 450);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button1);
-            Name = "Form1";
+            Name = "LOGINADMIN";
             Text = "buttonlogin";
             Load += Form1_Load;
             ResumeLayout(false);

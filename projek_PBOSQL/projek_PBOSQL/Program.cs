@@ -1,3 +1,5 @@
+using projek_PBOSQL.VIEWS;
+
 namespace projek_PBOSQL
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace projek_PBOSQL
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new LOGIN());
+            Application.Run(new ROLE());
         }
     }
 }

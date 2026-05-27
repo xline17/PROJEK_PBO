@@ -4,9 +4,9 @@ using System;
 using System.Data.SqlTypes;
 namespace projek_PBOSQL
 {
-    public partial class LOGIN : Form
+    public partial class LOGINADMIN : Form
     {
-        public LOGIN()
+        public LOGINADMIN()
         {
             InitializeComponent();
         }
