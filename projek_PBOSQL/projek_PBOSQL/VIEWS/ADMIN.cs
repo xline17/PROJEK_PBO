@@ -14,5 +14,15 @@ namespace projek_PBOSQL.VIEWS
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDashboardAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

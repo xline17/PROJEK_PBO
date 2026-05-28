@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LOGINADMIN));
             button1 = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
@@ -79,8 +80,9 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LOGINADMIN";
-            Text = "buttonlogin";
+            Text = "KancaTani";
             Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();

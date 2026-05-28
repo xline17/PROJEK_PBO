@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LOGINPETANI));
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             button1 = new Button();
@@ -46,8 +47,10 @@
             // 
             textBox2.Location = new Point(18, 152);
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
             textBox2.Size = new Size(204, 23);
             textBox2.TabIndex = 1;
+            textBox2.UseSystemPasswordChar = true;
             // 
             // button1
             // 
@@ -82,8 +85,9 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "LOGINPETANI";
-            Text = "LOGINPETANI";
+            Text = "KancaTani";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ROLE));
             button1 = new Button();
             button2 = new Button();
             SuspendLayout();
@@ -70,8 +71,9 @@
             ClientSize = new Size(800, 450);
             Controls.Add(button2);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ROLE";
-            Text = "ROLE";
+            Text = "KancaTani";
             Load += ROLE_Load;
             ResumeLayout(false);
         }
