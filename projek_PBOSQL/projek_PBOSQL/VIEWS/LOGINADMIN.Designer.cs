@@ -61,9 +61,11 @@
             textBox2.Anchor = AnchorStyles.None;
             textBox2.Location = new Point(472, 289);
             textBox2.Name = "textBox2";
+            textBox2.PasswordChar = '*';
             textBox2.ScrollBars = ScrollBars.Vertical;
             textBox2.Size = new Size(204, 23);
             textBox2.TabIndex = 2;
+            textBox2.UseSystemPasswordChar = true;
             textBox2.TextChanged += textBox2_TextChanged_1;
             // 
             // LOGINADMIN
