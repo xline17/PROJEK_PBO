@@ -4,6 +4,9 @@
     <Compile Update="VIEWS\ADMIN.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="VIEWS\KelolaUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="VIEWS\LOGINADMIN.cs">
       <SubType>Form</SubType>
     </Compile>

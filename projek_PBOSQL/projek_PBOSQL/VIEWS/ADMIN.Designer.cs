@@ -30,7 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ADMIN));
             panelSideBar = new Panel();
-            buttonDashboardAdmin = new Button();
+            btnhistoriTransaksi = new Button();
+            btnkelolaTahapan = new Button();
+            btnkelolaPupuk = new Button();
+            btnkelolaUser = new Button();
+            btnDashboardAdmin = new Button();
             pictureBox1 = new PictureBox();
             panelMainContent = new Panel();
             panelSideBar.SuspendLayout();
@@ -39,7 +43,11 @@
             // 
             // panelSideBar
             // 
-            panelSideBar.Controls.Add(buttonDashboardAdmin);
+            panelSideBar.Controls.Add(btnhistoriTransaksi);
+            panelSideBar.Controls.Add(btnkelolaTahapan);
+            panelSideBar.Controls.Add(btnkelolaPupuk);
+            panelSideBar.Controls.Add(btnkelolaUser);
+            panelSideBar.Controls.Add(btnDashboardAdmin);
             panelSideBar.Controls.Add(pictureBox1);
             panelSideBar.Dock = DockStyle.Left;
             panelSideBar.Location = new Point(0, 0);
@@ -47,24 +55,80 @@
             panelSideBar.Size = new Size(142, 450);
             panelSideBar.TabIndex = 0;
             // 
-            // buttonDashboardAdmin
+            // btnhistoriTransaksi
             // 
-            buttonDashboardAdmin.BackColor = Color.ForestGreen;
-            buttonDashboardAdmin.BackgroundImageLayout = ImageLayout.Stretch;
-            buttonDashboardAdmin.FlatAppearance.BorderSize = 0;
-            buttonDashboardAdmin.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonDashboardAdmin.ForeColor = Color.White;
-            buttonDashboardAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonDashboardAdmin.Location = new Point(9, 136);
-            buttonDashboardAdmin.Margin = new Padding(0);
-            buttonDashboardAdmin.Name = "buttonDashboardAdmin";
-            buttonDashboardAdmin.RightToLeft = RightToLeft.No;
-            buttonDashboardAdmin.Size = new Size(124, 38);
-            buttonDashboardAdmin.TabIndex = 0;
-            buttonDashboardAdmin.Text = "Dashboard";
-            buttonDashboardAdmin.TextAlign = ContentAlignment.MiddleRight;
-            buttonDashboardAdmin.UseVisualStyleBackColor = false;
-            buttonDashboardAdmin.Click += buttonDashboardAdmin_Click;
+            btnhistoriTransaksi.BackColor = Color.Black;
+            btnhistoriTransaksi.Font = new Font("Arial", 9.75F, FontStyle.Bold);
+            btnhistoriTransaksi.ForeColor = Color.White;
+            btnhistoriTransaksi.Location = new Point(9, 345);
+            btnhistoriTransaksi.Name = "btnhistoriTransaksi";
+            btnhistoriTransaksi.Size = new Size(124, 38);
+            btnhistoriTransaksi.TabIndex = 0;
+            btnhistoriTransaksi.Text = "Histori Transaksi";
+            btnhistoriTransaksi.TextAlign = ContentAlignment.MiddleLeft;
+            btnhistoriTransaksi.UseVisualStyleBackColor = false;
+            btnhistoriTransaksi.Click += btnhistoriTransaksi_Click;
+            // 
+            // btnkelolaTahapan
+            // 
+            btnkelolaTahapan.BackColor = Color.Black;
+            btnkelolaTahapan.Font = new Font("Arial", 9.75F, FontStyle.Bold);
+            btnkelolaTahapan.ForeColor = Color.White;
+            btnkelolaTahapan.Location = new Point(9, 291);
+            btnkelolaTahapan.Name = "btnkelolaTahapan";
+            btnkelolaTahapan.Size = new Size(124, 38);
+            btnkelolaTahapan.TabIndex = 0;
+            btnkelolaTahapan.Text = "Kelola Tahapan";
+            btnkelolaTahapan.TextAlign = ContentAlignment.MiddleLeft;
+            btnkelolaTahapan.UseVisualStyleBackColor = false;
+            btnkelolaTahapan.Click += btnkelolaTahapan_Click;
+            // 
+            // btnkelolaPupuk
+            // 
+            btnkelolaPupuk.BackColor = Color.Black;
+            btnkelolaPupuk.Font = new Font("Arial", 9.75F, FontStyle.Bold);
+            btnkelolaPupuk.ForeColor = Color.White;
+            btnkelolaPupuk.Location = new Point(9, 238);
+            btnkelolaPupuk.Name = "btnkelolaPupuk";
+            btnkelolaPupuk.Size = new Size(124, 38);
+            btnkelolaPupuk.TabIndex = 0;
+            btnkelolaPupuk.Text = "Kelola Pupuk";
+            btnkelolaPupuk.TextAlign = ContentAlignment.MiddleLeft;
+            btnkelolaPupuk.UseVisualStyleBackColor = false;
+            btnkelolaPupuk.Click += btnkelolaPupuk_Click;
+            // 
+            // btnkelolaUser
+            // 
+            btnkelolaUser.BackColor = Color.Black;
+            btnkelolaUser.Font = new Font("Arial", 9.75F, FontStyle.Bold);
+            btnkelolaUser.ForeColor = Color.White;
+            btnkelolaUser.Location = new Point(9, 186);
+            btnkelolaUser.Name = "btnkelolaUser";
+            btnkelolaUser.Size = new Size(124, 38);
+            btnkelolaUser.TabIndex = 0;
+            btnkelolaUser.Text = "Kelola User";
+            btnkelolaUser.TextAlign = ContentAlignment.MiddleLeft;
+            btnkelolaUser.UseVisualStyleBackColor = false;
+            btnkelolaUser.Click += button1_Click;
+            // 
+            // btnDashboardAdmin
+            // 
+            btnDashboardAdmin.BackColor = Color.White;
+            btnDashboardAdmin.BackgroundImageLayout = ImageLayout.Stretch;
+            btnDashboardAdmin.FlatAppearance.BorderSize = 0;
+            btnDashboardAdmin.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboardAdmin.ForeColor = Color.Black;
+            btnDashboardAdmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDashboardAdmin.Location = new Point(9, 136);
+            btnDashboardAdmin.Margin = new Padding(0);
+            btnDashboardAdmin.Name = "btnDashboardAdmin";
+            btnDashboardAdmin.RightToLeft = RightToLeft.No;
+            btnDashboardAdmin.Size = new Size(124, 38);
+            btnDashboardAdmin.TabIndex = 0;
+            btnDashboardAdmin.Text = "Dashboard";
+            btnDashboardAdmin.TextAlign = ContentAlignment.MiddleLeft;
+            btnDashboardAdmin.UseVisualStyleBackColor = false;
+            btnDashboardAdmin.Click += buttonDashboardAdmin_Click;
             // 
             // pictureBox1
             // 
@@ -110,6 +174,10 @@
         private Panel panelSideBar;
         private PictureBox pictureBox1;
         private Panel panelMainContent;
-        private Button buttonDashboardAdmin;
+        private Button btnDashboardAdmin;
+        private Button btnkelolaPupuk;
+        private Button btnkelolaUser;
+        private Button btnhistoriTransaksi;
+        private Button btnkelolaTahapan;
     }
 }

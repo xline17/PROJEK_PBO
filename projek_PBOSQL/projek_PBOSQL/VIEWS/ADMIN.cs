@@ -29,5 +29,27 @@ namespace projek_PBOSQL.VIEWS
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaUser kelolauserForm = new projek_PBOSQL.VIEWS.KelolaUser();
+            kelolauserForm.Show();
+            this.Hide();
+        }
+
+        private void btnkelolaPupuk_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnkelolaTahapan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnhistoriTransaksi_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
