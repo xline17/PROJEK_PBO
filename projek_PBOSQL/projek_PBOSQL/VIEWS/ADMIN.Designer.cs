@@ -52,7 +52,7 @@
             panelSideBar.Dock = DockStyle.Left;
             panelSideBar.Location = new Point(0, 0);
             panelSideBar.Name = "panelSideBar";
-            panelSideBar.Size = new Size(142, 450);
+            panelSideBar.Size = new Size(162, 450);
             panelSideBar.TabIndex = 0;
             // 
             // btnhistoriTransaksi
@@ -62,7 +62,7 @@
             btnhistoriTransaksi.ForeColor = Color.White;
             btnhistoriTransaksi.Location = new Point(9, 345);
             btnhistoriTransaksi.Name = "btnhistoriTransaksi";
-            btnhistoriTransaksi.Size = new Size(124, 38);
+            btnhistoriTransaksi.Size = new Size(145, 38);
             btnhistoriTransaksi.TabIndex = 0;
             btnhistoriTransaksi.Text = "Histori Transaksi";
             btnhistoriTransaksi.TextAlign = ContentAlignment.MiddleLeft;
@@ -76,7 +76,7 @@
             btnkelolaTahapan.ForeColor = Color.White;
             btnkelolaTahapan.Location = new Point(9, 291);
             btnkelolaTahapan.Name = "btnkelolaTahapan";
-            btnkelolaTahapan.Size = new Size(124, 38);
+            btnkelolaTahapan.Size = new Size(145, 38);
             btnkelolaTahapan.TabIndex = 0;
             btnkelolaTahapan.Text = "Kelola Tahapan";
             btnkelolaTahapan.TextAlign = ContentAlignment.MiddleLeft;
@@ -90,7 +90,7 @@
             btnkelolaPupuk.ForeColor = Color.White;
             btnkelolaPupuk.Location = new Point(9, 238);
             btnkelolaPupuk.Name = "btnkelolaPupuk";
-            btnkelolaPupuk.Size = new Size(124, 38);
+            btnkelolaPupuk.Size = new Size(145, 38);
             btnkelolaPupuk.TabIndex = 0;
             btnkelolaPupuk.Text = "Kelola Pupuk";
             btnkelolaPupuk.TextAlign = ContentAlignment.MiddleLeft;
@@ -104,7 +104,7 @@
             btnkelolaUser.ForeColor = Color.White;
             btnkelolaUser.Location = new Point(9, 186);
             btnkelolaUser.Name = "btnkelolaUser";
-            btnkelolaUser.Size = new Size(124, 38);
+            btnkelolaUser.Size = new Size(145, 38);
             btnkelolaUser.TabIndex = 0;
             btnkelolaUser.Text = "Kelola User";
             btnkelolaUser.TextAlign = ContentAlignment.MiddleLeft;
@@ -123,7 +123,7 @@
             btnDashboardAdmin.Margin = new Padding(0);
             btnDashboardAdmin.Name = "btnDashboardAdmin";
             btnDashboardAdmin.RightToLeft = RightToLeft.No;
-            btnDashboardAdmin.Size = new Size(124, 38);
+            btnDashboardAdmin.Size = new Size(145, 38);
             btnDashboardAdmin.TabIndex = 0;
             btnDashboardAdmin.Text = "Dashboard";
             btnDashboardAdmin.TextAlign = ContentAlignment.MiddleLeft;
@@ -137,7 +137,7 @@
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Location = new Point(0, 11);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(142, 113);
+            pictureBox1.Size = new Size(162, 122);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -146,9 +146,9 @@
             // 
             panelMainContent.BackColor = Color.White;
             panelMainContent.Dock = DockStyle.Fill;
-            panelMainContent.Location = new Point(142, 0);
+            panelMainContent.Location = new Point(162, 0);
             panelMainContent.Name = "panelMainContent";
-            panelMainContent.Size = new Size(658, 450);
+            panelMainContent.Size = new Size(638, 450);
             panelMainContent.TabIndex = 1;
             // 
             // ADMIN
