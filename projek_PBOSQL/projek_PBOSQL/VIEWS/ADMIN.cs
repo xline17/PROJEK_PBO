@@ -24,5 +24,10 @@ namespace projek_PBOSQL.VIEWS
         {
 
         }
+
+        private void ADMIN_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

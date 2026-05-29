@@ -30,19 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ADMIN));
             panelSideBar = new Panel();
-            pictureBox2 = new PictureBox();
             buttonDashboardAdmin = new Button();
             pictureBox1 = new PictureBox();
             panelMainContent = new Panel();
             panelSideBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelSideBar
             // 
-            panelSideBar.BackgroundImage = Properties.Resources.BG_DASHBOARD_ADMIN;
-            panelSideBar.Controls.Add(pictureBox2);
             panelSideBar.Controls.Add(buttonDashboardAdmin);
             panelSideBar.Controls.Add(pictureBox1);
             panelSideBar.Dock = DockStyle.Left;
@@ -50,17 +46,6 @@
             panelSideBar.Name = "panelSideBar";
             panelSideBar.Size = new Size(142, 450);
             panelSideBar.TabIndex = 0;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = Properties.Resources.icon_dashboard;
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(17, 143);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(23, 23);
-            pictureBox2.TabIndex = 0;
-            pictureBox2.TabStop = false;
             // 
             // buttonDashboardAdmin
             // 
@@ -106,8 +91,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkGreen;
-            BackgroundImage = Properties.Resources.BG_DASHBOARD_ADMIN;
+            BackColor = Color.Black;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(panelMainContent);
@@ -115,8 +99,8 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ADMIN";
             Text = "KancaTani";
+            Load += ADMIN_Load;
             panelSideBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
@@ -127,6 +111,5 @@
         private PictureBox pictureBox1;
         private Panel panelMainContent;
         private Button buttonDashboardAdmin;
-        private PictureBox pictureBox2;
     }
 }

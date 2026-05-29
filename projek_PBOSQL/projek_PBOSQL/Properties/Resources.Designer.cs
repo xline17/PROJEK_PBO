@@ -63,36 +63,6 @@ namespace projek_PBOSQL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BG_DASHBOARD_ADMIN {
-            get {
-                object obj = ResourceManager.GetObject("BG DASHBOARD ADMIN", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bg_dashboard_side {
-            get {
-                object obj = ResourceManager.GetObject("bg dashboard side", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap bg_menu_dashboard {
-            get {
-                object obj = ResourceManager.GetObject("bg menu dashboard", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Form_Login_1 {
             get {
                 object obj = ResourceManager.GetObject("Form Login 1", resourceCulture);
@@ -106,16 +76,6 @@ namespace projek_PBOSQL.Properties {
         internal static System.Drawing.Bitmap FORM_ROLE {
             get {
                 object obj = ResourceManager.GetObject("FORM ROLE", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icon_dashboard {
-            get {
-                object obj = ResourceManager.GetObject("icon dashboard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
