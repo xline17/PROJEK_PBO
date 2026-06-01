@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projek_PBOSQL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a48668645e594481da25ce8f92a22924b3cf8381")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22fcc6e1d2e3181d5c7fbbcee4c96602bbfefbe8")]
 [assembly: System.Reflection.AssemblyProductAttribute("projek_PBOSQL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projek_PBOSQL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
