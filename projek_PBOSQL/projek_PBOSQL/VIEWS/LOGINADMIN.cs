@@ -1,5 +1,6 @@
 using Npgsql;
 using projek_PBOSQL.MODELS.Pengguna;
+using projek_PBOSQL.VIEWS;
 using System;
 using System.Data.SqlTypes;
 namespace projek_PBOSQL
@@ -13,43 +14,33 @@ namespace projek_PBOSQL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string connString = "Host=localhost;Port=5432;Username=postgres;Password=12345;Database=projek_pbo";
+            projek_PBOSQL.CONTROLLERS.c_users userController = new projek_PBOSQL.CONTROLLERS.c_users();
 
-            string query = "SELECT username, password, id_role from akun WHERE username = @username AND password = @password AND id_role = 1";
+            // Memanggil fungsi validasi dari controller
+            dynamic adminLogedIn = userController.validasi_login(textBox1.Text, textBox2.Text);
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            if (adminLogedIn != null)
             {
-                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                // Memastikan objek yang dikembalikan adalah instansi dari class Admin
+                if (adminLogedIn is Admin admin)
                 {
-                    cmd.Parameters.AddWithValue("@username", textBox1.Text);
-                    cmd.Parameters.AddWithValue("@password", textBox2.Text);
-                    try
-                    {
-                        conn.Open();
+                    MessageBox.Show("Login Berhasil sebagai Admin!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        using (NpgsqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader != null && reader.HasRows)
-                            {
-                                MessageBox.Show("Login Berhasil!");
+                    // PANGGIL FORM ADMIN KAMU DI SINI
+                    // (Ganti 'FormAdminDashboard' dengan nama Class Form Admin milikmu yang asli)
+                    ADMIN admin_form = new ADMIN();
+                    admin_form.Show();
 
-                                projek_PBOSQL.VIEWS.ADMIN adminForm = new projek_PBOSQL.VIEWS.ADMIN();
-                                adminForm.Show();
-                                this.Hide();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Username atau Password Admin salah!");
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
+                    this.Hide(); // Menyembunyikan Form Login agar tidak menumpuk
                 }
             }
+            else
+            {
+                // Jika userLogin mengembalikan null (tidak ditemukan di DB)
+                MessageBox.Show("Username atau Password salah!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+    
                 
         
 
