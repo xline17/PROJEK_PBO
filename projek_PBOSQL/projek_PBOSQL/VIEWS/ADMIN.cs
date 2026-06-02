@@ -52,5 +52,9 @@ namespace projek_PBOSQL.VIEWS
 
         }
 
+        private void panelSideBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -51,18 +51,21 @@
             panelSideBar.Controls.Add(pictureBox1);
             panelSideBar.Dock = DockStyle.Left;
             panelSideBar.Location = new Point(0, 0);
+            panelSideBar.Margin = new Padding(3, 4, 3, 4);
             panelSideBar.Name = "panelSideBar";
-            panelSideBar.Size = new Size(162, 450);
+            panelSideBar.Size = new Size(185, 600);
             panelSideBar.TabIndex = 0;
+            panelSideBar.Paint += panelSideBar_Paint;
             // 
             // btnhistoriTransaksi
             // 
             btnhistoriTransaksi.BackColor = Color.Black;
             btnhistoriTransaksi.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             btnhistoriTransaksi.ForeColor = Color.White;
-            btnhistoriTransaksi.Location = new Point(9, 345);
+            btnhistoriTransaksi.Location = new Point(10, 460);
+            btnhistoriTransaksi.Margin = new Padding(3, 4, 3, 4);
             btnhistoriTransaksi.Name = "btnhistoriTransaksi";
-            btnhistoriTransaksi.Size = new Size(145, 38);
+            btnhistoriTransaksi.Size = new Size(166, 51);
             btnhistoriTransaksi.TabIndex = 0;
             btnhistoriTransaksi.Text = "Histori Transaksi";
             btnhistoriTransaksi.TextAlign = ContentAlignment.MiddleLeft;
@@ -74,9 +77,10 @@
             btnkelolaTahapan.BackColor = Color.Black;
             btnkelolaTahapan.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             btnkelolaTahapan.ForeColor = Color.White;
-            btnkelolaTahapan.Location = new Point(9, 291);
+            btnkelolaTahapan.Location = new Point(10, 388);
+            btnkelolaTahapan.Margin = new Padding(3, 4, 3, 4);
             btnkelolaTahapan.Name = "btnkelolaTahapan";
-            btnkelolaTahapan.Size = new Size(145, 38);
+            btnkelolaTahapan.Size = new Size(166, 51);
             btnkelolaTahapan.TabIndex = 0;
             btnkelolaTahapan.Text = "Kelola Tahapan";
             btnkelolaTahapan.TextAlign = ContentAlignment.MiddleLeft;
@@ -88,9 +92,10 @@
             btnkelolaPupuk.BackColor = Color.Black;
             btnkelolaPupuk.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             btnkelolaPupuk.ForeColor = Color.White;
-            btnkelolaPupuk.Location = new Point(9, 238);
+            btnkelolaPupuk.Location = new Point(10, 317);
+            btnkelolaPupuk.Margin = new Padding(3, 4, 3, 4);
             btnkelolaPupuk.Name = "btnkelolaPupuk";
-            btnkelolaPupuk.Size = new Size(145, 38);
+            btnkelolaPupuk.Size = new Size(166, 51);
             btnkelolaPupuk.TabIndex = 0;
             btnkelolaPupuk.Text = "Kelola Pupuk";
             btnkelolaPupuk.TextAlign = ContentAlignment.MiddleLeft;
@@ -102,9 +107,10 @@
             btnkelolaUser.BackColor = Color.Black;
             btnkelolaUser.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             btnkelolaUser.ForeColor = Color.White;
-            btnkelolaUser.Location = new Point(9, 186);
+            btnkelolaUser.Location = new Point(10, 248);
+            btnkelolaUser.Margin = new Padding(3, 4, 3, 4);
             btnkelolaUser.Name = "btnkelolaUser";
-            btnkelolaUser.Size = new Size(145, 38);
+            btnkelolaUser.Size = new Size(166, 51);
             btnkelolaUser.TabIndex = 0;
             btnkelolaUser.Text = "Kelola User";
             btnkelolaUser.TextAlign = ContentAlignment.MiddleLeft;
@@ -119,11 +125,11 @@
             btnDashboardAdmin.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDashboardAdmin.ForeColor = Color.Black;
             btnDashboardAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboardAdmin.Location = new Point(9, 136);
+            btnDashboardAdmin.Location = new Point(10, 181);
             btnDashboardAdmin.Margin = new Padding(0);
             btnDashboardAdmin.Name = "btnDashboardAdmin";
             btnDashboardAdmin.RightToLeft = RightToLeft.No;
-            btnDashboardAdmin.Size = new Size(145, 38);
+            btnDashboardAdmin.Size = new Size(166, 51);
             btnDashboardAdmin.TabIndex = 0;
             btnDashboardAdmin.Text = "Dashboard";
             btnDashboardAdmin.TextAlign = ContentAlignment.MiddleLeft;
@@ -135,9 +141,10 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = Properties.Resources.logo_dan_teks_pojok;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(0, 11);
+            pictureBox1.Location = new Point(0, 15);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(162, 122);
+            pictureBox1.Size = new Size(185, 163);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -146,21 +153,23 @@
             // 
             panelMainContent.BackColor = Color.White;
             panelMainContent.Dock = DockStyle.Fill;
-            panelMainContent.Location = new Point(162, 0);
+            panelMainContent.Location = new Point(185, 0);
+            panelMainContent.Margin = new Padding(3, 4, 3, 4);
             panelMainContent.Name = "panelMainContent";
-            panelMainContent.Size = new Size(638, 450);
+            panelMainContent.Size = new Size(729, 600);
             panelMainContent.TabIndex = 1;
             // 
             // ADMIN
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(panelMainContent);
             Controls.Add(panelSideBar);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ADMIN";
             Text = "KancaTani";
             Load += ADMIN_Load;
