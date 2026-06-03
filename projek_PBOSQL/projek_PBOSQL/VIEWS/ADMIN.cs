@@ -30,6 +30,7 @@ namespace projek_PBOSQL.VIEWS
         {
             UpdateTotalTransaksi();
             UpdateTotalStockPupuk();
+            UpdateTotalJenisPupuk();
         }
 
         private void UpdateTotalTransaksi()
@@ -53,6 +54,20 @@ namespace projek_PBOSQL.VIEWS
                 CONTROLLERS.c_Dashboard totalStockPupuk = new CONTROLLERS.c_Dashboard();
                 long jumlah = totalStockPupuk.ttlStokPupuk(); // Garis merah akan hilang
                 lblTotalStokPupuk.Text = jumlah.ToString("N0");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat total stok: " + ex.Message);
+            }
+        }
+
+        private void UpdateTotalJenisPupuk()
+        {
+            try
+            {
+                CONTROLLERS.c_Dashboard totalJenisPupuk = new CONTROLLERS.c_Dashboard();
+                long jumlah = totalJenisPupuk.ttlJenisPupuk(); // Garis merah akan hilang
+                lblTotalJenisPupuk.Text = jumlah.ToString("N0");
             }
             catch (Exception ex)
             {

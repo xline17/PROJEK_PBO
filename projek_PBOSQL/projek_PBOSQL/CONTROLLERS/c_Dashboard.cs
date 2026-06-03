@@ -65,5 +65,34 @@ namespace projek_PBOSQL.CONTROLLERS
             }
             return totalStok;
         }
+
+        public long ttlJenisPupuk()
+        {
+            long totalJenis = 0;
+            string query = "SELECT COUNT(*) FROM pupuk WHERE status = 'active'";
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
+            {
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        object? result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                           
+                            totalJenis = Convert.ToInt64(result);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error hitung stok: " + ex.Message);
+                    }
+                }
+            }
+            return totalJenis;
+        }
     }
 }

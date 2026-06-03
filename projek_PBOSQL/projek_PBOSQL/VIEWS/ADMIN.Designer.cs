@@ -38,6 +38,9 @@
             btnDashboardAdmin = new Button();
             pictureBox1 = new PictureBox();
             panelMainContent = new Panel();
+            panel3 = new Panel();
+            lblTotalJenisPupuk = new Label();
+            lblJenisPupuk = new Label();
             panel2 = new Panel();
             lblTotalStokPupuk = new Label();
             label2 = new Label();
@@ -47,6 +50,7 @@
             panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelMainContent.SuspendLayout();
+            panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -169,6 +173,7 @@
             // panelMainContent
             // 
             panelMainContent.BackColor = Color.White;
+            panelMainContent.Controls.Add(panel3);
             panelMainContent.Controls.Add(panel2);
             panelMainContent.Controls.Add(panel1);
             panelMainContent.Dock = DockStyle.Fill;
@@ -176,6 +181,39 @@
             panelMainContent.Name = "panelMainContent";
             panelMainContent.Size = new Size(638, 450);
             panelMainContent.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Black;
+            panel3.Controls.Add(lblTotalJenisPupuk);
+            panel3.Controls.Add(lblJenisPupuk);
+            panel3.ForeColor = Color.Transparent;
+            panel3.Location = new Point(465, 19);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(205, 102);
+            panel3.TabIndex = 2;
+            // 
+            // lblTotalJenisPupuk
+            // 
+            lblTotalJenisPupuk.AutoSize = true;
+            lblTotalJenisPupuk.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold);
+            lblTotalJenisPupuk.ForeColor = Color.White;
+            lblTotalJenisPupuk.Location = new Point(71, 39);
+            lblTotalJenisPupuk.Name = "lblTotalJenisPupuk";
+            lblTotalJenisPupuk.Size = new Size(40, 47);
+            lblTotalJenisPupuk.TabIndex = 1;
+            lblTotalJenisPupuk.Text = "0";
+            // 
+            // lblJenisPupuk
+            // 
+            lblJenisPupuk.AutoSize = true;
+            lblJenisPupuk.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
+            lblJenisPupuk.ForeColor = Color.White;
+            lblJenisPupuk.Location = new Point(35, 6);
+            lblJenisPupuk.Name = "lblJenisPupuk";
+            lblJenisPupuk.Size = new Size(152, 20);
+            lblJenisPupuk.TabIndex = 0;
+            lblJenisPupuk.Text = "TOTAL JENIS PUPUK";
             // 
             // panel2
             // 
@@ -261,6 +299,8 @@
             panelSideBar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelMainContent.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
@@ -285,5 +325,8 @@
         private Panel panel2;
         private Label label2;
         private Label lblTotalStokPupuk;
+        private Panel panel3;
+        private Label lblJenisPupuk;
+        private Label lblTotalJenisPupuk;
     }
 }
