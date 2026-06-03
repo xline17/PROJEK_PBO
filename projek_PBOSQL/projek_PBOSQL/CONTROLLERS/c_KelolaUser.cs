@@ -10,7 +10,7 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_KelolaUser
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=Faris23;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=bombigaul123;Database=projek_pbo";
 
         // Ambil semua akun → untuk isi grid
         public DataTable GetAllAkun()

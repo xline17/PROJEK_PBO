@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Text;
 using System.Windows.Forms;
 
@@ -27,7 +28,36 @@ namespace projek_PBOSQL.VIEWS
 
         private void ADMIN_Load(object sender, EventArgs e)
         {
+            UpdateTotalTransaksi();
+            UpdateTotalStockPupuk();
+        }
 
+        private void UpdateTotalTransaksi()
+        {
+            try
+            {
+                CONTROLLERS.c_Dashboard totalTransaksi = new CONTROLLERS.c_Dashboard();
+                long jumlah = totalTransaksi.ttltransaksi();
+                lblTotalTransaksi.Text = jumlah.ToString("N0");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat total transaksi: " + ex.Message);
+            }
+        }
+
+        private void UpdateTotalStockPupuk()
+        {
+            try
+            {
+                CONTROLLERS.c_Dashboard totalStockPupuk = new CONTROLLERS.c_Dashboard();
+                long jumlah = totalStockPupuk.ttlStokPupuk(); // Garis merah akan hilang
+                lblTotalStokPupuk.Text = jumlah.ToString("N0");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat total stok: " + ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -53,6 +83,16 @@ namespace projek_PBOSQL.VIEWS
         }
 
         private void panelSideBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

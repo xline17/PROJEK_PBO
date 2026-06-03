@@ -157,5 +157,17 @@ namespace projek_PBOSQL.VIEWS
         {
 
         }
+
+        private void btnkelolaUser_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.ADMIN kelolauserForm = new projek_PBOSQL.VIEWS.ADMIN();
+            kelolauserForm.Show();
+            this.Hide();
+        }
+
+        private void KelolaUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
