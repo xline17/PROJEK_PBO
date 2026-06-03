@@ -27,9 +27,18 @@ namespace projek_PBOSQL.VIEWS
 
         private void btnTambahAkun_Click(object sender, EventArgs e)
         {
-            var formTambah = new FormTambahAkun(controller);
-            if (formTambah.ShowDialog() == DialogResult.OK)
-                LoadAkun(); // refresh grid setelah akun ditambah
+            VIEWS.TambahUser popUp = new VIEWS.TambahUser();
+
+            // 2. Tampilkan sebagai Dialog Pop-up (Aplikasi di belakangnya tidak bisa diklik sebelum pop-up ditutup)
+            if (popUp.ShowDialog() == DialogResult.OK)
+            {
+                // 3. Jika tombol simpan di pop-up berhasil diklik (menghasilkan DialogResult.OK)
+                // Maka otomatis refresh DataGridView di Form Utama ini
+                CONTROLLERS.c_KelolaUser controllerUser = new CONTROLLERS.c_KelolaUser();
+                DGV_kelUser.DataSource = controllerUser.GetAllAkun();
+            }
+
         }
+
     }
 }
