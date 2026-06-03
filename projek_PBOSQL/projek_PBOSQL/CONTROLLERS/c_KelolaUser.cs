@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using projek_PBOSQL.HELPERS;
 using projek_PBOSQL.MODELS.Pengguna;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace projek_PBOSQL.CONTROLLERS
         // Ambil semua akun → untuk isi grid
         public DataTable GetAllAkun()
         {
-            string query = "SELECT username, password, no_telp FROM \"Akun\" ORDER BY username";
+            string query = "SELECT id_akun, username, password, no_telp FROM Akun ORDER BY id_akun";
 
             using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
             {
@@ -28,38 +29,85 @@ namespace projek_PBOSQL.CONTROLLERS
             }
         }
 
-        // Tambah akun baru
-        public bool TambahUser(string username, string password, string noTelp, string role = "user")
-        {
-            // Asumsi: ada kolom 'role' di tabel "Akun" untuk membedakan Admin/User/Petani
-            string query = "INSERT INTO \"Akun\" (username, password, no_telp, role) VALUES (@username, @password, @no_telp, @role)";
 
-            using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
+        public bool TambahUser(string username, string password, string noTelp, string idRoleString)
+        {
+            bool status = false;
+            NpgsqlConnection conn = ConnectDB.GetConn();
+
+            try
             {
-                try
+                if (conn.State == System.Data.ConnectionState.Closed)
                 {
                     conn.Open();
-                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.Parameters.AddWithValue("@password", password);
-                        cmd.Parameters.AddWithValue("@no_telp", noTelp);
-                        cmd.Parameters.AddWithValue("@role", role); // Menyimpan role sebagai 'user'
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
                 }
-                catch (Exception ex)
+
+                string query = "INSERT INTO akun (username, password, no_telp, id_role) VALUES (@username, @password, @no_telp, @id_role)";
+
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@no_telp", noTelp);
+
+                int idRoleInteger = int.Parse(idRoleString);
+                cmd.Parameters.AddWithValue("@id_role", idRoleInteger);
+
+                int barisTersimpan = cmd.ExecuteNonQuery();
+                if (barisTersimpan > 0)
                 {
-                    System.Windows.Forms.MessageBox.Show("Gagal menambah user: " + ex.Message, "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
-                    return false;
+                    status = true;
                 }
             }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if (conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return status;
         }
 
-
+        public bool HapusUser(int idAkun)
+        {
+            bool status = false;
+            NpgsqlConnection conn = ConnectDB.GetConn();
+            try
+            {
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open();
+                }
+                string query = "DELETE FROM akun WHERE id_akun = @id_akun";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id_akun", idAkun);
+                int barisTerhapus = cmd.ExecuteNonQuery();
+                if (barisTerhapus > 0)
+                {
+                    status = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                if (conn.State == System.Data.ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return status;
+        }
     }
+
+
 }
-    
+
 

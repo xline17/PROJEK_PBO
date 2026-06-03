@@ -9,12 +9,14 @@ namespace projek_PBOSQL.MODELS.Pengguna
         public string Username { get; set; }
         public string Password { get; set; }
         public string NoTelp { get; set; }
+        public string Role { get; set; }
 
-        public KelolaUser(string username, string password, string noTelp)
+        public KelolaUser(string username, string password, string noTelp, string role)
         {
             Username = username;
             Password = password;
             NoTelp = noTelp;
+            Role = role;
         }
     }
 }
