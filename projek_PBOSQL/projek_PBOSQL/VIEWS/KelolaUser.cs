@@ -53,14 +53,11 @@ namespace projek_PBOSQL.VIEWS
         {
             if (e.RowIndex >= 0)
             {
-                // 1. AMBIL ID DAN USERNAME DARI BARIS YANG DIKLIK
-                // id_akun diambil sebagai int untuk dikirim ke controller, username diambil hanya untuk teks konfirmasi
                 int idTerpilih = Convert.ToInt32(DGV_kelUser.Rows[e.RowIndex].Cells["id_akun"].Value);
                 string usernameTerpilih = DGV_kelUser.Rows[e.RowIndex].Cells["username"].Value.ToString();
 
                 string noTelpTerpilih = DGV_kelUser.Rows[e.RowIndex].Cells["no_telp"].Value.ToString();
 
-                // 2. CEK APAKAH TOMBOL HAPUS DIKLIK
                 if (DGV_kelUser.Columns[e.ColumnIndex].Name == "btnHapusCol" || DGV_kelUser.Columns[e.ColumnIndex].HeaderText == "Aksi2")
                 {
                     // Konfirmasi tetap pakai nama username agar user tidak bingung melihat angka ID
@@ -90,29 +87,26 @@ namespace projek_PBOSQL.VIEWS
                 }
                 else if (DGV_kelUser.Columns[e.ColumnIndex].Name == "btnEditCol" || DGV_kelUser.Columns[e.ColumnIndex].HeaderText == "Aksi")
                 {
-                    // Simpan ID yang dipilih ke variabel global agar bisa dipakai tombol Simpan nanti
-                    idAkunTerpilih = idTerpilih;
+                    // 1. Panggil form pop-up EditAkun yang sudah kamu buat
+                    VIEWS.EditAkun popUp = new VIEWS.EditAkun();
 
-                    // ===================================================================
-                    // SAKLAR MANUAL: Munculkan gambar Figma & semua komponen inputan kamu
-                    // ===================================================================
-                    PbEdit.Visible = true;
-                    txtEditUsername.Visible = true;
-                    txtEditTelp.Visible = true;
-                    txtEditPass.Visible = true;
-                    btnSimpanEdit.Visible = true; // Ini tombol simpan yang ada di bawah desain Figma kamu
-                                                  // ===================================================================
+                    // 2. Lempar data baris terpilih ke pop-up
+                    popUp.IdAkunTerpilih = idTerpilih;
+                    popUp.txtEditUsername.Text = usernameTerpilih;
+                    popUp.txtEditNotelp.Text = noTelpTerpilih;
+                    popUp.txtEditPass.Text = ""; // Biarkan kosong demi keamanan
 
-                    // Lempar datanya langsung "turun" ke TextBox edit buatanmu di bawah DGV
-                    txtEditUsername.Text = usernameTerpilih;
-                    txtEditTelp.Text = noTelpTerpilih;
-                    txtEditPass.Text = ""; // Selalu kosongkan kolom password demi privasi
-
-                    // Opsional: Beri fokus kursor langsung ke textbox username biar user bisa langsung ngetik
-                    txtEditUsername.Focus();
+                    // 3. Munculkan pop-up di tengah layar
+                    if (popUp.ShowDialog() == DialogResult.OK)
+                    {
+                        // Jika tombol simpan di pop-up berhasil diklik, otomatis refresh tabel utama
+                        TampilkanDataUser();
+                    }
                 }
-            }
-        }
+            } // Penutup if (e.RowIndex >= 0)
+        
+    }
+        
 
 
 
@@ -122,11 +116,8 @@ namespace projek_PBOSQL.VIEWS
         {
             VIEWS.TambahUser popUp = new VIEWS.TambahUser();
 
-            // 2. Tampilkan sebagai Dialog Pop-up (Aplikasi di belakangnya tidak bisa diklik sebelum pop-up ditutup)
             if (popUp.ShowDialog() == DialogResult.OK)
             {
-                // 3. Jika tombol simpan di pop-up berhasil diklik (menghasilkan DialogResult.OK)
-                // Maka otomatis refresh DataGridView di Form Utama ini
                 CONTROLLERS.c_KelolaUser controllerUser = new CONTROLLERS.c_KelolaUser();
                 DGV_kelUser.DataSource = controllerUser.GetAllAkun();
             }

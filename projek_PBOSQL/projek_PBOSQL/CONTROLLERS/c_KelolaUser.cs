@@ -10,7 +10,7 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_KelolaUser
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=Faris23;Database=KancaTani";
 
         // Ambil semua akun → untuk isi grid
         public DataTable GetAllAkun()
@@ -105,9 +105,52 @@ namespace projek_PBOSQL.CONTROLLERS
             }
             return status;
         }
+
+        public bool EditUser(int idAkun, string username, string noTelp, string password)
+        {
+            bool status = false;
+            string query = "SELECT sp_edit_akun(@id, @username, @no_telp, @password)";
+
+            try
+            {
+                // 1. Ambil objek koneksi database kamu
+                NpgsqlConnection conn = ConnectDB.GetConn();
+
+                // 2. KODE PENYELAMAT: Cek status koneksi sebelum dibuka!
+                if (conn.State == System.Data.ConnectionState.Closed)
+                {
+                    conn.Open(); // Hanya dibuka jika posisinya sedang tertutup
+                }
+                else if (conn.State == System.Data.ConnectionState.Broken)
+                {
+                    conn.Close();
+                    conn.Open(); // Reset jika koneksinya rusak di tengah jalan
+                }
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", idAkun);
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@no_telp", noTelp);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    // Ambil return BOOLEAN dari fungsi PostgreSQL
+                    status = (bool)cmd.ExecuteScalar();
+                }
+
+                // 3. KODE WAJIB: Setelah selesai dipakai, tutup atau lepas koneksinya
+                // Agar fungsi TampilkanDataUser() di form utama tidak bergantian error saat merefresh tabel
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Error Database: " + ex.Message);
+                status = false;
+            }
+
+            return status;
+        }
     }
-
-
 }
 
 
