@@ -84,7 +84,9 @@ namespace projek_PBOSQL.VIEWS
 
         private void btnkelolaPupuk_Click(object sender, EventArgs e)
         {
-
+            projek_PBOSQL.VIEWS.KelolaPupuk kelolapupukForm = new projek_PBOSQL.VIEWS.KelolaPupuk();
+            kelolapupukForm.Show();
+            this.Hide();
         }
 
         private void btnkelolaTahapan_Click(object sender, EventArgs e)

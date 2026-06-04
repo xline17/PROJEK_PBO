@@ -83,9 +83,39 @@ namespace projek_PBOSQL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap formAddPupuk {
+            get {
+                object obj = ResourceManager.GetObject("formAddPupuk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_dan_teks_pojok {
             get {
                 object obj = ResourceManager.GetObject("logo dan teks pojok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout {
+            get {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ukuran_Kelola_Pupuk {
+            get {
+                object obj = ResourceManager.GetObject("Ukuran Kelola Pupuk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

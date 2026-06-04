@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj": {}
+    "C:\\Users\\Surya\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj": {
+    "C:\\Users\\Surya\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj",
+        "projectUniqueName": "C:\\Users\\Surya\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj",
         "projectName": "projek_PBOSQL",
-        "projectPath": "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj",
-        "packagesPath": "C:\\Users\\amien\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\amien\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\obj\\",
+        "projectPath": "C:\\Users\\Surya\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\projek_PBOSQL.csproj",
+        "packagesPath": "C:\\Users\\Surya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Surya\\source\\repos\\PROJEK_PBO\\projek_PBOSQL\\projek_PBOSQL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\amien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Surya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,10 +26,12 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net10.0-windows7.0": {
+          "net10.0-windows": {
+            "framework": "net10.0-windows7.0",
             "targetAlias": "net10.0-windows",
             "projectReferences": {}
           }
@@ -44,15 +46,16 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
-        "net10.0-windows7.0": {
+        "net10.0-windows": {
+          "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
           "dependencies": {
             "Npgsql": {
               "target": "Package",
-              "version": "[10.0.2, )"
+              "version": "[10.0.3, )"
             }
           },
           "imports": [
@@ -74,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -22,7 +22,7 @@ namespace projek_PBOSQL.VIEWS
             if (koneksi != null && koneksi.State == System.Data.ConnectionState.Open)
             {
                 // Tampilkan notifikasi jika berhasil tersambung
-                MessageBox.Show("Koneksi ke PostgreSQL Berhasil!", "Sukses Hubungkan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Koneksi ke PostgreSQL Berhasil!", "Sukses Hubungkan", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Jangan lupa tutup kembali setelah dites agar tidak boros resource data
                 koneksi.Close();
