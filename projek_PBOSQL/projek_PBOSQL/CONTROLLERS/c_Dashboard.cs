@@ -7,7 +7,7 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_Dashboard
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=Faris23;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
 
         public long ttltransaksi()
         {
@@ -40,7 +40,7 @@ namespace projek_PBOSQL.CONTROLLERS
         public long ttlStokPupuk()
         {
             long totalStok = 0; // Pastikan ini bertipe long
-            string query = "SELECT COALESCE(SUM(stock), 0) FROM stock_pupuk";
+            string query = "select * from v_totalstock";
 
             using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
             {
@@ -69,7 +69,7 @@ namespace projek_PBOSQL.CONTROLLERS
         public long ttlJenisPupuk()
         {
             long totalJenis = 0;
-            string query = "SELECT COUNT(*) FROM pupuk WHERE status = 'active'";
+            string query = "SELECT COUNT(*) FROM pupuk WHERE status = 'Aktif'";
 
             using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
             {
