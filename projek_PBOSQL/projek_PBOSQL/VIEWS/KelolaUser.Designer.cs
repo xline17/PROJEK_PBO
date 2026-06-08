@@ -65,7 +65,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(184, 599);
+            panel1.Size = new Size(184, 1200);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -173,10 +173,10 @@
             DGV_kelUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DGV_kelUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DGV_kelUser.Columns.AddRange(new DataGridViewColumn[] { btnEditCol, btnHapusCol });
-            DGV_kelUser.Location = new Point(3, 52);
+            DGV_kelUser.Location = new Point(3, 144);
             DGV_kelUser.Name = "DGV_kelUser";
             DGV_kelUser.RowHeadersWidth = 51;
-            DGV_kelUser.Size = new Size(715, 253);
+            DGV_kelUser.Size = new Size(1721, 405);
             DGV_kelUser.TabIndex = 1;
             DGV_kelUser.CellContentClick += DGV_kelUser_CellContentClick;
             // 
@@ -199,10 +199,11 @@
             // btnTambahAkun
             // 
             btnTambahAkun.BackColor = SystemColors.ActiveCaptionText;
+            btnTambahAkun.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTambahAkun.ForeColor = SystemColors.ButtonFace;
-            btnTambahAkun.Location = new Point(560, 17);
+            btnTambahAkun.Location = new Point(1535, 74);
             btnTambahAkun.Name = "btnTambahAkun";
-            btnTambahAkun.Size = new Size(160, 29);
+            btnTambahAkun.Size = new Size(189, 50);
             btnTambahAkun.TabIndex = 2;
             btnTambahAkun.Text = "Tambah Akun";
             btnTambahAkun.UseVisualStyleBackColor = false;
@@ -245,20 +246,21 @@
             panel2.Location = new Point(184, 0);
             panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(727, 599);
+            panel2.Size = new Size(1736, 1200);
             panel2.TabIndex = 9;
             // 
             // KelolaUser
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(911, 599);
+            ClientSize = new Size(1920, 1200);
             Controls.Add(panel2);
             Controls.Add(btnSimpanEdit);
             Controls.Add(txtEditTelp);
             Controls.Add(PbEdit);
             Controls.Add(panel1);
             ForeColor = Color.Black;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "KelolaUser";
             Text = "KancaTani";

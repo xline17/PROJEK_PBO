@@ -28,7 +28,7 @@ namespace projek_PBOSQL.VIEWS
             {
                 CONTROLLERS.c_KelolaUser controllerUser = new CONTROLLERS.c_KelolaUser();
 
-                bool isEditBerhasil = controllerUser.EditUser(IdAkunTerpilih, txtEditUsername.Text.Trim(), txtEditNotelp.Text.Trim(), txtEditPass.Text.Trim());
+                bool isEditBerhasil = controllerUser.EditUser(IdAkunTerpilih, txtEditUsername.Text.Trim(), txtEditNotelp.Text.Trim(), txtEditPass.Text.Trim(), "");
 
                 if (isEditBerhasil)
                 {
@@ -70,7 +70,7 @@ namespace projek_PBOSQL.VIEWS
 
                 // 3. PANGGIL FUNGSI EDIT DARI CONTROLLER
                 // Kita kirimkan IdAkunTerpilih (variabel tanpa {get;set;} yang barusan diperbaiki) beserta data barunya
-                bool isEditBerhasil = controllerUser.EditUser(IdAkunTerpilih, usernameBaru, noTelpBaru, passwordBaru);
+                bool isEditBerhasil = controllerUser.EditUser(IdAkunTerpilih, usernameBaru, noTelpBaru, passwordBaru, "");
 
                 // 4. CEK HASIL EKSEKUSI DATABASE
                 if (isEditBerhasil)
