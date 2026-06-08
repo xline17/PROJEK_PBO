@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
+            btnLogout = new Button();
             btnHistory = new Button();
             btnKelolaStock = new Button();
             btnKelolaPupuk = new Button();
@@ -46,18 +48,18 @@
             id_pupuk = new DataGridViewTextBoxColumn();
             nama_pupuk = new DataGridViewTextBoxColumn();
             status = new DataGridViewTextBoxColumn();
-            btnLogout = new Button();
-            pictureBox2 = new PictureBox();
+            btnKelolaTahapan = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPupuk).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.Black;
+            panel1.Controls.Add(btnKelolaTahapan);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(btnLogout);
             panel1.Controls.Add(btnHistory);
@@ -72,10 +74,32 @@
             panel1.Size = new Size(300, 1144);
             panel1.TabIndex = 0;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.logout;
+            pictureBox2.Location = new Point(52, 1044);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(51, 43);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
+            btnLogout.ForeColor = SystemColors.ButtonHighlight;
+            btnLogout.Location = new Point(118, 1053);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(112, 34);
+            btnLogout.TabIndex = 6;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
             // btnHistory
             // 
             btnHistory.Font = new Font("Helvetica", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnHistory.Location = new Point(12, 792);
+            btnHistory.Location = new Point(14, 741);
             btnHistory.Name = "btnHistory";
             btnHistory.Size = new Size(273, 72);
             btnHistory.TabIndex = 5;
@@ -85,17 +109,18 @@
             // btnKelolaStock
             // 
             btnKelolaStock.Font = new Font("Helvetica", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKelolaStock.Location = new Point(12, 671);
+            btnKelolaStock.Location = new Point(14, 548);
             btnKelolaStock.Name = "btnKelolaStock";
             btnKelolaStock.Size = new Size(273, 72);
             btnKelolaStock.TabIndex = 4;
             btnKelolaStock.Text = "Kelola Stock";
             btnKelolaStock.UseVisualStyleBackColor = true;
+            btnKelolaStock.Click += btnKelolaStock_Click;
             // 
             // btnKelolaPupuk
             // 
             btnKelolaPupuk.Font = new Font("Helvetica", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKelolaPupuk.Location = new Point(14, 536);
+            btnKelolaPupuk.Location = new Point(14, 453);
             btnKelolaPupuk.Name = "btnKelolaPupuk";
             btnKelolaPupuk.Size = new Size(273, 72);
             btnKelolaPupuk.TabIndex = 3;
@@ -105,7 +130,7 @@
             // btnUser
             // 
             btnUser.Font = new Font("Helvetica", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUser.Location = new Point(12, 413);
+            btnUser.Location = new Point(14, 357);
             btnUser.Name = "btnUser";
             btnUser.Size = new Size(273, 72);
             btnUser.TabIndex = 2;
@@ -116,7 +141,7 @@
             // btnDashboard
             // 
             btnDashboard.Font = new Font("Helvetica", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.Location = new Point(12, 300);
+            btnDashboard.Location = new Point(14, 265);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(273, 72);
             btnDashboard.TabIndex = 1;
@@ -255,27 +280,15 @@
             status.Name = "status";
             status.ReadOnly = true;
             // 
-            // btnLogout
+            // btnKelolaTahapan
             // 
-            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
-            btnLogout.ForeColor = SystemColors.ButtonHighlight;
-            btnLogout.Location = new Point(118, 1053);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(112, 34);
-            btnLogout.TabIndex = 6;
-            btnLogout.Text = "Logout";
-            btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.logout;
-            pictureBox2.Location = new Point(52, 1044);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(51, 43);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 7;
-            pictureBox2.TabStop = false;
+            btnKelolaTahapan.Font = new Font("Helvetica", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKelolaTahapan.Location = new Point(14, 645);
+            btnKelolaTahapan.Name = "btnKelolaTahapan";
+            btnKelolaTahapan.Size = new Size(273, 72);
+            btnKelolaTahapan.TabIndex = 8;
+            btnKelolaTahapan.Text = "Kelola Tahapan";
+            btnKelolaTahapan.UseVisualStyleBackColor = true;
             // 
             // KelolaPupuk
             // 
@@ -288,11 +301,11 @@
             Text = "KelolaPupuk";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPupuk).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -318,5 +331,6 @@
         private Button btnUpdate;
         private PictureBox pictureBox2;
         private Button btnLogout;
+        private Button btnKelolaTahapan;
     }
 }

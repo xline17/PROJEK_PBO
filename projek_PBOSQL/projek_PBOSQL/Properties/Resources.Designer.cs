@@ -113,9 +113,29 @@ namespace projek_PBOSQL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tambah_Stock {
+            get {
+                object obj = ResourceManager.GetObject("Tambah Stock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ukuran_Kelola_Pupuk {
             get {
                 object obj = ResourceManager.GetObject("Ukuran Kelola Pupuk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ukuran_kelola_stock_Pupuk {
+            get {
+                object obj = ResourceManager.GetObject("Ukuran kelola stock Pupuk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

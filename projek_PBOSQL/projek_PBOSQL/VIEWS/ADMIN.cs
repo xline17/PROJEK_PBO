@@ -113,5 +113,12 @@ namespace projek_PBOSQL.VIEWS
         {
 
         }
+
+        private void btnKelolaStock_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaStock stock = new projek_PBOSQL.VIEWS.KelolaStock();
+            stock.Show();
+            this.Hide();
+        }
     }
 }
