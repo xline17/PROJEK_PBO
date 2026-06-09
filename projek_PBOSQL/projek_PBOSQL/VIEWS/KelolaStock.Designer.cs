@@ -230,10 +230,10 @@
             dgvPupuk.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPupuk.BackgroundColor = SystemColors.ControlLight;
             dgvPupuk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPupuk.Location = new Point(103, 384);
+            dgvPupuk.Location = new Point(68, 383);
             dgvPupuk.Name = "dgvPupuk";
             dgvPupuk.RowHeadersWidth = 62;
-            dgvPupuk.Size = new Size(1399, 536);
+            dgvPupuk.Size = new Size(1458, 536);
             dgvPupuk.TabIndex = 0;
             // 
             // KelolaStock

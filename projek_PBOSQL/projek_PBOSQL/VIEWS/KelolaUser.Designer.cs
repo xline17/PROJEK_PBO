@@ -64,8 +64,9 @@
             panel1.Controls.Add(btnDashboardAdmin);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(184, 1200);
+            panel1.Size = new Size(230, 1200);
             panel1.TabIndex = 0;
             // 
             // button1
@@ -73,10 +74,10 @@
             button1.BackColor = Color.Red;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(35, 535);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(44, 669);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(104, 37);
+            button1.Size = new Size(130, 46);
             button1.TabIndex = 6;
             button1.Text = "LOG OUT";
             button1.UseVisualStyleBackColor = false;
@@ -85,9 +86,10 @@
             // 
             pictureBox1.BackgroundImage = Properties.Resources.logo_dan_teks_pojok;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(0, 15);
+            pictureBox1.Location = new Point(0, 19);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(185, 160);
+            pictureBox1.Size = new Size(231, 200);
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
@@ -96,10 +98,10 @@
             btnHistori.BackColor = Color.Black;
             btnHistori.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             btnHistori.ForeColor = Color.White;
-            btnHistori.Location = new Point(11, 459);
-            btnHistori.Margin = new Padding(3, 4, 3, 4);
+            btnHistori.Location = new Point(14, 574);
+            btnHistori.Margin = new Padding(4, 5, 4, 5);
             btnHistori.Name = "btnHistori";
-            btnHistori.Size = new Size(166, 51);
+            btnHistori.Size = new Size(208, 64);
             btnHistori.TabIndex = 5;
             btnHistori.Text = "Histori Transaksi";
             btnHistori.TextAlign = ContentAlignment.MiddleLeft;
@@ -110,10 +112,10 @@
             btnKelolaTahapan.BackColor = Color.Black;
             btnKelolaTahapan.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             btnKelolaTahapan.ForeColor = Color.White;
-            btnKelolaTahapan.Location = new Point(10, 387);
-            btnKelolaTahapan.Margin = new Padding(3, 4, 3, 4);
+            btnKelolaTahapan.Location = new Point(12, 484);
+            btnKelolaTahapan.Margin = new Padding(4, 5, 4, 5);
             btnKelolaTahapan.Name = "btnKelolaTahapan";
-            btnKelolaTahapan.Size = new Size(166, 51);
+            btnKelolaTahapan.Size = new Size(208, 64);
             btnKelolaTahapan.TabIndex = 4;
             btnKelolaTahapan.Text = "Kelola Tahapan";
             btnKelolaTahapan.TextAlign = ContentAlignment.MiddleLeft;
@@ -124,10 +126,10 @@
             btnKelolaPupuk.BackColor = Color.Black;
             btnKelolaPupuk.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             btnKelolaPupuk.ForeColor = Color.White;
-            btnKelolaPupuk.Location = new Point(10, 316);
-            btnKelolaPupuk.Margin = new Padding(3, 4, 3, 4);
+            btnKelolaPupuk.Location = new Point(12, 395);
+            btnKelolaPupuk.Margin = new Padding(4, 5, 4, 5);
             btnKelolaPupuk.Name = "btnKelolaPupuk";
-            btnKelolaPupuk.Size = new Size(166, 51);
+            btnKelolaPupuk.Size = new Size(208, 64);
             btnKelolaPupuk.TabIndex = 3;
             btnKelolaPupuk.Text = "Kelola Pupuk";
             btnKelolaPupuk.TextAlign = ContentAlignment.MiddleLeft;
@@ -138,10 +140,10 @@
             btnkelolaUser.BackColor = Color.Black;
             btnkelolaUser.Font = new Font("Arial", 9.75F, FontStyle.Bold);
             btnkelolaUser.ForeColor = Color.White;
-            btnkelolaUser.Location = new Point(10, 181);
-            btnkelolaUser.Margin = new Padding(3, 4, 3, 4);
+            btnkelolaUser.Location = new Point(12, 226);
+            btnkelolaUser.Margin = new Padding(4, 5, 4, 5);
             btnkelolaUser.Name = "btnkelolaUser";
-            btnkelolaUser.Size = new Size(166, 51);
+            btnkelolaUser.Size = new Size(208, 64);
             btnkelolaUser.TabIndex = 2;
             btnkelolaUser.Text = "Dashboard";
             btnkelolaUser.TextAlign = ContentAlignment.MiddleLeft;
@@ -156,11 +158,11 @@
             btnDashboardAdmin.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDashboardAdmin.ForeColor = Color.Black;
             btnDashboardAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboardAdmin.Location = new Point(9, 248);
+            btnDashboardAdmin.Location = new Point(11, 310);
             btnDashboardAdmin.Margin = new Padding(0);
             btnDashboardAdmin.Name = "btnDashboardAdmin";
             btnDashboardAdmin.RightToLeft = RightToLeft.No;
-            btnDashboardAdmin.Size = new Size(166, 51);
+            btnDashboardAdmin.Size = new Size(208, 64);
             btnDashboardAdmin.TabIndex = 1;
             btnDashboardAdmin.Text = "Kelola User";
             btnDashboardAdmin.TextAlign = ContentAlignment.MiddleLeft;
@@ -173,10 +175,11 @@
             DGV_kelUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DGV_kelUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DGV_kelUser.Columns.AddRange(new DataGridViewColumn[] { btnEditCol, btnHapusCol });
-            DGV_kelUser.Location = new Point(3, 144);
+            DGV_kelUser.Location = new Point(9, 194);
+            DGV_kelUser.Margin = new Padding(4);
             DGV_kelUser.Name = "DGV_kelUser";
             DGV_kelUser.RowHeadersWidth = 51;
-            DGV_kelUser.Size = new Size(1721, 405);
+            DGV_kelUser.Size = new Size(1668, 506);
             DGV_kelUser.TabIndex = 1;
             DGV_kelUser.CellContentClick += DGV_kelUser_CellContentClick;
             // 
@@ -201,9 +204,10 @@
             btnTambahAkun.BackColor = SystemColors.ActiveCaptionText;
             btnTambahAkun.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTambahAkun.ForeColor = SystemColors.ButtonFace;
-            btnTambahAkun.Location = new Point(1535, 74);
+            btnTambahAkun.Location = new Point(1426, 111);
+            btnTambahAkun.Margin = new Padding(4);
             btnTambahAkun.Name = "btnTambahAkun";
-            btnTambahAkun.Size = new Size(189, 50);
+            btnTambahAkun.Size = new Size(236, 62);
             btnTambahAkun.TabIndex = 2;
             btnTambahAkun.Text = "Tambah Akun";
             btnTambahAkun.UseVisualStyleBackColor = false;
@@ -211,9 +215,10 @@
             // 
             // btnSimpanEdit
             // 
-            btnSimpanEdit.Location = new Point(459, 531);
+            btnSimpanEdit.Location = new Point(574, 664);
+            btnSimpanEdit.Margin = new Padding(4);
             btnSimpanEdit.Name = "btnSimpanEdit";
-            btnSimpanEdit.Size = new Size(170, 29);
+            btnSimpanEdit.Size = new Size(212, 36);
             btnSimpanEdit.TabIndex = 4;
             btnSimpanEdit.Text = "Simpan Perubahan";
             btnSimpanEdit.UseVisualStyleBackColor = true;
@@ -222,18 +227,20 @@
             // txtEditTelp
             // 
             txtEditTelp.BorderStyle = BorderStyle.None;
-            txtEditTelp.Location = new Point(335, 489);
+            txtEditTelp.Location = new Point(419, 611);
+            txtEditTelp.Margin = new Padding(4);
             txtEditTelp.Name = "txtEditTelp";
-            txtEditTelp.Size = new Size(235, 20);
+            txtEditTelp.Size = new Size(294, 24);
             txtEditTelp.TabIndex = 7;
             txtEditTelp.Visible = false;
             // 
             // PbEdit
             // 
             PbEdit.BackgroundImage = (Image)resources.GetObject("PbEdit.BackgroundImage");
-            PbEdit.Location = new Point(309, 316);
+            PbEdit.Location = new Point(386, 395);
+            PbEdit.Margin = new Padding(4);
             PbEdit.Name = "PbEdit";
-            PbEdit.Size = new Size(465, 257);
+            PbEdit.Size = new Size(581, 321);
             PbEdit.TabIndex = 8;
             PbEdit.TabStop = false;
             PbEdit.Visible = false;
@@ -243,15 +250,16 @@
             // 
             panel2.Controls.Add(btnTambahAkun);
             panel2.Controls.Add(DGV_kelUser);
-            panel2.Location = new Point(184, 0);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(230, 0);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1736, 1200);
+            panel2.Size = new Size(1690, 1200);
             panel2.TabIndex = 9;
             // 
             // KelolaUser
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1920, 1200);
             Controls.Add(panel2);
@@ -262,6 +270,7 @@
             ForeColor = Color.Black;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4);
             Name = "KelolaUser";
             Text = "KancaTani";
             WindowState = FormWindowState.Maximized;

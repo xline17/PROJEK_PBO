@@ -7,7 +7,7 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_Dashboard
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=Faris23;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
 
         public long ttltransaksi()
         {
