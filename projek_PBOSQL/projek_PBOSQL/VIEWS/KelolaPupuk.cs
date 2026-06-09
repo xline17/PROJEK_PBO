@@ -174,5 +174,24 @@ namespace projek_PBOSQL.VIEWS
         {
 
         }
+
+        private void btnKelolaPupuk_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaPupuk pupuk = new projek_PBOSQL.VIEWS.KelolaPupuk();
+            pupuk.Show();
+            this.Hide();
+        }
+
+        private void btnKelolaTahapan_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaTahapan tahapan = new projek_PBOSQL.VIEWS.KelolaTahapan();
+            tahapan.Show();
+            this.Hide();
+        }
+
+        private void dgvPupuk_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

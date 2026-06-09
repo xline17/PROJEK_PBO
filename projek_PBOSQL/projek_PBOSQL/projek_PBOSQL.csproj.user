@@ -16,6 +16,9 @@
     <Compile Update="VIEWS\KelolaStock.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="VIEWS\KelolaTahapan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="VIEWS\KelolaUser.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -8,7 +8,7 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_users
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=bombigaul123;Database=projek_pbo";
         public object validasi_login(string username, string password)
         {
             // PERBAIKAN 1: Pastikan di dalam query teksnya "id_role" (pakai underscore)

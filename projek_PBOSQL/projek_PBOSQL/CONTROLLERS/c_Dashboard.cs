@@ -7,7 +7,7 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_Dashboard
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=bombigaul123;Database=projek_pbo";
 
         public long ttltransaksi()
         {
@@ -40,7 +40,7 @@ namespace projek_PBOSQL.CONTROLLERS
         public long ttlStokPupuk()
         {
             long totalStok = 0; // Pastikan ini bertipe long
-            string query = "select * from v_totalstock";
+            string query = "SELECT SUM(stock) FROM stock_pupuk;";
 
             using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
             {

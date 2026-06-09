@@ -13,8 +13,8 @@ namespace projek_PBOSQL.HELPERS
             "Host=localhost;" +
             "Port=5432;" +
             "Username=postgres;" +
-            "Password=1111;" + //password kalian
-            "Database=KancaTani;"; //database kalian
+            "Password=bombigaul123;" + //password kalian
+            "Database=projek_pbo;"; //database kalian
         public static NpgsqlConnection GetConn() //ini method manggil database
         {
             NpgsqlConnection conn = new NpgsqlConnection(connString);

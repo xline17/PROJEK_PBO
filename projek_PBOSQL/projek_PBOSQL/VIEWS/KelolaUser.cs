@@ -104,9 +104,9 @@ namespace projek_PBOSQL.VIEWS
                     }
                 }
             } // Penutup if (e.RowIndex >= 0)
-        
-    }
-        
+
+        }
+
 
 
 
@@ -151,14 +151,31 @@ namespace projek_PBOSQL.VIEWS
 
         private void btnkelolaUser_Click(object sender, EventArgs e)
         {
-            projek_PBOSQL.VIEWS.ADMIN kelolauserForm = new projek_PBOSQL.VIEWS.ADMIN();
-            kelolauserForm.Show();
-            this.Hide();
+            
         }
 
         private void KelolaUser_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnKelolaPupuk_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaPupuk kelolapForm = new projek_PBOSQL.VIEWS.KelolaPupuk();
+            kelolapForm.Show();
+            this.Hide();
+        }
+
+        private void btnKelolaTahapan_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaTahapan kelolatForm = new projek_PBOSQL.VIEWS.KelolaTahapan();
+            kelolatForm.Show();
+            this.Hide();
+        }
+
+        private void btnHistori_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

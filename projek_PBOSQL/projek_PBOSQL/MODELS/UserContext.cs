@@ -9,7 +9,7 @@ namespace projek_PBOSQL.MODELS
 {
     internal class UserContext
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=bombigaul123;Database=projek_pbo";
 
         // Ambil semua akun → untuk isi grid
         public DataTable GetAllAkun()

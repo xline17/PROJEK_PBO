@@ -91,7 +91,9 @@ namespace projek_PBOSQL.VIEWS
 
         private void btnkelolaTahapan_Click(object sender, EventArgs e)
         {
-
+            projek_PBOSQL.VIEWS.KelolaTahapan kelolaTahapanForm = new projek_PBOSQL.VIEWS.KelolaTahapan();
+            kelolaTahapanForm.Show();
+            this.Hide();
         }
 
         private void btnhistoriTransaksi_Click(object sender, EventArgs e)
