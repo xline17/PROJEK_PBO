@@ -38,17 +38,21 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(18, 102);
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Location = new Point(25, 141);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(204, 23);
+            textBox1.Size = new Size(227, 20);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(18, 152);
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Location = new Point(26, 208);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(204, 23);
+            textBox2.Size = new Size(226, 20);
             textBox2.TabIndex = 1;
             textBox2.UseSystemPasswordChar = true;
             // 
@@ -57,9 +61,10 @@
             button1.BackColor = Color.DarkGreen;
             button1.Font = new Font("Arial", 15.75F, FontStyle.Bold);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(55, 188);
+            button1.Location = new Point(63, 251);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(136, 30);
+            button1.Size = new Size(155, 40);
             button1.TabIndex = 2;
             button1.Text = "LOGIN";
             button1.UseVisualStyleBackColor = false;
@@ -72,20 +77,22 @@
             panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(textBox1);
-            panel1.Location = new Point(454, 137);
+            panel1.Location = new Point(519, 183);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(247, 229);
+            panel1.Size = new Size(282, 305);
             panel1.TabIndex = 3;
             // 
             // LOGINPETANI
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Form_Login_1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LOGINPETANI";
             Text = "KancaTani";
             panel1.ResumeLayout(false);

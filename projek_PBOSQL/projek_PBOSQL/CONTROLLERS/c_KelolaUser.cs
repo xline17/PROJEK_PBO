@@ -32,5 +32,10 @@ namespace projek_PBOSQL.CONTROLLERS
         {
             return _userContext.EditUser(idAkun, username, password, noTelp);
         }
+
+        public int UserSummary()
+        {
+            return _userContext.UserSummary();
+        }
     }
 }

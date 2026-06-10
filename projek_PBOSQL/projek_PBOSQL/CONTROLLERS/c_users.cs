@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using projek_PBOSQL.MODELS;
 using projek_PBOSQL.MODELS.Pengguna;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,8 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_users
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=bombigaul123;Database=projek_pbo";
+        private string connstring = "Host=localhost;Username=postgres;Password=Faris23;Database=KancaTani";
+
         public object validasi_login(string username, string password)
         {
             // PERBAIKAN 1: Pastikan di dalam query teksnya "id_role" (pakai underscore)
@@ -49,5 +51,6 @@ namespace projek_PBOSQL.CONTROLLERS
             }
             return null; // Login gagal jika data tidak ditemukan
         }
+
     }
 }

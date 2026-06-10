@@ -71,7 +71,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(210, 449);
+            panel1.Size = new Size(240, 1153);
             panel1.TabIndex = 0;
             // 
             // btnKelolaTahapan
@@ -79,10 +79,10 @@
             btnKelolaTahapan.BackColor = Color.Black;
             btnKelolaTahapan.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKelolaTahapan.ForeColor = Color.White;
-            btnKelolaTahapan.Location = new Point(10, 387);
+            btnKelolaTahapan.Location = new Point(11, 516);
             btnKelolaTahapan.Margin = new Padding(1);
             btnKelolaTahapan.Name = "btnKelolaTahapan";
-            btnKelolaTahapan.Size = new Size(190, 43);
+            btnKelolaTahapan.Size = new Size(217, 57);
             btnKelolaTahapan.TabIndex = 8;
             btnKelolaTahapan.Text = "Kelola Tahapan";
             btnKelolaTahapan.UseVisualStyleBackColor = false;
@@ -91,10 +91,10 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.logout;
-            pictureBox2.Location = new Point(36, 626);
+            pictureBox2.Location = new Point(41, 835);
             pictureBox2.Margin = new Padding(1);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(36, 25);
+            pictureBox2.Size = new Size(41, 33);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -103,10 +103,10 @@
             // 
             btnLogout.BackColor = Color.FromArgb(192, 0, 0);
             btnLogout.ForeColor = SystemColors.ButtonHighlight;
-            btnLogout.Location = new Point(83, 631);
+            btnLogout.Location = new Point(95, 841);
             btnLogout.Margin = new Padding(1);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(78, 20);
+            btnLogout.Size = new Size(89, 27);
             btnLogout.TabIndex = 6;
             btnLogout.Text = "Logout";
             btnLogout.UseVisualStyleBackColor = false;
@@ -117,10 +117,10 @@
             btnKelolaStock.BackColor = Color.Black;
             btnKelolaStock.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKelolaStock.ForeColor = Color.White;
-            btnKelolaStock.Location = new Point(10, 329);
+            btnKelolaStock.Location = new Point(11, 439);
             btnKelolaStock.Margin = new Padding(1);
             btnKelolaStock.Name = "btnKelolaStock";
-            btnKelolaStock.Size = new Size(190, 43);
+            btnKelolaStock.Size = new Size(217, 57);
             btnKelolaStock.TabIndex = 4;
             btnKelolaStock.Text = "Kelola Stock";
             btnKelolaStock.UseVisualStyleBackColor = false;
@@ -129,10 +129,10 @@
             // btnKelolaPupuk
             // 
             btnKelolaPupuk.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKelolaPupuk.Location = new Point(10, 271);
+            btnKelolaPupuk.Location = new Point(11, 361);
             btnKelolaPupuk.Margin = new Padding(1);
             btnKelolaPupuk.Name = "btnKelolaPupuk";
-            btnKelolaPupuk.Size = new Size(190, 43);
+            btnKelolaPupuk.Size = new Size(217, 57);
             btnKelolaPupuk.TabIndex = 3;
             btnKelolaPupuk.Text = "Kelola Pupuk";
             btnKelolaPupuk.UseVisualStyleBackColor = true;
@@ -143,10 +143,10 @@
             btnUser.BackColor = Color.Black;
             btnUser.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUser.ForeColor = Color.White;
-            btnUser.Location = new Point(10, 215);
+            btnUser.Location = new Point(11, 287);
             btnUser.Margin = new Padding(1);
             btnUser.Name = "btnUser";
-            btnUser.Size = new Size(190, 43);
+            btnUser.Size = new Size(217, 57);
             btnUser.TabIndex = 2;
             btnUser.Text = "Kelola User";
             btnUser.UseVisualStyleBackColor = false;
@@ -157,10 +157,10 @@
             btnDashboard.BackColor = Color.Black;
             btnDashboard.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(10, 159);
+            btnDashboard.Location = new Point(11, 212);
             btnDashboard.Margin = new Padding(1);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(190, 43);
+            btnDashboard.Size = new Size(217, 57);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -170,10 +170,10 @@
             // 
             pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox1.Image = Properties.Resources.logo_dan_teks_pojok;
-            pictureBox1.Location = new Point(1, 7);
+            pictureBox1.Location = new Point(10, 21);
             pictureBox1.Margin = new Padding(1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(197, 142);
+            pictureBox1.Size = new Size(225, 189);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -189,10 +189,10 @@
             panel2.Controls.Add(chkTampilkanSemua);
             panel2.Controls.Add(dgvPupuk);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(210, 0);
+            panel2.Location = new Point(240, 0);
             panel2.Margin = new Padding(1);
             panel2.Name = "panel2";
-            panel2.Size = new Size(749, 449);
+            panel2.Size = new Size(1662, 1153);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -201,10 +201,10 @@
             btnDelete.BackColor = Color.FromArgb(192, 0, 0);
             btnDelete.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDelete.ForeColor = SystemColors.ButtonHighlight;
-            btnDelete.Location = new Point(828, 572);
+            btnDelete.Location = new Point(1260, 962);
             btnDelete.Margin = new Padding(1);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(99, 33);
+            btnDelete.Size = new Size(113, 44);
             btnDelete.TabIndex = 6;
             btnDelete.Text = "DELETE";
             btnDelete.UseVisualStyleBackColor = false;
@@ -215,10 +215,10 @@
             btnUpdate.BackColor = Color.FromArgb(255, 192, 128);
             btnUpdate.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnUpdate.ForeColor = SystemColors.ButtonHighlight;
-            btnUpdate.Location = new Point(944, 572);
+            btnUpdate.Location = new Point(1406, 962);
             btnUpdate.Margin = new Padding(1);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(111, 33);
+            btnUpdate.Size = new Size(127, 44);
             btnUpdate.TabIndex = 5;
             btnUpdate.Text = "UPDATE";
             btnUpdate.UseVisualStyleBackColor = false;
@@ -229,10 +229,10 @@
             btnTambah.BackColor = Color.FromArgb(0, 192, 192);
             btnTambah.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTambah.ForeColor = SystemColors.ButtonHighlight;
-            btnTambah.Location = new Point(880, 221);
+            btnTambah.Location = new Point(1335, 323);
             btnTambah.Margin = new Padding(1);
             btnTambah.Name = "btnTambah";
-            btnTambah.Size = new Size(174, 31);
+            btnTambah.Size = new Size(199, 33);
             btnTambah.TabIndex = 4;
             btnTambah.Text = "+ Tambah";
             btnTambah.UseVisualStyleBackColor = false;
@@ -243,10 +243,10 @@
             lblJenisPupuk.AutoSize = true;
             lblJenisPupuk.BackColor = Color.Transparent;
             lblJenisPupuk.Font = new Font("Arial", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblJenisPupuk.Location = new Point(617, 125);
+            lblJenisPupuk.Location = new Point(870, 197);
             lblJenisPupuk.Margin = new Padding(1, 0, 1, 0);
             lblJenisPupuk.Name = "lblJenisPupuk";
-            lblJenisPupuk.Size = new Size(0, 41);
+            lblJenisPupuk.Size = new Size(0, 51);
             lblJenisPupuk.TabIndex = 3;
             // 
             // lblTotalStock
@@ -254,20 +254,20 @@
             lblTotalStock.AutoSize = true;
             lblTotalStock.BackColor = Color.Transparent;
             lblTotalStock.Font = new Font("Arial", 26F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalStock.Location = new Point(77, 125);
+            lblTotalStock.Location = new Point(103, 197);
             lblTotalStock.Margin = new Padding(1, 0, 1, 0);
             lblTotalStock.Name = "lblTotalStock";
-            lblTotalStock.Size = new Size(0, 41);
+            lblTotalStock.Size = new Size(0, 51);
             lblTotalStock.TabIndex = 2;
             // 
             // chkTampilkanSemua
             // 
             chkTampilkanSemua.AutoSize = true;
             chkTampilkanSemua.BackColor = Color.Transparent;
-            chkTampilkanSemua.Location = new Point(54, 541);
+            chkTampilkanSemua.Location = new Point(62, 962);
             chkTampilkanSemua.Margin = new Padding(1);
             chkTampilkanSemua.Name = "chkTampilkanSemua";
-            chkTampilkanSemua.Size = new Size(119, 19);
+            chkTampilkanSemua.Size = new Size(147, 24);
             chkTampilkanSemua.TabIndex = 1;
             chkTampilkanSemua.Text = "Tampilkan Semua";
             chkTampilkanSemua.UseVisualStyleBackColor = false;
@@ -279,11 +279,11 @@
             dgvPupuk.BackgroundColor = SystemColors.ControlLight;
             dgvPupuk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPupuk.Columns.AddRange(new DataGridViewColumn[] { id_pupuk, nama_pupuk, status });
-            dgvPupuk.Location = new Point(54, 271);
+            dgvPupuk.Location = new Point(62, 361);
             dgvPupuk.Margin = new Padding(1);
             dgvPupuk.Name = "dgvPupuk";
             dgvPupuk.RowHeadersWidth = 62;
-            dgvPupuk.Size = new Size(1012, 268);
+            dgvPupuk.Size = new Size(1471, 585);
             dgvPupuk.TabIndex = 0;
             dgvPupuk.CellContentClick += dgvPupuk_CellContentClick;
             // 
@@ -310,9 +310,9 @@
             // 
             // KelolaPupuk
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(959, 449);
+            ClientSize = new Size(1902, 1153);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");

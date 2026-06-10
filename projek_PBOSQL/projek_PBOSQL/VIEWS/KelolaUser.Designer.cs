@@ -29,127 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KelolaUser));
-            panel1 = new Panel();
-            button1 = new Button();
-            pictureBox1 = new PictureBox();
-            btnKelolaTahapan = new Button();
-            btnKelolaPupuk = new Button();
-            btnKelolaUser = new Button();
-            btnDashboardAdmin = new Button();
             DGV_kelUser = new DataGridView();
             btnEditCol = new DataGridViewButtonColumn();
             btnHapusCol = new DataGridViewButtonColumn();
             btnTambahAkun = new Button();
-            btnSimpanEdit = new Button();
-            txtEditTelp = new TextBox();
-            PbEdit = new PictureBox();
             panel2 = new Panel();
+            lblUser = new Label();
+            label1 = new Label();
+            panel1 = new Panel();
+            pictureBox1 = new PictureBox();
+            btnKelolaTahapan = new Button();
+            pictureBox2 = new PictureBox();
+            btnLogout = new Button();
+            btnKelolaStock = new Button();
+            btnKelolaPupuk = new Button();
+            btnUser = new Button();
+            btnDashboard = new Button();
+            panel3 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)DGV_kelUser).BeginInit();
+            panel2.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)DGV_kelUser).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)PbEdit).BeginInit();
-            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.ActiveCaptionText;
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(btnKelolaTahapan);
-            panel1.Controls.Add(btnKelolaPupuk);
-            panel1.Controls.Add(btnKelolaUser);
-            panel1.Controls.Add(btnDashboardAdmin);
-            panel1.Dock = DockStyle.Left;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(161, 473);
-            panel1.TabIndex = 0;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Red;
-            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(32, 334);
-            button1.Name = "button1";
-            button1.Size = new Size(91, 28);
-            button1.TabIndex = 6;
-            button1.Text = "LOG OUT";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.logo_dan_teks_pojok;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(0, 11);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(162, 120);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
-            // btnKelolaTahapan
-            // 
-            btnKelolaTahapan.BackColor = Color.Black;
-            btnKelolaTahapan.Font = new Font("Arial", 9.75F, FontStyle.Bold);
-            btnKelolaTahapan.ForeColor = Color.White;
-            btnKelolaTahapan.Location = new Point(8, 290);
-            btnKelolaTahapan.Name = "btnKelolaTahapan";
-            btnKelolaTahapan.Size = new Size(146, 38);
-            btnKelolaTahapan.TabIndex = 4;
-            btnKelolaTahapan.Text = "Kelola Tahapan";
-            btnKelolaTahapan.TextAlign = ContentAlignment.MiddleLeft;
-            btnKelolaTahapan.UseVisualStyleBackColor = false;
-            btnKelolaTahapan.Click += btnKelolaTahapan_Click;
-            // 
-            // btnKelolaPupuk
-            // 
-            btnKelolaPupuk.BackColor = Color.Black;
-            btnKelolaPupuk.Font = new Font("Arial", 9.75F, FontStyle.Bold);
-            btnKelolaPupuk.ForeColor = Color.White;
-            btnKelolaPupuk.Location = new Point(8, 237);
-            btnKelolaPupuk.Name = "btnKelolaPupuk";
-            btnKelolaPupuk.Size = new Size(146, 38);
-            btnKelolaPupuk.TabIndex = 3;
-            btnKelolaPupuk.Text = "Kelola Pupuk";
-            btnKelolaPupuk.TextAlign = ContentAlignment.MiddleLeft;
-            btnKelolaPupuk.UseVisualStyleBackColor = false;
-            btnKelolaPupuk.Click += btnKelolaPupuk_Click;
-            // 
-            // btnKelolaUser
-            // 
-            btnKelolaUser.BackColor = Color.Black;
-            btnKelolaUser.Font = new Font("Arial", 9.75F, FontStyle.Bold);
-            btnKelolaUser.ForeColor = Color.White;
-            btnKelolaUser.Location = new Point(8, 136);
-            btnKelolaUser.Name = "btnKelolaUser";
-            btnKelolaUser.Size = new Size(146, 38);
-            btnKelolaUser.TabIndex = 2;
-            btnKelolaUser.Text = "Dashboard";
-            btnKelolaUser.TextAlign = ContentAlignment.MiddleLeft;
-            btnKelolaUser.UseVisualStyleBackColor = false;
-            btnKelolaUser.Click += btnkelolaUser_Click;
-            // 
-            // btnDashboardAdmin
-            // 
-            btnDashboardAdmin.BackColor = Color.White;
-            btnDashboardAdmin.BackgroundImageLayout = ImageLayout.Stretch;
-            btnDashboardAdmin.FlatAppearance.BorderSize = 0;
-            btnDashboardAdmin.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboardAdmin.ForeColor = Color.Black;
-            btnDashboardAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboardAdmin.Location = new Point(8, 186);
-            btnDashboardAdmin.Margin = new Padding(0);
-            btnDashboardAdmin.Name = "btnDashboardAdmin";
-            btnDashboardAdmin.RightToLeft = RightToLeft.No;
-            btnDashboardAdmin.Size = new Size(146, 38);
-            btnDashboardAdmin.TabIndex = 1;
-            btnDashboardAdmin.Text = "Kelola User";
-            btnDashboardAdmin.TextAlign = ContentAlignment.MiddleLeft;
-            btnDashboardAdmin.UseVisualStyleBackColor = false;
-            btnDashboardAdmin.Click += btnDashboardAdmin_Click;
             // 
             // DGV_kelUser
             // 
@@ -157,11 +60,10 @@
             DGV_kelUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DGV_kelUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DGV_kelUser.Columns.AddRange(new DataGridViewColumn[] { btnEditCol, btnHapusCol });
-            DGV_kelUser.Location = new Point(6, 116);
-            DGV_kelUser.Margin = new Padding(3, 2, 3, 2);
+            DGV_kelUser.Location = new Point(283, 196);
             DGV_kelUser.Name = "DGV_kelUser";
             DGV_kelUser.RowHeadersWidth = 51;
-            DGV_kelUser.Size = new Size(1168, 304);
+            DGV_kelUser.Size = new Size(1570, 868);
             DGV_kelUser.TabIndex = 1;
             DGV_kelUser.CellContentClick += DGV_kelUser_CellContentClick;
             // 
@@ -186,101 +88,222 @@
             btnTambahAkun.BackColor = SystemColors.ActiveCaptionText;
             btnTambahAkun.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnTambahAkun.ForeColor = SystemColors.ButtonFace;
-            btnTambahAkun.Location = new Point(998, 67);
-            btnTambahAkun.Margin = new Padding(3, 2, 3, 2);
+            btnTambahAkun.Location = new Point(1626, 125);
             btnTambahAkun.Name = "btnTambahAkun";
-            btnTambahAkun.Size = new Size(165, 37);
+            btnTambahAkun.Size = new Size(227, 65);
             btnTambahAkun.TabIndex = 2;
             btnTambahAkun.Text = "Tambah Akun";
             btnTambahAkun.UseVisualStyleBackColor = false;
             btnTambahAkun.Click += btnTambahAkun_Click;
             // 
-            // btnSimpanEdit
-            // 
-            btnSimpanEdit.Location = new Point(402, 398);
-            btnSimpanEdit.Margin = new Padding(3, 2, 3, 2);
-            btnSimpanEdit.Name = "btnSimpanEdit";
-            btnSimpanEdit.Size = new Size(148, 22);
-            btnSimpanEdit.TabIndex = 4;
-            btnSimpanEdit.Text = "Simpan Perubahan";
-            btnSimpanEdit.UseVisualStyleBackColor = true;
-            btnSimpanEdit.Visible = false;
-            // 
-            // txtEditTelp
-            // 
-            txtEditTelp.BorderStyle = BorderStyle.None;
-            txtEditTelp.Location = new Point(293, 367);
-            txtEditTelp.Margin = new Padding(3, 2, 3, 2);
-            txtEditTelp.Name = "txtEditTelp";
-            txtEditTelp.Size = new Size(206, 16);
-            txtEditTelp.TabIndex = 7;
-            txtEditTelp.Visible = false;
-            // 
-            // PbEdit
-            // 
-            PbEdit.BackgroundImage = (Image)resources.GetObject("PbEdit.BackgroundImage");
-            PbEdit.Location = new Point(270, 237);
-            PbEdit.Margin = new Padding(3, 2, 3, 2);
-            PbEdit.Name = "PbEdit";
-            PbEdit.Size = new Size(407, 193);
-            PbEdit.TabIndex = 8;
-            PbEdit.TabStop = false;
-            PbEdit.Visible = false;
-            PbEdit.Click += PbEdit_Click_1;
-            // 
             // panel2
             // 
+            panel2.Controls.Add(panel3);
             panel2.Controls.Add(btnTambahAkun);
             panel2.Controls.Add(DGV_kelUser);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(161, 0);
+            panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(809, 473);
+            panel2.Size = new Size(1898, 1149);
             panel2.TabIndex = 9;
+            // 
+            // lblUser
+            // 
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Arial", 22F, FontStyle.Bold);
+            lblUser.ForeColor = Color.White;
+            lblUser.Location = new Point(107, 64);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(40, 44);
+            lblUser.TabIndex = 4;
+            lblUser.Text = "0";
+            lblUser.Click += lblUser_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(25, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(197, 50);
+            label1.TabIndex = 3;
+            label1.Text = "Total User";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Black;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(btnKelolaTahapan);
+            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(btnLogout);
+            panel1.Controls.Add(btnKelolaStock);
+            panel1.Controls.Add(btnKelolaPupuk);
+            panel1.Controls.Add(btnUser);
+            panel1.Controls.Add(btnDashboard);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(240, 1149);
+            panel1.TabIndex = 10;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.logo_dan_teks_pojok;
+            pictureBox1.Location = new Point(11, 21);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(215, 187);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 9;
+            pictureBox1.TabStop = false;
+            // 
+            // btnKelolaTahapan
+            // 
+            btnKelolaTahapan.BackColor = Color.Black;
+            btnKelolaTahapan.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKelolaTahapan.ForeColor = Color.White;
+            btnKelolaTahapan.Location = new Point(11, 516);
+            btnKelolaTahapan.Margin = new Padding(1);
+            btnKelolaTahapan.Name = "btnKelolaTahapan";
+            btnKelolaTahapan.Size = new Size(217, 57);
+            btnKelolaTahapan.TabIndex = 8;
+            btnKelolaTahapan.Text = "Kelola Tahapan";
+            btnKelolaTahapan.UseVisualStyleBackColor = false;
+            btnKelolaTahapan.Click += btnKelolaTahapan_Click_1;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.logout;
+            pictureBox2.Location = new Point(30, 829);
+            pictureBox2.Margin = new Padding(1);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(41, 33);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 7;
+            pictureBox2.TabStop = false;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.FromArgb(192, 0, 0);
+            btnLogout.ForeColor = SystemColors.ButtonHighlight;
+            btnLogout.Location = new Point(77, 826);
+            btnLogout.Margin = new Padding(1);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(124, 40);
+            btnLogout.TabIndex = 6;
+            btnLogout.Text = "Logout";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
+            // btnKelolaStock
+            // 
+            btnKelolaStock.BackColor = Color.Black;
+            btnKelolaStock.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKelolaStock.ForeColor = Color.White;
+            btnKelolaStock.Location = new Point(11, 439);
+            btnKelolaStock.Margin = new Padding(1);
+            btnKelolaStock.Name = "btnKelolaStock";
+            btnKelolaStock.Size = new Size(217, 57);
+            btnKelolaStock.TabIndex = 4;
+            btnKelolaStock.Text = "Kelola Stock";
+            btnKelolaStock.UseVisualStyleBackColor = false;
+            btnKelolaStock.Click += btnKelolaStock_Click;
+            // 
+            // btnKelolaPupuk
+            // 
+            btnKelolaPupuk.BackColor = Color.Black;
+            btnKelolaPupuk.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnKelolaPupuk.ForeColor = Color.White;
+            btnKelolaPupuk.Location = new Point(11, 361);
+            btnKelolaPupuk.Margin = new Padding(1);
+            btnKelolaPupuk.Name = "btnKelolaPupuk";
+            btnKelolaPupuk.Size = new Size(217, 57);
+            btnKelolaPupuk.TabIndex = 3;
+            btnKelolaPupuk.Text = "Kelola Pupuk";
+            btnKelolaPupuk.UseVisualStyleBackColor = false;
+            btnKelolaPupuk.Click += btnKelolaPupuk_Click_1;
+            // 
+            // btnUser
+            // 
+            btnUser.BackColor = Color.White;
+            btnUser.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUser.ForeColor = Color.Black;
+            btnUser.Location = new Point(11, 287);
+            btnUser.Margin = new Padding(1);
+            btnUser.Name = "btnUser";
+            btnUser.Size = new Size(217, 57);
+            btnUser.TabIndex = 2;
+            btnUser.Text = "Kelola User";
+            btnUser.UseVisualStyleBackColor = false;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.Black;
+            btnDashboard.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = Color.White;
+            btnDashboard.Location = new Point(11, 212);
+            btnDashboard.Margin = new Padding(1);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.Size = new Size(217, 57);
+            btnDashboard.TabIndex = 1;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Black;
+            panel3.Controls.Add(label1);
+            panel3.Controls.Add(lblUser);
+            panel3.Location = new Point(283, 21);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(250, 124);
+            panel3.TabIndex = 5;
             // 
             // KelolaUser
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(970, 473);
-            Controls.Add(panel2);
-            Controls.Add(btnSimpanEdit);
-            Controls.Add(txtEditTelp);
-            Controls.Add(PbEdit);
+            BackgroundImageLayout = ImageLayout.None;
+            ClientSize = new Size(1898, 1149);
             Controls.Add(panel1);
+            Controls.Add(panel2);
             ForeColor = Color.Black;
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 2, 3, 2);
             Name = "KelolaUser";
             Text = "KancaTani";
             WindowState = FormWindowState.Maximized;
             Load += KelolaUser_Load;
+            ((System.ComponentModel.ISupportInitialize)DGV_kelUser).EndInit();
+            panel2.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)DGV_kelUser).EndInit();
-            ((System.ComponentModel.ISupportInitialize)PbEdit).EndInit();
-            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button btnDashboardAdmin;
-        private Button btnKelolaUser;
-        private Button btnKelolaPupuk;
-        private Button btnKelolaTahapan;
-        private PictureBox pictureBox1;
         private DataGridView DGV_kelUser;
         private Button btnTambahAkun;
         private DataGridViewButtonColumn btnEditCol;
         private DataGridViewButtonColumn btnHapusCol;
-        private Button btnSimpanEdit;
-        private TextBox txtEditTelp;
-        private PictureBox PbEdit;
         private Panel panel2;
-        private Button button1;
+        private Panel panel1;
+        private Button btnKelolaTahapan;
+        private PictureBox pictureBox2;
+        private Button btnLogout;
+        private Button btnKelolaStock;
+        private Button btnKelolaPupuk;
+        private Button btnUser;
+        private Button btnDashboard;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private Label lblUser;
+        private Panel panel3;
     }
 }

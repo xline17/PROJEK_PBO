@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Text;
 using System.Windows.Forms;
 
@@ -15,6 +16,7 @@ namespace projek_PBOSQL.VIEWS
         {
             InitializeComponent();
             TampilkanDataUser();
+            UserSummary();
 
         }
 
@@ -42,6 +44,23 @@ namespace projek_PBOSQL.VIEWS
                 MessageBox.Show("Gagal memuat data user: " + ex.Message);
             }
         }
+
+        private void UserSummary()
+        {
+            try
+            {
+                CONTROLLERS.c_KelolaUser controllerUser = new CONTROLLERS.c_KelolaUser();
+                int totalUser = controllerUser.UserSummary();
+                lblUser.Text = totalUser.ToString();
+                //lblUser.Text = UserSummary().ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat ringkasan user: " + ex.Message);
+            }
+        }
+
 
 
         private void btnDashboardAdmin_Click(object sender, EventArgs e)
@@ -151,7 +170,7 @@ namespace projek_PBOSQL.VIEWS
 
         private void btnkelolaUser_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void KelolaUser_Load(object sender, EventArgs e)
@@ -175,7 +194,62 @@ namespace projek_PBOSQL.VIEWS
 
         private void btnHistori_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.ADMIN Admin = new projek_PBOSQL.VIEWS.ADMIN();
+            Admin.Show();
+            this.Hide();
+        }
+
+        private void btnKelolaPupuk_Click_1(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaPupuk kelolaPupuk = new projek_PBOSQL.VIEWS.KelolaPupuk();
+            kelolaPupuk.Show();
+            this.Hide();
+        }
+
+        private void btnKelolaStock_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaStock kelolaStock = new projek_PBOSQL.VIEWS.KelolaStock();
+            kelolaStock.Show();
+            this.Hide();
+        }
+
+        private void btnKelolaTahapan_Click_1(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaTahapan kelolatahapForm = new projek_PBOSQL.VIEWS.KelolaTahapan();
+            kelolatahapForm.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Anda yakin ingin keluar?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                projek_PBOSQL.VIEWS.ROLE Logout = new projek_PBOSQL.VIEWS.ROLE();
+                Logout.Show();
+                this.Hide();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
         }
     }
+
 }

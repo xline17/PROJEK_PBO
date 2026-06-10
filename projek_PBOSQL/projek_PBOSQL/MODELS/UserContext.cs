@@ -9,7 +9,7 @@ namespace projek_PBOSQL.MODELS
 {
     internal class UserContext
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=bombigaul123;Database=projek_pbo";
+        private string connstring = "Host=localhost;Username=postgres;Password=Faris23;Database=KancaTani";
 
         // Ambil semua akun → untuk isi grid
         public DataTable GetAllAkun()
@@ -148,5 +148,37 @@ namespace projek_PBOSQL.MODELS
 
             return status;
         }
+
+        public int UserSummary()
+        {
+            int totalUser = 0;
+            string Query = @"SELECT COUNT(*) FROM akun";
+
+            try
+            {
+                using (var conn = ConnectDB.GetConn())
+                {
+                    using (var cmd = new NpgsqlCommand(Query, conn))
+                    {
+                        object result = cmd.ExecuteScalar();
+                        if (result != null)
+                        {
+                            totalUser = Convert.ToInt32(result);
+                        }
+                    }
+                } // conn otomatis ditutup karena using
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Gagal memuat ringkasan card user: " + ex.Message);
+            }
+
+            return totalUser;
+        }
+
+
+
     }
 }
+
+    

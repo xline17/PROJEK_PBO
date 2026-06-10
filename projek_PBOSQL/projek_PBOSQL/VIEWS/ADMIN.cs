@@ -122,5 +122,61 @@ namespace projek_PBOSQL.VIEWS
             stock.Show();
             this.Hide();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaPupuk kelolaPupuk = new projek_PBOSQL.VIEWS.KelolaPupuk();
+            kelolaPupuk.Show();
+            this.Hide();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaUser kelolauserForm = new projek_PBOSQL.VIEWS.KelolaUser();
+            kelolauserForm.Show();
+            this.Hide();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaStock kelolaStock = new projek_PBOSQL.VIEWS.KelolaStock();
+            kelolaStock.Show();
+            this.Hide();
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            projek_PBOSQL.VIEWS.KelolaTahapan kelolaTahapan = new projek_PBOSQL.VIEWS.KelolaTahapan();
+            kelolaTahapan.Show();
+            this.Hide();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+                "Anda yakin ingin keluar?",
+                "Konfirmasi Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            if (result == DialogResult.Yes)
+            {
+                // Kalau pilih Yes → arahkan ke FormLogin
+                projek_PBOSQL.VIEWS.ROLE Logout = new projek_PBOSQL.VIEWS.ROLE();
+                Logout.Show();
+                this.Hide();
+            }
+            else
+            {
+
+            }
+        }
+
     }
 }

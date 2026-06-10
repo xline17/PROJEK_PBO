@@ -83,32 +83,54 @@ namespace projek_PBOSQL.VIEWS
             restock.Show();
         }
 
-        private void btnDashboard_Click(object sender, EventArgs e)
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Anda yakin ingin keluar?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                projek_PBOSQL.VIEWS.ROLE Logout = new projek_PBOSQL.VIEWS.ROLE();
+                Logout.Show();
+                this.Hide();
+            }
+            else
+            {
+
+            }
+        }
+
+        private void btndash_Click(object sender, EventArgs e)
         {
             projek_PBOSQL.VIEWS.ADMIN admin = new projek_PBOSQL.VIEWS.ADMIN();
             admin.Show();
             this.Hide();
         }
 
-        private void btnKelolaUser_Click(object sender, EventArgs e)
+        private void btnKel_Click(object sender, EventArgs e)
         {
-            projek_PBOSQL.VIEWS.KelolaUser user = new projek_PBOSQL.VIEWS.KelolaUser();
-            user.Show();
+            projek_PBOSQL.VIEWS.KelolaUser KelolaUser = new projek_PBOSQL.VIEWS.KelolaUser();
+            KelolaUser.Show();
             this.Hide();
         }
 
-        private void btnKelPupuk_Click(object sender, EventArgs e)
+        private void btnKelPuk_Click(object sender, EventArgs e)
         {
-            projek_PBOSQL.VIEWS.KelolaPupuk pupuk = new projek_PBOSQL.VIEWS.KelolaPupuk();
-            pupuk.Show();
+            projek_PBOSQL.VIEWS.KelolaPupuk KelolaPupuk = new projek_PBOSQL.VIEWS.KelolaPupuk();
+            KelolaPupuk.Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnKelTah_Click(object sender, EventArgs e)
         {
-            projek_PBOSQL.VIEWS.ROLE role = new projek_PBOSQL.VIEWS.ROLE();
-            role.Show();
+            projek_PBOSQL.VIEWS.KelolaTahapan KelolaTahapan = new projek_PBOSQL.VIEWS.KelolaTahapan();
+            KelolaTahapan.Show();
             this.Hide();
+        }
+
+        private void lblPeringatan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
