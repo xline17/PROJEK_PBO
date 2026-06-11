@@ -1,4 +1,5 @@
-﻿using projek_PBOSQL.MODELS;
+﻿using projek_PBOSQL.CONTROLLERS;
+using projek_PBOSQL.MODELS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,16 +7,33 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using projek_PBOSQL.CONTROLLERS;
 
 namespace projek_PBOSQL.VIEWS
 {
     public partial class KelolaTahapan : Form
     {
+        private readonly c_KelolaTahapan _kelolatahapanContext = new c_KelolaTahapan();
         public KelolaTahapan()
         {
             InitializeComponent();
+            TampilkanDataTahapan();
         }
 
+        private void TampilkanDataTahapan()
+        {
+            dgvTahapan.Rows.Clear();
+
+            var daftarTahapan = _kelolatahapanContext.GetAllTahapan();
+
+            foreach (var tahapan in daftarTahapan)
+            {
+
+                int rowIndex = dgvTahapan.Rows.Add(tahapan.id_fase,tahapan.nama_fase,tahapan.umur_min_hst,tahapan.umur_max_hst,tahapan.nama_tanaman);
+                DataGridViewRow row = dgvTahapan.Rows[rowIndex];
+                row.Tag = tahapan;
+            }
+        }
 
         private void btnkelolaTahapan_Click(object sender, EventArgs e)
         {

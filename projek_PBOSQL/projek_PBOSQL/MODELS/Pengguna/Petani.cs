@@ -11,9 +11,5 @@ namespace projek_PBOSQL.MODELS.Pengguna
             pass = "petani123";
             username = "petani";
         }
-        //public override void Dapatkanhakakses()
-        //{
-        //    Console.WriteLine("Petani memiliki akses terbatas ke sistem.");
-        //}
     }
 }

@@ -13,17 +13,15 @@ namespace projek_PBOSQL.HELPERS
             "Host=localhost;" +
             "Port=5432;" +
             "Username=postgres;" +
-            "Password=12345;" + //password kalian
-            "Database=projek_pbo;"; //database kalian
-        public static NpgsqlConnection GetConn() //ini method manggil database
+            "Password=1111;" + 
+            "Database=KancaTani;"; 
+        public static NpgsqlConnection GetConn() 
         {
             NpgsqlConnection conn = new NpgsqlConnection(connString);
 
             try
             {
                 conn.Open();
-                //Jika koneksi sudah berhasil matikan atau comment messagebox dibawah
-                //MessageBox.Show("Koneksi Berhasil"); comment ini jika sudah koneksi berhasil agar tidak muncul ketika buka tab
             }
             catch (Exception ex)
             {

@@ -132,5 +132,36 @@ namespace projek_PBOSQL.VIEWS
         {
 
         }
+
+        private void txtCariStok_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                // 1. Ambil teks kata kunci dari TextBox dan bersihkan spasi di ujungnya
+                string kataKunci = txtCariStok.Text.Trim();
+
+                // 2. Panggil metode pencarian dari controller
+                List<Pupuk> hasilPencarian = _stockcontext.CariStokPupuk(kataKunci);
+
+                // 3. Perbarui sumber data DataGridView stok dengan hasil yang baru
+                dgvPupuk.DataSource = null; // Reset binding lama
+                dgvPupuk.DataSource = hasilPencarian; // Pasang data hasil filter
+
+                if (dgvPupuk.Columns["id_pupuk"] != null)
+                {
+                    dgvPupuk.Columns["id_pupuk"].Visible = false;
+                }
+
+                if (dgvPupuk.Columns["status"] != null)
+                {
+                    dgvPupuk.Columns["status"].Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal melakukan pencarian: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

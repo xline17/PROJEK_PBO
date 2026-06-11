@@ -20,7 +20,5 @@ namespace projek_PBOSQL.MODELS.Pengguna
             _username = username;
             _role = role;
         }
-        //public abstract void Dapatkanhakakses();
-
     }
 }
