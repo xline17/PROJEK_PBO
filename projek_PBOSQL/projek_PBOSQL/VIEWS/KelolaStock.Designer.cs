@@ -79,11 +79,11 @@
             dgvPupuk.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPupuk.BackgroundColor = SystemColors.ControlLight;
             dgvPupuk.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPupuk.Location = new Point(95, 365);
-            dgvPupuk.Margin = new Padding(2, 3, 2, 3);
+            dgvPupuk.Location = new Point(83, 274);
+            dgvPupuk.Margin = new Padding(2);
             dgvPupuk.Name = "dgvPupuk";
             dgvPupuk.RowHeadersWidth = 62;
-            dgvPupuk.Size = new Size(1473, 718);
+            dgvPupuk.Size = new Size(1289, 538);
             dgvPupuk.TabIndex = 0;
             // 
             // btnTambah
@@ -91,10 +91,10 @@
             btnTambah.BackColor = SystemColors.ActiveCaptionText;
             btnTambah.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTambah.ForeColor = SystemColors.Control;
-            btnTambah.Location = new Point(1324, 302);
-            btnTambah.Margin = new Padding(2, 3, 2, 3);
+            btnTambah.Location = new Point(1158, 226);
+            btnTambah.Margin = new Padding(2);
             btnTambah.Name = "btnTambah";
-            btnTambah.Size = new Size(216, 54);
+            btnTambah.Size = new Size(189, 40);
             btnTambah.TabIndex = 1;
             btnTambah.Text = "+ Tambah Stock";
             btnTambah.UseVisualStyleBackColor = false;
@@ -105,10 +105,10 @@
             btnDetail.BackColor = SystemColors.ActiveCaptionText;
             btnDetail.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDetail.ForeColor = SystemColors.ButtonFace;
-            btnDetail.Location = new Point(1246, 159);
-            btnDetail.Margin = new Padding(2, 3, 2, 3);
+            btnDetail.Location = new Point(1090, 119);
+            btnDetail.Margin = new Padding(2);
             btnDetail.Name = "btnDetail";
-            btnDetail.Size = new Size(129, 53);
+            btnDetail.Size = new Size(113, 40);
             btnDetail.TabIndex = 2;
             btnDetail.Text = "Detail";
             btnDetail.UseVisualStyleBackColor = false;
@@ -119,10 +119,10 @@
             lblTotalStock.AutoSize = true;
             lblTotalStock.BackColor = Color.White;
             lblTotalStock.Font = new Font("Arial", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalStock.Location = new Point(105, 143);
+            lblTotalStock.Location = new Point(92, 107);
             lblTotalStock.Margin = new Padding(2, 0, 2, 0);
             lblTotalStock.Name = "lblTotalStock";
-            lblTotalStock.Size = new Size(40, 44);
+            lblTotalStock.Size = new Size(32, 35);
             lblTotalStock.TabIndex = 3;
             lblTotalStock.Text = "0";
             // 
@@ -131,10 +131,10 @@
             lblPeringatan.AutoSize = true;
             lblPeringatan.BackColor = Color.White;
             lblPeringatan.Font = new Font("Arial", 22F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPeringatan.Location = new Point(602, 143);
+            lblPeringatan.Location = new Point(527, 107);
             lblPeringatan.Margin = new Padding(2, 0, 2, 0);
             lblPeringatan.Name = "lblPeringatan";
-            lblPeringatan.Size = new Size(40, 44);
+            lblPeringatan.Size = new Size(32, 35);
             lblPeringatan.TabIndex = 4;
             lblPeringatan.Text = "0";
             lblPeringatan.Click += lblPeringatan_Click;
@@ -149,10 +149,10 @@
             panel2.Controls.Add(btnTambah);
             panel2.Controls.Add(dgvPupuk);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(256, 0);
-            panel2.Margin = new Padding(2, 3, 2, 3);
+            panel2.Location = new Point(224, 0);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1646, 1153);
+            panel2.Size = new Size(1680, 1061);
             panel2.TabIndex = 1;
             // 
             // btnDashboard
@@ -160,10 +160,10 @@
             btnDashboard.BackColor = Color.Black;
             btnDashboard.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(33, 217);
-            btnDashboard.Margin = new Padding(2, 3, 2, 3);
+            btnDashboard.Location = new Point(29, 163);
+            btnDashboard.Margin = new Padding(2);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(171, 53);
+            btnDashboard.Size = new Size(150, 40);
             btnDashboard.TabIndex = 0;
             btnDashboard.Text = "Dashboard";
             btnDashboard.UseVisualStyleBackColor = false;
@@ -173,10 +173,10 @@
             btnKelolaUser.BackColor = Color.Black;
             btnKelolaUser.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKelolaUser.ForeColor = Color.White;
-            btnKelolaUser.Location = new Point(33, 299);
-            btnKelolaUser.Margin = new Padding(2, 3, 2, 3);
+            btnKelolaUser.Location = new Point(29, 224);
+            btnKelolaUser.Margin = new Padding(2);
             btnKelolaUser.Name = "btnKelolaUser";
-            btnKelolaUser.Size = new Size(171, 53);
+            btnKelolaUser.Size = new Size(150, 40);
             btnKelolaUser.TabIndex = 2;
             btnKelolaUser.Text = "Kelola User";
             btnKelolaUser.UseVisualStyleBackColor = false;
@@ -186,10 +186,10 @@
             btnKelPupuk.BackColor = Color.Black;
             btnKelPupuk.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKelPupuk.ForeColor = Color.White;
-            btnKelPupuk.Location = new Point(33, 375);
-            btnKelPupuk.Margin = new Padding(2, 3, 2, 3);
+            btnKelPupuk.Location = new Point(29, 281);
+            btnKelPupuk.Margin = new Padding(2);
             btnKelPupuk.Name = "btnKelPupuk";
-            btnKelPupuk.Size = new Size(171, 53);
+            btnKelPupuk.Size = new Size(150, 40);
             btnKelPupuk.TabIndex = 3;
             btnKelPupuk.Text = "Kelola Pupuk";
             btnKelPupuk.UseVisualStyleBackColor = false;
@@ -198,10 +198,10 @@
             // 
             btnKelolaStock.BackColor = Color.White;
             btnKelolaStock.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnKelolaStock.Location = new Point(33, 460);
-            btnKelolaStock.Margin = new Padding(2, 3, 2, 3);
+            btnKelolaStock.Location = new Point(29, 345);
+            btnKelolaStock.Margin = new Padding(2);
             btnKelolaStock.Name = "btnKelolaStock";
-            btnKelolaStock.Size = new Size(171, 53);
+            btnKelolaStock.Size = new Size(150, 40);
             btnKelolaStock.TabIndex = 4;
             btnKelolaStock.Text = "Kelola Stock";
             btnKelolaStock.UseVisualStyleBackColor = false;
@@ -211,10 +211,10 @@
             btnTahapan.BackColor = Color.Black;
             btnTahapan.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTahapan.ForeColor = Color.White;
-            btnTahapan.Location = new Point(33, 535);
-            btnTahapan.Margin = new Padding(2, 3, 2, 3);
+            btnTahapan.Location = new Point(29, 401);
+            btnTahapan.Margin = new Padding(2);
             btnTahapan.Name = "btnTahapan";
-            btnTahapan.Size = new Size(171, 53);
+            btnTahapan.Size = new Size(150, 40);
             btnTahapan.TabIndex = 1;
             btnTahapan.Text = "Kelola Tahapan";
             btnTahapan.UseVisualStyleBackColor = false;
@@ -222,10 +222,10 @@
             // btnHistory
             // 
             btnHistory.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnHistory.Location = new Point(33, 611);
-            btnHistory.Margin = new Padding(2, 3, 2, 3);
+            btnHistory.Location = new Point(29, 458);
+            btnHistory.Margin = new Padding(2);
             btnHistory.Name = "btnHistory";
-            btnHistory.Size = new Size(171, 53);
+            btnHistory.Size = new Size(150, 40);
             btnHistory.TabIndex = 5;
             btnHistory.Text = "History Transaksi";
             btnHistory.UseVisualStyleBackColor = true;
@@ -234,10 +234,10 @@
             // 
             button1.BackColor = Color.Brown;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(103, 829);
-            button1.Margin = new Padding(2, 3, 2, 3);
+            button1.Location = new Point(90, 622);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(73, 29);
+            button1.Size = new Size(64, 22);
             button1.TabIndex = 6;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
@@ -245,10 +245,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logout;
-            pictureBox1.Location = new Point(48, 829);
-            pictureBox1.Margin = new Padding(2, 3, 2, 3);
+            pictureBox1.Location = new Point(42, 622);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(37, 33);
+            pictureBox1.Size = new Size(32, 25);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -267,9 +267,9 @@
             panel1.Controls.Add(btnDashboard);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(2, 3, 2, 3);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(256, 1153);
+            panel1.Size = new Size(224, 1061);
             panel1.TabIndex = 0;
             // 
             // panel6
@@ -284,10 +284,10 @@
             panel6.Controls.Add(button14);
             panel6.Controls.Add(button15);
             panel6.Controls.Add(button16);
-            panel6.Location = new Point(4, 4);
+            panel6.Location = new Point(4, 3);
             panel6.Margin = new Padding(1);
             panel6.Name = "panel6";
-            panel6.Size = new Size(240, 1153);
+            panel6.Size = new Size(210, 865);
             panel6.TabIndex = 12;
             // 
             // panel3
@@ -301,18 +301,19 @@
             panel3.Controls.Add(btnKelPuk);
             panel3.Controls.Add(btnKel);
             panel3.Controls.Add(btndash);
-            panel3.Location = new Point(8, 8);
+            panel3.Location = new Point(7, 6);
             panel3.Margin = new Padding(1);
             panel3.Name = "panel3";
-            panel3.Size = new Size(240, 1153);
+            panel3.Size = new Size(210, 865);
             panel3.TabIndex = 12;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.logo_dan_teks_pojok;
-            pictureBox2.Location = new Point(11, 21);
+            pictureBox2.Location = new Point(10, 16);
+            pictureBox2.Margin = new Padding(3, 2, 3, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(215, 187);
+            pictureBox2.Size = new Size(188, 140);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 9;
             pictureBox2.TabStop = false;
@@ -322,10 +323,10 @@
             btnKelTah.BackColor = Color.Black;
             btnKelTah.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKelTah.ForeColor = Color.White;
-            btnKelTah.Location = new Point(11, 516);
+            btnKelTah.Location = new Point(10, 387);
             btnKelTah.Margin = new Padding(1);
             btnKelTah.Name = "btnKelTah";
-            btnKelTah.Size = new Size(217, 57);
+            btnKelTah.Size = new Size(190, 43);
             btnKelTah.TabIndex = 8;
             btnKelTah.Text = "Kelola Tahapan";
             btnKelTah.UseVisualStyleBackColor = false;
@@ -334,10 +335,10 @@
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.logout;
-            pictureBox3.Location = new Point(30, 829);
+            pictureBox3.Location = new Point(26, 622);
             pictureBox3.Margin = new Padding(1);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(41, 33);
+            pictureBox3.Size = new Size(36, 25);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 7;
             pictureBox3.TabStop = false;
@@ -346,10 +347,10 @@
             // 
             button3.BackColor = Color.FromArgb(192, 0, 0);
             button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(77, 826);
+            button3.Location = new Point(67, 620);
             button3.Margin = new Padding(1);
             button3.Name = "button3";
-            button3.Size = new Size(124, 40);
+            button3.Size = new Size(108, 30);
             button3.TabIndex = 6;
             button3.Text = "Logout";
             button3.UseVisualStyleBackColor = false;
@@ -360,10 +361,10 @@
             btnKelStok.BackColor = Color.White;
             btnKelStok.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKelStok.ForeColor = Color.Black;
-            btnKelStok.Location = new Point(11, 439);
+            btnKelStok.Location = new Point(10, 329);
             btnKelStok.Margin = new Padding(1);
             btnKelStok.Name = "btnKelStok";
-            btnKelStok.Size = new Size(217, 57);
+            btnKelStok.Size = new Size(190, 43);
             btnKelStok.TabIndex = 4;
             btnKelStok.Text = "Kelola Stock";
             btnKelStok.UseVisualStyleBackColor = false;
@@ -373,10 +374,10 @@
             btnKelPuk.BackColor = Color.Black;
             btnKelPuk.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKelPuk.ForeColor = Color.White;
-            btnKelPuk.Location = new Point(11, 361);
+            btnKelPuk.Location = new Point(10, 271);
             btnKelPuk.Margin = new Padding(1);
             btnKelPuk.Name = "btnKelPuk";
-            btnKelPuk.Size = new Size(217, 57);
+            btnKelPuk.Size = new Size(190, 43);
             btnKelPuk.TabIndex = 3;
             btnKelPuk.Text = "Kelola Pupuk";
             btnKelPuk.UseVisualStyleBackColor = false;
@@ -387,10 +388,10 @@
             btnKel.BackColor = Color.Black;
             btnKel.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnKel.ForeColor = Color.White;
-            btnKel.Location = new Point(11, 287);
+            btnKel.Location = new Point(10, 215);
             btnKel.Margin = new Padding(1);
             btnKel.Name = "btnKel";
-            btnKel.Size = new Size(217, 57);
+            btnKel.Size = new Size(190, 43);
             btnKel.TabIndex = 2;
             btnKel.Text = "Kelola User";
             btnKel.UseVisualStyleBackColor = false;
@@ -401,10 +402,10 @@
             btndash.BackColor = Color.Black;
             btndash.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btndash.ForeColor = Color.White;
-            btndash.Location = new Point(11, 212);
+            btndash.Location = new Point(10, 159);
             btndash.Margin = new Padding(1);
             btndash.Name = "btndash";
-            btndash.Size = new Size(217, 57);
+            btndash.Size = new Size(190, 43);
             btndash.TabIndex = 1;
             btndash.Text = "Dashboard";
             btndash.UseVisualStyleBackColor = false;
@@ -413,9 +414,10 @@
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.logo_dan_teks_pojok;
-            pictureBox6.Location = new Point(11, 21);
+            pictureBox6.Location = new Point(10, 16);
+            pictureBox6.Margin = new Padding(3, 2, 3, 2);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(215, 187);
+            pictureBox6.Size = new Size(188, 140);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 9;
             pictureBox6.TabStop = false;
@@ -425,10 +427,10 @@
             button11.BackColor = Color.Black;
             button11.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button11.ForeColor = Color.White;
-            button11.Location = new Point(11, 516);
+            button11.Location = new Point(10, 387);
             button11.Margin = new Padding(1);
             button11.Name = "button11";
-            button11.Size = new Size(217, 57);
+            button11.Size = new Size(190, 43);
             button11.TabIndex = 8;
             button11.Text = "Kelola Tahapan";
             button11.UseVisualStyleBackColor = false;
@@ -436,10 +438,10 @@
             // pictureBox7
             // 
             pictureBox7.Image = Properties.Resources.logout;
-            pictureBox7.Location = new Point(30, 829);
+            pictureBox7.Location = new Point(26, 622);
             pictureBox7.Margin = new Padding(1);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(41, 33);
+            pictureBox7.Size = new Size(36, 25);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 7;
             pictureBox7.TabStop = false;
@@ -448,10 +450,10 @@
             // 
             button12.BackColor = Color.FromArgb(192, 0, 0);
             button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(77, 826);
+            button12.Location = new Point(67, 620);
             button12.Margin = new Padding(1);
             button12.Name = "button12";
-            button12.Size = new Size(124, 40);
+            button12.Size = new Size(108, 30);
             button12.TabIndex = 6;
             button12.Text = "Logout";
             button12.UseVisualStyleBackColor = false;
@@ -461,10 +463,10 @@
             button13.BackColor = Color.Black;
             button13.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button13.ForeColor = Color.White;
-            button13.Location = new Point(11, 439);
+            button13.Location = new Point(10, 329);
             button13.Margin = new Padding(1);
             button13.Name = "button13";
-            button13.Size = new Size(217, 57);
+            button13.Size = new Size(190, 43);
             button13.TabIndex = 4;
             button13.Text = "Kelola Stock";
             button13.UseVisualStyleBackColor = false;
@@ -474,10 +476,10 @@
             button14.BackColor = Color.Black;
             button14.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button14.ForeColor = Color.White;
-            button14.Location = new Point(11, 361);
+            button14.Location = new Point(10, 271);
             button14.Margin = new Padding(1);
             button14.Name = "button14";
-            button14.Size = new Size(217, 57);
+            button14.Size = new Size(190, 43);
             button14.TabIndex = 3;
             button14.Text = "Kelola Pupuk";
             button14.UseVisualStyleBackColor = false;
@@ -487,10 +489,10 @@
             button15.BackColor = Color.Black;
             button15.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button15.ForeColor = Color.White;
-            button15.Location = new Point(11, 287);
+            button15.Location = new Point(10, 215);
             button15.Margin = new Padding(1);
             button15.Name = "button15";
-            button15.Size = new Size(217, 57);
+            button15.Size = new Size(190, 43);
             button15.TabIndex = 2;
             button15.Text = "Kelola User";
             button15.UseVisualStyleBackColor = false;
@@ -500,25 +502,25 @@
             button16.BackColor = Color.White;
             button16.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button16.ForeColor = Color.Black;
-            button16.Location = new Point(11, 212);
+            button16.Location = new Point(10, 159);
             button16.Margin = new Padding(1);
             button16.Name = "button16";
-            button16.Size = new Size(217, 57);
+            button16.Size = new Size(190, 43);
             button16.TabIndex = 1;
             button16.Text = "Dashboard";
             button16.UseVisualStyleBackColor = false;
             // 
             // KelolaStock
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 1153);
+            ClientSize = new Size(1904, 1061);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 3, 2, 3);
+            Margin = new Padding(2);
             Name = "KelolaStock";
-            Text = "KelolaStock";
+            Text = "KancaTani";
             WindowState = FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)dgvPupuk).EndInit();
             panel2.ResumeLayout(false);

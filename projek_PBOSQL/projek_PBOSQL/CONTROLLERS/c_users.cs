@@ -9,7 +9,7 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_users
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=Faris23;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=12345;Database=projek_pbo";
 
         public object validasi_login(string username, string password)
         {

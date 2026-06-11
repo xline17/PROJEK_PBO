@@ -12,8 +12,9 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\HYPE AMD\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\HYPE AMD\\.nuget\\packages"
+      "C:\\Users\\Bombi\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Bombi\\.nuget\\packages",
+      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false,
