@@ -14,14 +14,10 @@ namespace projek_PBOSQL.MODELS
             get => _luasLahan;
             set { if (value >= 0) _luasLahan = value; }
         }
-
-        // Bisnis Logic perhitungan C# sesuai Flow Sistem nomor 5
         public double HitungKebutuhanPupuk(double dosisPerM2)
         {
             return _luasLahan * dosisPerM2;
         }
-
-        // Bisnis Logic perhitungan biaya berdasarkan harga spesifik toko terpilih (Flow 6)
         public decimal HitungEstimasiBiaya(double kebutuhanKg, decimal hargaPerKg)
         {
             return (decimal)kebutuhanKg * hargaPerKg;

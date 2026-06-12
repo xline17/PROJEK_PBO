@@ -29,14 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KelolaUser));
-            DGV_kelUser = new DataGridView();
-            btnEditCol = new DataGridViewButtonColumn();
-            btnHapusCol = new DataGridViewButtonColumn();
-            btnTambahAkun = new Button();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            label1 = new Label();
-            lblUser = new Label();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             btnKelolaTahapan = new Button();
@@ -46,105 +38,20 @@
             btnKelolaPupuk = new Button();
             btnUser = new Button();
             btnDashboard = new Button();
-            ((System.ComponentModel.ISupportInitialize)DGV_kelUser).BeginInit();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            DGV_kelUser = new DataGridView();
+            btnEditCol = new DataGridViewButtonColumn();
+            btnHapusCol = new DataGridViewButtonColumn();
+            btnTambahAkun = new Button();
+            panel3 = new Panel();
+            lblUser = new Label();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DGV_kelUser).BeginInit();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // DGV_kelUser
-            // 
-            DGV_kelUser.AllowUserToAddRows = false;
-            DGV_kelUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DGV_kelUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGV_kelUser.Columns.AddRange(new DataGridViewColumn[] { btnEditCol, btnHapusCol });
-            DGV_kelUser.Location = new Point(354, 265);
-            DGV_kelUser.Margin = new Padding(4, 3, 4, 3);
-            DGV_kelUser.Name = "DGV_kelUser";
-            DGV_kelUser.RowHeadersWidth = 51;
-            DGV_kelUser.Size = new Size(1465, 744);
-            DGV_kelUser.TabIndex = 1;
-            DGV_kelUser.CellContentClick += DGV_kelUser_CellContentClick;
-            // 
-            // btnEditCol
-            // 
-            btnEditCol.HeaderText = "";
-            btnEditCol.MinimumWidth = 6;
-            btnEditCol.Name = "btnEditCol";
-            btnEditCol.Text = "Edit";
-            btnEditCol.UseColumnTextForButtonValue = true;
-            // 
-            // btnHapusCol
-            // 
-            btnHapusCol.HeaderText = "";
-            btnHapusCol.MinimumWidth = 6;
-            btnHapusCol.Name = "btnHapusCol";
-            btnHapusCol.Text = "Hapus";
-            btnHapusCol.UseColumnTextForButtonValue = true;
-            // 
-            // btnTambahAkun
-            // 
-            btnTambahAkun.BackColor = SystemColors.ActiveCaptionText;
-            btnTambahAkun.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnTambahAkun.ForeColor = SystemColors.ButtonFace;
-            btnTambahAkun.Location = new Point(1535, 164);
-            btnTambahAkun.Margin = new Padding(4, 3, 4, 3);
-            btnTambahAkun.Name = "btnTambahAkun";
-            btnTambahAkun.Size = new Size(284, 82);
-            btnTambahAkun.TabIndex = 2;
-            btnTambahAkun.Text = "Tambah Akun";
-            btnTambahAkun.UseVisualStyleBackColor = false;
-            btnTambahAkun.Click += btnTambahAkun_Click;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(panel3);
-            panel2.Controls.Add(btnTambahAkun);
-            panel2.Controls.Add(DGV_kelUser);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(4, 5, 4, 5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(1894, 1140);
-            panel2.TabIndex = 9;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.Black;
-            panel3.Controls.Add(label1);
-            panel3.Controls.Add(lblUser);
-            panel3.Location = new Point(354, 27);
-            panel3.Margin = new Padding(4, 3, 4, 3);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(313, 155);
-            panel3.TabIndex = 5;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(31, 17);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(239, 61);
-            label1.TabIndex = 3;
-            label1.Text = "Total User";
-            // 
-            // lblUser
-            // 
-            lblUser.AutoSize = true;
-            lblUser.Font = new Font("Arial", 22F, FontStyle.Bold);
-            lblUser.ForeColor = Color.White;
-            lblUser.Location = new Point(134, 80);
-            lblUser.Margin = new Padding(4, 0, 4, 0);
-            lblUser.Name = "lblUser";
-            lblUser.Size = new Size(46, 51);
-            lblUser.TabIndex = 4;
-            lblUser.Text = "0";
-            lblUser.Click += lblUser_Click;
             // 
             // panel1
             // 
@@ -268,6 +175,88 @@
             btnDashboard.UseVisualStyleBackColor = false;
             btnDashboard.Click += btnDashboard_Click;
             // 
+            // DGV_kelUser
+            // 
+            DGV_kelUser.AllowUserToAddRows = false;
+            DGV_kelUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DGV_kelUser.BackgroundColor = Color.WhiteSmoke;
+            DGV_kelUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGV_kelUser.Columns.AddRange(new DataGridViewColumn[] { btnEditCol, btnHapusCol });
+            DGV_kelUser.Location = new Point(65, 235);
+            DGV_kelUser.Margin = new Padding(4, 3, 4, 3);
+            DGV_kelUser.Name = "DGV_kelUser";
+            DGV_kelUser.RowHeadersWidth = 51;
+            DGV_kelUser.Size = new Size(1468, 578);
+            DGV_kelUser.TabIndex = 1;
+            DGV_kelUser.CellContentClick += DGV_kelUser_CellContentClick;
+            // 
+            // btnEditCol
+            // 
+            btnEditCol.HeaderText = "";
+            btnEditCol.MinimumWidth = 6;
+            btnEditCol.Name = "btnEditCol";
+            btnEditCol.Text = "Edit";
+            btnEditCol.UseColumnTextForButtonValue = true;
+            // 
+            // btnHapusCol
+            // 
+            btnHapusCol.HeaderText = "";
+            btnHapusCol.MinimumWidth = 6;
+            btnHapusCol.Name = "btnHapusCol";
+            btnHapusCol.Text = "Hapus";
+            btnHapusCol.UseColumnTextForButtonValue = true;
+            // 
+            // btnTambahAkun
+            // 
+            btnTambahAkun.BackColor = Color.Transparent;
+            btnTambahAkun.BackgroundImage = Properties.Resources.btnTambahUser;
+            btnTambahAkun.FlatStyle = FlatStyle.Flat;
+            btnTambahAkun.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnTambahAkun.ForeColor = SystemColors.ButtonFace;
+            btnTambahAkun.Location = new Point(1276, 96);
+            btnTambahAkun.Margin = new Padding(4, 3, 4, 3);
+            btnTambahAkun.Name = "btnTambahAkun";
+            btnTambahAkun.Size = new Size(212, 47);
+            btnTambahAkun.TabIndex = 2;
+            btnTambahAkun.UseVisualStyleBackColor = false;
+            btnTambahAkun.Click += btnTambahAkun_Click;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.Transparent;
+            panel3.BackgroundImage = Properties.Resources.total_user;
+            panel3.Controls.Add(lblUser);
+            panel3.Location = new Point(74, 888);
+            panel3.Margin = new Padding(4, 3, 4, 3);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(313, 155);
+            panel3.TabIndex = 5;
+            // 
+            // lblUser
+            // 
+            lblUser.AutoSize = true;
+            lblUser.Font = new Font("Arial", 22F, FontStyle.Bold);
+            lblUser.ForeColor = Color.White;
+            lblUser.Location = new Point(132, 69);
+            lblUser.Margin = new Padding(4, 0, 4, 0);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(46, 51);
+            lblUser.TabIndex = 4;
+            lblUser.Text = "0";
+            lblUser.Click += lblUser_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackgroundImage = Properties.Resources.User;
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(btnTambahAkun);
+            panel2.Controls.Add(DGV_kelUser);
+            panel2.Location = new Point(305, 0);
+            panel2.Margin = new Padding(4, 5, 4, 5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1894, 1140);
+            panel2.TabIndex = 9;
+            // 
             // KelolaUser
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -284,22 +273,17 @@
             Text = "KancaTani";
             WindowState = FormWindowState.Maximized;
             Load += KelolaUser_Load;
-            ((System.ComponentModel.ISupportInitialize)DGV_kelUser).EndInit();
-            panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DGV_kelUser).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-        private DataGridView DGV_kelUser;
-        private Button btnTambahAkun;
-        private DataGridViewButtonColumn btnEditCol;
-        private DataGridViewButtonColumn btnHapusCol;
-        private Panel panel2;
         private Panel panel1;
         private Button btnKelolaTahapan;
         private PictureBox pictureBox2;
@@ -309,8 +293,12 @@
         private Button btnUser;
         private Button btnDashboard;
         private PictureBox pictureBox1;
-        private Label label1;
-        private Label lblUser;
+        private DataGridView DGV_kelUser;
+        private DataGridViewButtonColumn btnEditCol;
+        private DataGridViewButtonColumn btnHapusCol;
+        private Button btnTambahAkun;
         private Panel panel3;
+        private Label lblUser;
+        private Panel panel2;
     }
 }

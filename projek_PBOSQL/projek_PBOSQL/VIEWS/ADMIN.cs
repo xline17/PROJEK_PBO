@@ -6,15 +6,51 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Text;
 using System.Windows.Forms;
+using projek_PBOSQL.CONTROLLERS;
+
 
 namespace projek_PBOSQL.VIEWS
 {
     public partial class ADMIN : Form
     {
+        private readonly c_Dashboard _dash = new c_Dashboard();
         public ADMIN()
         {
             InitializeComponent();
+            LoadDashboardData();
         }
+
+        private void LoadDashboardData()
+        {
+            try
+            {
+                DataTable dtAktivitas = _dash.GetTransaksi();
+
+                dgvAktivitasTerbaru.DataSource = null;
+                dgvAktivitasTerbaru.DataSource = dtAktivitas;
+
+                if (dgvAktivitasTerbaru.Columns["waktu"] != null)
+                    dgvAktivitasTerbaru.Columns["waktu"].HeaderText = "Waktu Transaksi";
+
+                if (dgvAktivitasTerbaru.Columns["nama_petani"] != null)
+                    dgvAktivitasTerbaru.Columns["nama_petani"].HeaderText = "Nama Petani";
+
+                if (dgvAktivitasTerbaru.Columns["jenis_pupuk"] != null)
+                    dgvAktivitasTerbaru.Columns["jenis_pupuk"].HeaderText = "Jenis Pupuk";
+
+                if (dgvAktivitasTerbaru.Columns["jumlah"] != null)
+                    dgvAktivitasTerbaru.Columns["jumlah"].HeaderText = "Jumlah (Kg)";
+
+                if (dgvAktivitasTerbaru.Columns["total"] != null)
+                    dgvAktivitasTerbaru.Columns["total"].HeaderText = "Total Biaya (Rp)";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memuat dashboard: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -178,5 +214,9 @@ namespace projek_PBOSQL.VIEWS
             }
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -10,8 +10,6 @@ namespace projek_PBOSQL.MODELS
     internal class UserContext
     {
         private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
-
-        // Ambil semua akun → untuk isi grid
         public DataTable GetAllAkun()
         {
             string query = "SELECT id_akun, username, password, no_telp FROM Akun ORDER BY id_akun";
@@ -111,18 +109,16 @@ namespace projek_PBOSQL.MODELS
 
             try
             {
-                // 1. Ambil objek koneksi database kamu
                 NpgsqlConnection conn = ConnectDB.GetConn();
 
-                // 2. KODE PENYELAMAT: Cek status koneksi sebelum dibuka!
                 if (conn.State == System.Data.ConnectionState.Closed)
                 {
-                    conn.Open(); // Hanya dibuka jika posisinya sedang tertutup
+                    conn.Open(); 
                 }
                 else if (conn.State == System.Data.ConnectionState.Broken)
                 {
                     conn.Close();
-                    conn.Open(); // Reset jika koneksinya rusak di tengah jalan
+                    conn.Open(); 
                 }
 
                 using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
@@ -135,9 +131,6 @@ namespace projek_PBOSQL.MODELS
                     // Ambil return BOOLEAN dari fungsi PostgreSQL
                     status = (bool)cmd.ExecuteScalar();
                 }
-
-                // 3. KODE WAJIB: Setelah selesai dipakai, tutup atau lepas koneksinya
-                // Agar fungsi TampilkanDataUser() di form utama tidak bergantian error saat merefresh tabel
                 conn.Close();
             }
             catch (Exception ex)
@@ -166,19 +159,13 @@ namespace projek_PBOSQL.MODELS
                             totalUser = Convert.ToInt32(result);
                         }
                     }
-                } // conn otomatis ditutup karena using
+                } 
             }
             catch (Exception ex)
             {
                 throw new Exception("Gagal memuat ringkasan card user: " + ex.Message);
             }
-
             return totalUser;
         }
-
-
-
     }
 }
-
-    

@@ -42,7 +42,7 @@
             button1.BackColor = Color.DarkGreen;
             button1.Font = new Font("Arial", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(67, 325);
+            button1.Location = new Point(145, 450);
             button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
             button1.Size = new Size(243, 67);
@@ -55,10 +55,11 @@
             // 
             textBox1.Anchor = AnchorStyles.None;
             textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(41, 188);
+            textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(19, 247);
             textBox1.Margin = new Padding(4, 5, 4, 5);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(279, 24);
+            textBox1.Size = new Size(452, 38);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -66,12 +67,12 @@
             // 
             textBox2.Anchor = AnchorStyles.None;
             textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Location = new Point(40, 272);
+            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(28, 384);
             textBox2.Margin = new Padding(4, 5, 4, 5);
             textBox2.Name = "textBox2";
             textBox2.PasswordChar = '*';
-            textBox2.ScrollBars = ScrollBars.Vertical;
-            textBox2.Size = new Size(280, 24);
+            textBox2.Size = new Size(443, 32);
             textBox2.TabIndex = 2;
             textBox2.UseSystemPasswordChar = true;
             textBox2.TextChanged += textBox2_TextChanged_1;
@@ -84,10 +85,10 @@
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button1);
-            panel1.Location = new Point(637, 218);
+            panel1.Location = new Point(1107, 373);
             panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(367, 397);
+            panel1.Size = new Size(532, 536);
             panel1.TabIndex = 3;
             // 
             // LOGINADMIN
@@ -97,7 +98,7 @@
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.Form_Login_1;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1143, 750);
+            ClientSize = new Size(1898, 1144);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -105,6 +106,7 @@
             Name = "LOGINADMIN";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "KancaTani";
+            WindowState = FormWindowState.Maximized;
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditAkun));
             txtEditUsername = new TextBox();
             txtEditPass = new TextBox();
             txtEditNotelp = new TextBox();
@@ -38,52 +37,54 @@
             // txtEditUsername
             // 
             txtEditUsername.BorderStyle = BorderStyle.None;
-            txtEditUsername.Location = new Point(27, 42);
-            txtEditUsername.Margin = new Padding(4, 4, 4, 4);
+            txtEditUsername.Location = new Point(425, 132);
+            txtEditUsername.Margin = new Padding(4);
             txtEditUsername.Name = "txtEditUsername";
-            txtEditUsername.Size = new Size(240, 24);
+            txtEditUsername.Size = new Size(181, 24);
             txtEditUsername.TabIndex = 0;
             // 
             // txtEditPass
             // 
             txtEditPass.BorderStyle = BorderStyle.None;
-            txtEditPass.Location = new Point(27, 103);
-            txtEditPass.Margin = new Padding(4, 4, 4, 4);
+            txtEditPass.Location = new Point(425, 216);
+            txtEditPass.Margin = new Padding(4);
             txtEditPass.Name = "txtEditPass";
-            txtEditPass.Size = new Size(240, 24);
+            txtEditPass.Size = new Size(181, 24);
             txtEditPass.TabIndex = 1;
             // 
             // txtEditNotelp
             // 
             txtEditNotelp.BorderStyle = BorderStyle.None;
-            txtEditNotelp.Location = new Point(27, 170);
-            txtEditNotelp.Margin = new Padding(4, 4, 4, 4);
+            txtEditNotelp.Location = new Point(425, 301);
+            txtEditNotelp.Margin = new Padding(4);
             txtEditNotelp.Name = "txtEditNotelp";
-            txtEditNotelp.Size = new Size(240, 24);
+            txtEditNotelp.Size = new Size(181, 24);
             txtEditNotelp.TabIndex = 2;
             // 
             // btnSimpanEdit
             // 
-            btnSimpanEdit.Location = new Point(153, 222);
-            btnSimpanEdit.Margin = new Padding(4, 4, 4, 4);
+            btnSimpanEdit.BackColor = Color.Transparent;
+            btnSimpanEdit.FlatAppearance.BorderSize = 0;
+            btnSimpanEdit.FlatStyle = FlatStyle.Flat;
+            btnSimpanEdit.Location = new Point(303, 382);
+            btnSimpanEdit.Margin = new Padding(4);
             btnSimpanEdit.Name = "btnSimpanEdit";
             btnSimpanEdit.Size = new Size(194, 36);
             btnSimpanEdit.TabIndex = 3;
-            btnSimpanEdit.Text = "Simpan Perubahan";
-            btnSimpanEdit.UseVisualStyleBackColor = true;
+            btnSimpanEdit.UseVisualStyleBackColor = false;
             btnSimpanEdit.Click += btnSimpanEdit_Click_1;
             // 
             // EditAkun
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(457, 291);
+            BackgroundImage = Properties.Resources.Edit_Akun__2_;
+            ClientSize = new Size(773, 510);
             Controls.Add(btnSimpanEdit);
             Controls.Add(txtEditNotelp);
             Controls.Add(txtEditPass);
             Controls.Add(txtEditUsername);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "EditAkun";
             Text = "EditAkun";
             ResumeLayout(false);

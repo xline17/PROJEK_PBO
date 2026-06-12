@@ -41,46 +41,53 @@
             // 
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.None;
-            txtUsername.Location = new Point(97, 38);
+            txtUsername.Location = new Point(425, 131);
+            txtUsername.Margin = new Padding(4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(259, 20);
+            txtUsername.Size = new Size(190, 24);
             txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.None;
-            txtPassword.Location = new Point(97, 98);
+            txtPassword.Location = new Point(425, 218);
+            txtPassword.Margin = new Padding(4);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(259, 20);
+            txtPassword.Size = new Size(190, 24);
             txtPassword.TabIndex = 1;
             // 
             // txtNoTelp
             // 
             txtNoTelp.BackColor = Color.White;
             txtNoTelp.BorderStyle = BorderStyle.None;
-            txtNoTelp.Location = new Point(97, 162);
+            txtNoTelp.Location = new Point(425, 302);
+            txtNoTelp.Margin = new Padding(4);
             txtNoTelp.Name = "txtNoTelp";
-            txtNoTelp.Size = new Size(259, 20);
+            txtNoTelp.Size = new Size(190, 24);
             txtNoTelp.TabIndex = 2;
             // 
             // Simpan
             // 
-            Simpan.Location = new Point(178, 252);
+            Simpan.BackColor = Color.Transparent;
+            Simpan.FlatAppearance.BorderSize = 0;
+            Simpan.FlatStyle = FlatStyle.Flat;
+            Simpan.Location = new Point(328, 434);
+            Simpan.Margin = new Padding(4);
             Simpan.Name = "Simpan";
-            Simpan.Size = new Size(94, 30);
+            Simpan.Size = new Size(196, 38);
             Simpan.TabIndex = 3;
-            Simpan.Text = "Simpan";
-            Simpan.UseVisualStyleBackColor = true;
+            Simpan.UseVisualStyleBackColor = false;
             Simpan.Click += Simpan_Click;
             // 
             // RbAdmin
             // 
             RbAdmin.AutoSize = true;
-            RbAdmin.BackColor = Color.White;
-            RbAdmin.Location = new Point(97, 224);
+            RbAdmin.BackColor = Color.Transparent;
+            RbAdmin.Location = new Point(425, 374);
+            RbAdmin.Margin = new Padding(4);
             RbAdmin.Name = "RbAdmin";
-            RbAdmin.Size = new Size(74, 24);
+            RbAdmin.Size = new Size(90, 29);
             RbAdmin.TabIndex = 4;
             RbAdmin.TabStop = true;
             RbAdmin.Text = "Admin";
@@ -89,10 +96,11 @@
             // RbPetani
             // 
             RbPetani.AutoSize = true;
-            RbPetani.BackColor = Color.White;
-            RbPetani.Location = new Point(282, 224);
+            RbPetani.BackColor = Color.Transparent;
+            RbPetani.Location = new Point(571, 374);
+            RbPetani.Margin = new Padding(4);
             RbPetani.Name = "RbPetani";
-            RbPetani.Size = new Size(70, 24);
+            RbPetani.Size = new Size(84, 29);
             RbPetani.TabIndex = 5;
             RbPetani.TabStop = true;
             RbPetani.Text = "Petani";
@@ -100,10 +108,10 @@
             // 
             // TambahUser
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(432, 292);
+            BackgroundImage = Properties.Resources.Tambah_Akun2;
+            ClientSize = new Size(777, 502);
             Controls.Add(RbPetani);
             Controls.Add(RbAdmin);
             Controls.Add(Simpan);
@@ -111,6 +119,7 @@
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4);
             Name = "TambahUser";
             Text = "TambahUser";
             Load += TambahUser_Load;

@@ -39,22 +39,15 @@
             button15 = new Button();
             button16 = new Button();
             panelMainContent = new Panel();
-            panel3 = new Panel();
+            dgvAktivitasTerbaru = new DataGridView();
             lblTotalJenisPupuk = new Label();
-            lblJenisPupuk = new Label();
-            panel2 = new Panel();
-            lblTotalStokPupuk = new Label();
-            label2 = new Label();
-            panel1 = new Panel();
             lblTotalTransaksi = new Label();
-            label1 = new Label();
+            lblTotalStokPupuk = new Label();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panelMainContent.SuspendLayout();
-            panel3.SuspendLayout();
-            panel2.SuspendLayout();
-            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAktivitasTerbaru).BeginInit();
             SuspendLayout();
             // 
             // panel6
@@ -181,129 +174,67 @@
             // panelMainContent
             // 
             panelMainContent.BackColor = Color.White;
-            panelMainContent.Controls.Add(panel3);
-            panelMainContent.Controls.Add(panel2);
-            panelMainContent.Controls.Add(panel1);
+            panelMainContent.BackgroundImage = Properties.Resources.Admin;
+            panelMainContent.Controls.Add(dgvAktivitasTerbaru);
+            panelMainContent.Controls.Add(lblTotalJenisPupuk);
+            panelMainContent.Controls.Add(lblTotalTransaksi);
+            panelMainContent.Controls.Add(lblTotalStokPupuk);
             panelMainContent.Location = new Point(309, -3);
             panelMainContent.Margin = new Padding(4, 5, 4, 5);
             panelMainContent.Name = "panelMainContent";
             panelMainContent.Size = new Size(2066, 1442);
             panelMainContent.TabIndex = 1;
             // 
-            // panel3
+            // dgvAktivitasTerbaru
             // 
-            panel3.BackColor = Color.Black;
-            panel3.Controls.Add(lblTotalJenisPupuk);
-            panel3.Controls.Add(lblJenisPupuk);
-            panel3.ForeColor = Color.Transparent;
-            panel3.Location = new Point(664, 32);
-            panel3.Margin = new Padding(4, 5, 4, 5);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(293, 170);
-            panel3.TabIndex = 2;
+            dgvAktivitasTerbaru.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvAktivitasTerbaru.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAktivitasTerbaru.Location = new Point(66, 474);
+            dgvAktivitasTerbaru.Name = "dgvAktivitasTerbaru";
+            dgvAktivitasTerbaru.RowHeadersWidth = 62;
+            dgvAktivitasTerbaru.Size = new Size(1456, 422);
+            dgvAktivitasTerbaru.TabIndex = 2;
             // 
             // lblTotalJenisPupuk
             // 
             lblTotalJenisPupuk.AutoSize = true;
             lblTotalJenisPupuk.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold);
-            lblTotalJenisPupuk.ForeColor = Color.White;
-            lblTotalJenisPupuk.Location = new Point(101, 65);
+            lblTotalJenisPupuk.ForeColor = Color.Black;
+            lblTotalJenisPupuk.Location = new Point(1094, 218);
             lblTotalJenisPupuk.Margin = new Padding(4, 0, 4, 0);
             lblTotalJenisPupuk.Name = "lblTotalJenisPupuk";
             lblTotalJenisPupuk.Size = new Size(60, 71);
             lblTotalJenisPupuk.TabIndex = 1;
             lblTotalJenisPupuk.Text = "0";
             // 
-            // lblJenisPupuk
-            // 
-            lblJenisPupuk.AutoSize = true;
-            lblJenisPupuk.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            lblJenisPupuk.ForeColor = Color.White;
-            lblJenisPupuk.Location = new Point(50, 10);
-            lblJenisPupuk.Margin = new Padding(4, 0, 4, 0);
-            lblJenisPupuk.Name = "lblJenisPupuk";
-            lblJenisPupuk.Size = new Size(230, 31);
-            lblJenisPupuk.TabIndex = 0;
-            lblJenisPupuk.Text = "TOTAL JENIS PUPUK";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Black;
-            panel2.Controls.Add(lblTotalStokPupuk);
-            panel2.Controls.Add(label2);
-            panel2.Location = new Point(343, 32);
-            panel2.Margin = new Padding(4, 5, 4, 5);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(293, 170);
-            panel2.TabIndex = 1;
-            // 
-            // lblTotalStokPupuk
-            // 
-            lblTotalStokPupuk.AutoSize = true;
-            lblTotalStokPupuk.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold);
-            lblTotalStokPupuk.ForeColor = Color.White;
-            lblTotalStokPupuk.Location = new Point(84, 65);
-            lblTotalStokPupuk.Margin = new Padding(4, 0, 4, 0);
-            lblTotalStokPupuk.Name = "lblTotalStokPupuk";
-            lblTotalStokPupuk.Size = new Size(60, 71);
-            lblTotalStokPupuk.TabIndex = 1;
-            lblTotalStokPupuk.Text = "0";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(41, 17);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(227, 31);
-            label2.TabIndex = 0;
-            label2.Text = "TOTAL STOK PUPUK";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.Black;
-            panel1.Controls.Add(lblTotalTransaksi);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(21, 32);
-            panel1.Margin = new Padding(4, 5, 4, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(293, 170);
-            panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
-            // 
             // lblTotalTransaksi
             // 
             lblTotalTransaksi.AutoSize = true;
             lblTotalTransaksi.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalTransaksi.ForeColor = Color.White;
-            lblTotalTransaksi.Location = new Point(110, 65);
+            lblTotalTransaksi.ForeColor = Color.Black;
+            lblTotalTransaksi.Location = new Point(97, 227);
             lblTotalTransaksi.Margin = new Padding(4, 0, 4, 0);
             lblTotalTransaksi.Name = "lblTotalTransaksi";
             lblTotalTransaksi.Size = new Size(60, 71);
             lblTotalTransaksi.TabIndex = 1;
             lblTotalTransaksi.Text = "0";
             // 
-            // label1
+            // lblTotalStokPupuk
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Black;
-            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(43, 17);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(213, 31);
-            label1.TabIndex = 0;
-            label1.Text = "TOTAL TRANSAKSI";
-            label1.Click += label1_Click;
+            lblTotalStokPupuk.AutoSize = true;
+            lblTotalStokPupuk.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold);
+            lblTotalStokPupuk.ForeColor = Color.Black;
+            lblTotalStokPupuk.Location = new Point(597, 218);
+            lblTotalStokPupuk.Margin = new Padding(4, 0, 4, 0);
+            lblTotalStokPupuk.Name = "lblTotalStokPupuk";
+            lblTotalStokPupuk.Size = new Size(60, 71);
+            lblTotalStokPupuk.TabIndex = 1;
+            lblTotalStokPupuk.Text = "0";
             // 
             // ADMIN
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1898, 1144);
@@ -319,12 +250,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panelMainContent.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelMainContent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvAktivitasTerbaru).EndInit();
             ResumeLayout(false);
         }
 
@@ -338,14 +265,7 @@
         private Button btnkelolaUser;
         private Button btnkelolaTahapan;
         private Button btnLogOut;
-        private Panel panel1;
-        private Label label1;
         private Label lblTotalTransaksi;
-        private Panel panel2;
-        private Label label2;
-        private Label lblTotalStokPupuk;
-        private Panel panel3;
-        private Label lblJenisPupuk;
         private Label lblTotalJenisPupuk;
         private Button btnKelolaStock;
         private Panel panel4;
@@ -375,5 +295,7 @@
         private Button button9;
         private Button button10;
         private Button button5;
+        private Label lblTotalStokPupuk;
+        private DataGridView dgvAktivitasTerbaru;
     }
 }

@@ -28,15 +28,12 @@ namespace projek_PBOSQL.MODELS
                     {
                         while (reader.Read())
                         {
-                            // 2. Mapping data dengan cara GetOrdinal mirip gaya kating
                             Pupuk pupuk = new Pupuk
                             {
                                 id_pupuk = reader.GetInt32(reader.GetOrdinal("id_pupuk")),
                                 nama_pupuk = reader.GetString(reader.GetOrdinal("nama_pupuk")),
                                 status = reader.GetString(reader.GetOrdinal("status"))
                             };
-
-                            // 3. Masukkan objek ke dalam list
                             list.Add(pupuk);
                         }
                     }

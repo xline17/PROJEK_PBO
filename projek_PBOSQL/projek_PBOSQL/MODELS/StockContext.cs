@@ -24,10 +24,8 @@ namespace projek_PBOSQL.MODELS
                     {
                         while (reader.Read())
                         {
-                            // Perbaikan 2: Mapping menggunakan nama kolom asli dari SELECT statement
                             Pupuk pupuk = new Pupuk
                             {
-                                // Pastikan tipe data di bawah ini sesuai dengan property di class Pupuk-m
                                 nama_pupuk = reader.GetString(reader.GetOrdinal("nama_pupuk")),
                                 Stock = reader.GetInt32(reader.GetOrdinal("stock")),
                                 HargaKg = reader.GetDouble(reader.GetOrdinal("harga_kg"))
@@ -49,7 +47,6 @@ namespace projek_PBOSQL.MODELS
         {
             List<Pupuk> list = new List<Pupuk>();
 
-            // Query disesuaikan untuk melakukan pencarian dengan klausa WHERE ILIKE
             string query = @"SELECT * FROM v_allpupukstock 
                              WHERE LOWER(nama_pupuk) LIKE LOWER(@keyword)";
             try
@@ -113,7 +110,6 @@ namespace projek_PBOSQL.MODELS
                 using (var conn = ConnectDB.GetConn())
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
-                    // Menggunakan NpgsqlDataAdapter untuk otomatis mengisi DataTable
                     using (var adapter = new NpgsqlDataAdapter(cmd))
                     {
                         adapter.Fill(dt);
@@ -155,7 +151,6 @@ namespace projek_PBOSQL.MODELS
             {
                 throw new Exception("Gagal memuat ringkasan card pupuk: " + ex.Message);
             }
-
             return (totalStok, stockRendah);
         }
     }
