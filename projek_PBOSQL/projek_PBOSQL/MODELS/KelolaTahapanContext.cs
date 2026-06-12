@@ -19,8 +19,10 @@ namespace projek_PBOSQL.MODELS
                 using (var conn = ConnectDB.GetConn())
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
-                    //cmd.Parameters.AddWithValue("@includeAll", includeInactive);
-
+                    if (conn.State != System.Data.ConnectionState.Open)
+                    {
+                        conn.Open();
+                    }
                     using (var reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -32,7 +34,7 @@ namespace projek_PBOSQL.MODELS
                                 nama_fase = reader.GetString(reader.GetOrdinal("nama_fase")),
                                 umur_min_hst = reader.GetInt32(reader.GetOrdinal("umur_min_hst")),
                                 umur_max_hst = reader.GetInt32(reader.GetOrdinal("umur_max_hst")),
-                                id_tanaman = reader.GetInt32(reader.GetOrdinal("id_tanaman"))
+                                nama_tanaman = reader.GetString(reader.GetOrdinal("nama_tanaman"))
                             };
 
                             // 3. Masukkan objek ke dalam list
@@ -43,7 +45,7 @@ namespace projek_PBOSQL.MODELS
             }
             catch (Exception ex)
             {
-                throw new Exception("Gagal mengambil data pupuk: " + ex.Message);
+                throw new Exception("Gagal mengambil data tahapan: " + ex.Message);
             }
             return list;
         }

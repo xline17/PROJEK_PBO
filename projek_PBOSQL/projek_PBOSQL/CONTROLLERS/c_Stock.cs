@@ -16,6 +16,17 @@ namespace projek_PBOSQL.CONTROLLERS
             return _stockcontext.GetAllStock();
         }
 
+        public List<Pupuk> CariStokPupuk(string kataKunci)
+        {
+            if (string.IsNullOrWhiteSpace(kataKunci))
+            {
+                return _stockcontext.GetAllStock(); // Memanggil versi default (Bentuk 1)
+            }
+
+            // Jika ada kata kunci, panggil fungsi Overload yang menggunakan parameter (Bentuk 2)
+            return _stockcontext.GetAllStock(kataKunci);
+        }
+
         public List<Supplier> GetStaticSuppliers()
         {
             return new List<Supplier>
@@ -32,7 +43,7 @@ namespace projek_PBOSQL.CONTROLLERS
 
         public bool TambahPengadaan(int jumlahKg, double hargaBeli, int idPupuk, int idSupplier)
         {
-            // Validasi Logika Bisnis: Pengadaan tidak boleh bernilai 0 atau minus
+            //Validasi Pengadaan tidak boleh bernilai 0 atau minus
             if (jumlahKg <= 0)
                 throw new Exception("Jumlah KG pengadaan harus lebih dari 0!");
 

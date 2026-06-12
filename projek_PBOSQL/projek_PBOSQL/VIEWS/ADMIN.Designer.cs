@@ -68,18 +68,19 @@
             panel6.Controls.Add(button14);
             panel6.Controls.Add(button15);
             panel6.Controls.Add(button16);
-            panel6.Location = new Point(3, -2);
-            panel6.Margin = new Padding(1);
+            panel6.Location = new Point(4, -3);
+            panel6.Margin = new Padding(1, 2, 1, 2);
             panel6.Name = "panel6";
-            panel6.Size = new Size(240, 1153);
+            panel6.Size = new Size(300, 1442);
             panel6.TabIndex = 11;
             // 
             // pictureBox6
             // 
             pictureBox6.Image = Properties.Resources.logo_dan_teks_pojok;
-            pictureBox6.Location = new Point(11, 21);
+            pictureBox6.Location = new Point(14, 27);
+            pictureBox6.Margin = new Padding(4, 3, 4, 3);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(215, 187);
+            pictureBox6.Size = new Size(269, 233);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 9;
             pictureBox6.TabStop = false;
@@ -89,10 +90,10 @@
             button11.BackColor = Color.Black;
             button11.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button11.ForeColor = Color.White;
-            button11.Location = new Point(11, 516);
-            button11.Margin = new Padding(1);
+            button11.Location = new Point(14, 645);
+            button11.Margin = new Padding(1, 2, 1, 2);
             button11.Name = "button11";
-            button11.Size = new Size(217, 57);
+            button11.Size = new Size(271, 72);
             button11.TabIndex = 8;
             button11.Text = "Kelola Tahapan";
             button11.UseVisualStyleBackColor = false;
@@ -101,10 +102,10 @@
             // pictureBox7
             // 
             pictureBox7.Image = Properties.Resources.logout;
-            pictureBox7.Location = new Point(30, 829);
-            pictureBox7.Margin = new Padding(1);
+            pictureBox7.Location = new Point(37, 1037);
+            pictureBox7.Margin = new Padding(1, 2, 1, 2);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(41, 33);
+            pictureBox7.Size = new Size(51, 42);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 7;
             pictureBox7.TabStop = false;
@@ -113,10 +114,10 @@
             // 
             button12.BackColor = Color.FromArgb(192, 0, 0);
             button12.ForeColor = SystemColors.ButtonHighlight;
-            button12.Location = new Point(77, 826);
-            button12.Margin = new Padding(1);
+            button12.Location = new Point(96, 1033);
+            button12.Margin = new Padding(1, 2, 1, 2);
             button12.Name = "button12";
-            button12.Size = new Size(124, 40);
+            button12.Size = new Size(154, 50);
             button12.TabIndex = 6;
             button12.Text = "Logout";
             button12.UseVisualStyleBackColor = false;
@@ -127,10 +128,10 @@
             button13.BackColor = Color.Black;
             button13.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button13.ForeColor = Color.White;
-            button13.Location = new Point(11, 439);
-            button13.Margin = new Padding(1);
+            button13.Location = new Point(14, 548);
+            button13.Margin = new Padding(1, 2, 1, 2);
             button13.Name = "button13";
-            button13.Size = new Size(217, 57);
+            button13.Size = new Size(271, 72);
             button13.TabIndex = 4;
             button13.Text = "Kelola Stock";
             button13.UseVisualStyleBackColor = false;
@@ -141,10 +142,10 @@
             button14.BackColor = Color.Black;
             button14.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button14.ForeColor = Color.White;
-            button14.Location = new Point(11, 361);
-            button14.Margin = new Padding(1);
+            button14.Location = new Point(14, 452);
+            button14.Margin = new Padding(1, 2, 1, 2);
             button14.Name = "button14";
-            button14.Size = new Size(217, 57);
+            button14.Size = new Size(271, 72);
             button14.TabIndex = 3;
             button14.Text = "Kelola Pupuk";
             button14.UseVisualStyleBackColor = false;
@@ -155,10 +156,10 @@
             button15.BackColor = Color.Black;
             button15.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button15.ForeColor = Color.White;
-            button15.Location = new Point(11, 287);
-            button15.Margin = new Padding(1);
+            button15.Location = new Point(14, 358);
+            button15.Margin = new Padding(1, 2, 1, 2);
             button15.Name = "button15";
-            button15.Size = new Size(217, 57);
+            button15.Size = new Size(271, 72);
             button15.TabIndex = 2;
             button15.Text = "Kelola User";
             button15.UseVisualStyleBackColor = false;
@@ -169,10 +170,10 @@
             button16.BackColor = Color.White;
             button16.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button16.ForeColor = Color.Black;
-            button16.Location = new Point(11, 212);
-            button16.Margin = new Padding(1);
+            button16.Location = new Point(14, 265);
+            button16.Margin = new Padding(1, 2, 1, 2);
             button16.Name = "button16";
-            button16.Size = new Size(217, 57);
+            button16.Size = new Size(271, 72);
             button16.TabIndex = 1;
             button16.Text = "Dashboard";
             button16.UseVisualStyleBackColor = false;
@@ -183,10 +184,10 @@
             panelMainContent.Controls.Add(panel3);
             panelMainContent.Controls.Add(panel2);
             panelMainContent.Controls.Add(panel1);
-            panelMainContent.Location = new Point(247, -2);
-            panelMainContent.Margin = new Padding(3, 4, 3, 4);
+            panelMainContent.Location = new Point(309, -3);
+            panelMainContent.Margin = new Padding(4, 5, 4, 5);
             panelMainContent.Name = "panelMainContent";
-            panelMainContent.Size = new Size(1653, 1153);
+            panelMainContent.Size = new Size(2066, 1442);
             panelMainContent.TabIndex = 1;
             // 
             // panel3
@@ -195,10 +196,10 @@
             panel3.Controls.Add(lblTotalJenisPupuk);
             panel3.Controls.Add(lblJenisPupuk);
             panel3.ForeColor = Color.Transparent;
-            panel3.Location = new Point(531, 25);
-            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Location = new Point(664, 32);
+            panel3.Margin = new Padding(4, 5, 4, 5);
             panel3.Name = "panel3";
-            panel3.Size = new Size(234, 136);
+            panel3.Size = new Size(293, 170);
             panel3.TabIndex = 2;
             // 
             // lblTotalJenisPupuk
@@ -206,9 +207,10 @@
             lblTotalJenisPupuk.AutoSize = true;
             lblTotalJenisPupuk.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold);
             lblTotalJenisPupuk.ForeColor = Color.White;
-            lblTotalJenisPupuk.Location = new Point(81, 52);
+            lblTotalJenisPupuk.Location = new Point(101, 65);
+            lblTotalJenisPupuk.Margin = new Padding(4, 0, 4, 0);
             lblTotalJenisPupuk.Name = "lblTotalJenisPupuk";
-            lblTotalJenisPupuk.Size = new Size(50, 60);
+            lblTotalJenisPupuk.Size = new Size(60, 71);
             lblTotalJenisPupuk.TabIndex = 1;
             lblTotalJenisPupuk.Text = "0";
             // 
@@ -217,9 +219,10 @@
             lblJenisPupuk.AutoSize = true;
             lblJenisPupuk.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             lblJenisPupuk.ForeColor = Color.White;
-            lblJenisPupuk.Location = new Point(40, 8);
+            lblJenisPupuk.Location = new Point(50, 10);
+            lblJenisPupuk.Margin = new Padding(4, 0, 4, 0);
             lblJenisPupuk.Name = "lblJenisPupuk";
-            lblJenisPupuk.Size = new Size(192, 25);
+            lblJenisPupuk.Size = new Size(230, 31);
             lblJenisPupuk.TabIndex = 0;
             lblJenisPupuk.Text = "TOTAL JENIS PUPUK";
             // 
@@ -228,10 +231,10 @@
             panel2.BackColor = Color.Black;
             panel2.Controls.Add(lblTotalStokPupuk);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(274, 25);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(343, 32);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(234, 136);
+            panel2.Size = new Size(293, 170);
             panel2.TabIndex = 1;
             // 
             // lblTotalStokPupuk
@@ -239,9 +242,10 @@
             lblTotalStokPupuk.AutoSize = true;
             lblTotalStokPupuk.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold);
             lblTotalStokPupuk.ForeColor = Color.White;
-            lblTotalStokPupuk.Location = new Point(67, 52);
+            lblTotalStokPupuk.Location = new Point(84, 65);
+            lblTotalStokPupuk.Margin = new Padding(4, 0, 4, 0);
             lblTotalStokPupuk.Name = "lblTotalStokPupuk";
-            lblTotalStokPupuk.Size = new Size(50, 60);
+            lblTotalStokPupuk.Size = new Size(60, 71);
             lblTotalStokPupuk.TabIndex = 1;
             lblTotalStokPupuk.Text = "0";
             // 
@@ -250,9 +254,10 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(33, 13);
+            label2.Location = new Point(41, 17);
+            label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(189, 25);
+            label2.Size = new Size(227, 31);
             label2.TabIndex = 0;
             label2.Text = "TOTAL STOK PUPUK";
             // 
@@ -261,10 +266,10 @@
             panel1.BackColor = Color.Black;
             panel1.Controls.Add(lblTotalTransaksi);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(17, 25);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(21, 32);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(234, 136);
+            panel1.Size = new Size(293, 170);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -273,9 +278,10 @@
             lblTotalTransaksi.AutoSize = true;
             lblTotalTransaksi.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalTransaksi.ForeColor = Color.White;
-            lblTotalTransaksi.Location = new Point(88, 52);
+            lblTotalTransaksi.Location = new Point(110, 65);
+            lblTotalTransaksi.Margin = new Padding(4, 0, 4, 0);
             lblTotalTransaksi.Name = "lblTotalTransaksi";
-            lblTotalTransaksi.Size = new Size(50, 60);
+            lblTotalTransaksi.Size = new Size(60, 71);
             lblTotalTransaksi.TabIndex = 1;
             lblTotalTransaksi.Text = "0";
             // 
@@ -285,25 +291,26 @@
             label1.BackColor = Color.Black;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(34, 13);
+            label1.Location = new Point(43, 17);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(177, 25);
+            label1.Size = new Size(213, 31);
             label1.TabIndex = 0;
             label1.Text = "TOTAL TRANSAKSI";
             label1.Click += label1_Click;
             // 
             // ADMIN
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1902, 1153);
+            ClientSize = new Size(1898, 1144);
             Controls.Add(panel6);
             Controls.Add(panelMainContent);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "ADMIN";
             Text = "KancaTani";
             WindowState = FormWindowState.Maximized;

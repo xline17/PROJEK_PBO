@@ -12,9 +12,5 @@ namespace projek_PBOSQL.MODELS.Pengguna
             username = "admin";
             pass = "admin123";
         }
-        //public override void Dapatkanhakakses()
-        //{
-        //    Console.WriteLine("Admin memiliki akses penuh ke sistem.");
-        //}
     }
 }

@@ -45,6 +45,40 @@ namespace projek_PBOSQL.MODELS
             return list;
         }
 
+        public List<Pupuk> GetAllStock(string kataKunci)
+        {
+            List<Pupuk> list = new List<Pupuk>();
+
+            // Query disesuaikan untuk melakukan pencarian dengan klausa WHERE ILIKE
+            string query = @"SELECT * FROM v_allpupukstock 
+                             WHERE LOWER(nama_pupuk) LIKE LOWER(@keyword)";
+            try
+            {
+                using (var conn = ConnectDB.GetConn())
+                using (var cmd = new NpgsqlCommand(query, conn))
+                {
+                    // Menambahkan wildcard % agar pencarian bersifat fleksibel (mengandung kata tersebut)
+                    cmd.Parameters.AddWithValue("@keyword", "%" + kataKunci + "%");
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Pupuk pupuk = new Pupuk
+                            {
+                                nama_pupuk = reader.GetString(reader.GetOrdinal("nama_pupuk")),
+                                Stock = reader.GetInt32(reader.GetOrdinal("stock")),
+                                HargaKg = reader.GetDouble(reader.GetOrdinal("harga_kg"))
+                            };
+                            list.Add(pupuk);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { throw new Exception("Gagal mencari data pupuk: " + ex.Message); }
+            return list;
+        }
+
         public bool TambahPengadaan(int jumlahKg, double hargaBeli, int idPupuk, int idSupplier)
         {
             string query = "CALL sp_tambah_pengadaan_stock(@jumlah, @harga, @idPupuk, @idSupplier)";

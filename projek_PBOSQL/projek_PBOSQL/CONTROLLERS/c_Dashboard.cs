@@ -7,7 +7,7 @@ namespace projek_PBOSQL.CONTROLLERS
 {
     internal class c_Dashboard
     {
-        private string connstring = "Host=localhost;Username=postgres;Password=Faris23;Database=KancaTani";
+        private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
 
         public long ttltransaksi()
         {
@@ -21,7 +21,6 @@ namespace projek_PBOSQL.CONTROLLERS
                     try
                     {
                         conn.Open();
-                        // Menambahkan tanda tanya (?) setelah object agar mengizinkan nilai null (menghilangkan warning)
                         object? result = cmd.ExecuteScalar();
 
                         if (result != null && result != DBNull.Value)
@@ -35,11 +34,11 @@ namespace projek_PBOSQL.CONTROLLERS
                     }
                 }
             }
-            return total; // WAJIB ada return karena fungsinya menghasilkan data long
+            return total; 
         }
         public long ttlStokPupuk()
         {
-            long totalStok = 0; // Pastikan ini bertipe long
+            long totalStok = 0; 
             string query = "SELECT SUM(stock) FROM stock_pupuk;";
 
             using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
@@ -53,7 +52,6 @@ namespace projek_PBOSQL.CONTROLLERS
 
                         if (result != null && result != DBNull.Value)
                         {
-                            // Gunakan ToInt64 agar sesuai dengan tipe kembalian fungsi (long)
                             totalStok = Convert.ToInt64(result);
                         }
                     }
