@@ -6,19 +6,19 @@ namespace projek_PBOSQL.MODELS.Pengguna
 {
     public class User
     {
-        private string _pass;
-        private string _username;
-        protected string _role;
+        private string username;
+        private string password;
+        protected string role;
 
-        public string Pass { get => _pass; set => _pass = value; }
-        public string Username { get => _username; set => _username = value; }
-        public string Role { get => _role; set => _role = value; }
+        public string Pass { get => password; set => password = value; }
+        public string Username { get => username; set => username = value; }
+        public string Role { get => role; set => role = value; }
 
-        protected User(string pass, string username, string role)
+        protected User(string Pass, string Username, string Role)
         {
-            _pass = pass;
-            _username = username;
-            _role = role;
+            password = Pass;
+            username = Username;
+            role = Role;
         }
     }
 }

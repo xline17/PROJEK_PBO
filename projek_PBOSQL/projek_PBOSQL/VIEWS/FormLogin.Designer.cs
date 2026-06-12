@@ -1,6 +1,6 @@
 ﻿namespace projek_PBOSQL
 {
-    partial class LOGINADMIN
+    partial class FormLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LOGINADMIN));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             button1 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
             panel1 = new Panel();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -51,39 +51,39 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(19, 247);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(452, 38);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            txtUsername.Anchor = AnchorStyles.None;
+            txtUsername.BorderStyle = BorderStyle.None;
+            txtUsername.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsername.Location = new Point(19, 247);
+            txtUsername.Margin = new Padding(4, 5, 4, 5);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(452, 38);
+            txtUsername.TabIndex = 1;
+            txtUsername.TextChanged += textBox1_TextChanged;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(28, 384);
-            textBox2.Margin = new Padding(4, 5, 4, 5);
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(443, 32);
-            textBox2.TabIndex = 2;
-            textBox2.UseSystemPasswordChar = true;
-            textBox2.TextChanged += textBox2_TextChanged_1;
+            txtPassword.Anchor = AnchorStyles.None;
+            txtPassword.BorderStyle = BorderStyle.None;
+            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(28, 384);
+            txtPassword.Margin = new Padding(4, 5, 4, 5);
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(443, 32);
+            txtPassword.TabIndex = 2;
+            txtPassword.UseSystemPasswordChar = true;
+            txtPassword.TextChanged += textBox2_TextChanged_1;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             panel1.AutoScrollMargin = new Size(15, 0);
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtPassword);
+            panel1.Controls.Add(txtUsername);
             panel1.Controls.Add(button1);
             panel1.Location = new Point(1107, 373);
             panel1.Margin = new Padding(4, 5, 4, 5);
@@ -116,8 +116,8 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
         private Panel panel1;
     }
 }

@@ -11,6 +11,7 @@ namespace projek_PBOSQL.MODELS
 {
     internal class DashboardContext
     {
+        private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
         public DataTable GetTransaksi()
         {
             var dt = new DataTable();
@@ -31,6 +32,90 @@ namespace projek_PBOSQL.MODELS
                 throw new Exception("Gagal mengambil aktivitas terbaru: " + ex.Message);
             }
             return dt;
+        }
+
+        public long ttltransaksi()
+        {
+            long total = 0;
+            string query = "SELECT COUNT(*) FROM v_historyTansaksi";
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
+            {
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        object? result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            total = Convert.ToInt64(result);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error: " + ex.Message);
+                    }
+                }
+            }
+            return total;
+        }
+
+        public long ttlStokPupuk()
+        {
+            long totalStok = 0;
+            string query = "SELECT SUM(stock) FROM stock_pupuk;";
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
+            {
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        object? result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+                            totalStok = Convert.ToInt64(result);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error hitung stok: " + ex.Message);
+                    }
+                }
+            }
+            return totalStok;
+        }
+        public long ttlJenisPupuk()
+        {
+            long totalJenis = 0;
+            string query = "SELECT COUNT(*) FROM pupuk WHERE status = 'Aktif'";
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
+            {
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    try
+                    {
+                        conn.Open();
+                        object? result = cmd.ExecuteScalar();
+
+                        if (result != null && result != DBNull.Value)
+                        {
+
+                            totalJenis = Convert.ToInt64(result);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Error hitung stok: " + ex.Message);
+                    }
+                }
+            }
+            return totalJenis;
         }
     }
 }

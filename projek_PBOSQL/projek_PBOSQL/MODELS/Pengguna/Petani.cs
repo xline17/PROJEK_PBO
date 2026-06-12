@@ -6,10 +6,9 @@ namespace projek_PBOSQL.MODELS.Pengguna
 {
     internal class Petani : User
     {
-        public Petani(string pass, string username, string role) : base(pass, username, "Petani")
+        public Petani(string Pass, string Username, string Role) : base(Pass, Username, Role)
         {
-            pass = "petani123";
-            username = "petani";
+
         }
     }
 }

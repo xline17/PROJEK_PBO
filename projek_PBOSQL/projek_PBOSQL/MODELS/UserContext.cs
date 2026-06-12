@@ -1,5 +1,6 @@
 ﻿using Npgsql;
 using projek_PBOSQL.HELPERS;
+using projek_PBOSQL.MODELS.Pengguna;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,6 +11,49 @@ namespace projek_PBOSQL.MODELS
     internal class UserContext
     {
         private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
+
+        public User AmbilDataLogin(string username, string password)
+        {
+            string query = "SELECT username, password, id_role, nama_role FROM v_login_akun WHERE username = @username AND password = @password";
+
+            try
+            {
+                using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
+                using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    conn.Open();
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            int id_role = Convert.ToInt32(reader["id_role"]);
+                            string uName = reader["username"]?.ToString() ?? "";
+                            string pass = reader["password"]?.ToString() ?? "";
+                            string roleText = reader["nama_role"]?.ToString() ?? "petani";
+
+                            // Mengembalikan objek konkrit berdasarkan id_role
+                            if (id_role == 1)
+                            {
+                                return new Admin(pass, uName, roleText);
+                            }
+                            else
+                            {
+                                return new Petani(pass, uName, roleText);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Database Error (AmbilDataLogin): " + ex.Message);
+            }
+
+            return null; // Mengembalikan null jika tidak ditemukan di DB
+        }
         public DataTable GetAllAkun()
         {
             string query = "SELECT id_akun, username, password, no_telp FROM Akun ORDER BY id_akun";

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace projek_PBOSQL.MODELS
 {
-    internal class Tanaman
+    public class Tanaman
     {
-        public int id_tanaman;
-        public string nama_tanaman;
+        public int id_tanaman { get ; set; }
+        public string nama_tanaman { get; set; }
     }
 }

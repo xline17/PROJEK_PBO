@@ -5,12 +5,11 @@ using System.Text;
 
 namespace projek_PBOSQL.MODELS.Pengguna
 {
-    internal class Admin : User
+    public class Admin : User
     {
-        public Admin(string pass, string username, string role) : base(pass, username, "Admin")
+        public Admin(string Pass, string Username, string Role) : base(Pass, Username, Role)
         {
-            username = "admin";
-            pass = "admin123";
+
         }
     }
 }
