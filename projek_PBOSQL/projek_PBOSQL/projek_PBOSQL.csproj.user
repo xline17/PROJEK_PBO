@@ -10,6 +10,9 @@
     <Compile Update="VIEWS\EditAkun.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="VIEWS\FormTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="VIEWS\KelolaPupuk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -39,6 +42,9 @@
     </Compile>
     <Compile Update="VIEWS\TambahUser.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="VIEWS\UC_ItemPupuk.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>

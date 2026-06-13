@@ -41,7 +41,7 @@ namespace projek_PBOSQL.MODELS
         {
             var dt = new DataTable();
             string query = @"
-                            SELECT 
+                            SELECT id_pupuk,
                             fase_pemupukan AS ""Fase Pemupukan"",
                             waktu_pemupukan AS ""Waktu Rekomendasi"",
                             nama_pupuk AS ""Jenis Pupuk"",

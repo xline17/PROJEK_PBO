@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using projek_PBOSQL.CONTROLLERS;
+using projek_PBOSQL.MODELS;
 
 namespace projek_PBOSQL.VIEWS
 {
@@ -41,9 +42,11 @@ namespace projek_PBOSQL.VIEWS
             foreach (DataGridViewRow row in dgvRekomendasi.Rows)
             {
                 if (row.IsNewRow) continue;
-                if (row.Cells[4].Value != null)
+
+                // 🔥 Ubah dari Cells[4] ke nama kolomnya langsung
+                if (row.Cells["Estimasi Biaya (Rp)"].Value != null)
                 {
-                    string nilaiString = row.Cells[4].Value.ToString();
+                    string nilaiString = row.Cells["Estimasi Biaya (Rp)"].Value.ToString();
 
                     if (double.TryParse(nilaiString, out double hasilKonversi))
                     {
@@ -74,7 +77,7 @@ namespace projek_PBOSQL.VIEWS
                 }
 
                 int idTanamanTerpilih = Convert.ToInt32(cmbTanaman.SelectedValue);
-                string inputLuas = txtLuasLahan.Text.Trim(); 
+                string inputLuas = txtLuasLahan.Text.Trim();
 
                 string faseTerpilih = cmbFase.SelectedItem != null ? cmbFase.SelectedItem.ToString().Trim() : "Semua Fase";
 
@@ -84,6 +87,7 @@ namespace projek_PBOSQL.VIEWS
                 {
                     // Pasang ke DataGridView
                     dgvRekomendasi.DataSource = tabelHasil;
+                    dgvRekomendasi.Columns["id_pupuk"].Visible = false;
 
                     // Panggilan fungsi hitung total setelah data sukses tampil
                     HitungTotalBiayaRekomendasi();
@@ -98,6 +102,58 @@ namespace projek_PBOSQL.VIEWS
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnLanjutTransaksi_Click(object sender, EventArgs e)
+        {
+            if (dgvRekomendasi.Rows.Count == 0 || dgvRekomendasi.DataSource == null)
+            {
+                MessageBox.Show("Belum ada data rekomendasi. Silakan klik HITUNG terlebih dahulu!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                List<DetailTransaksi> listMentah = new List<DetailTransaksi>();
+
+                foreach (DataGridViewRow row in dgvRekomendasi.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    // 🔥 KUNCI: Panggil pakai nama kolom persis seperti di query C#-mu!
+                    int ambilIdPupuk = Convert.ToInt32(row.Cells["id_pupuk"].Value);
+
+                    // Tembak kolom Kebutuhan (Kg)
+                    double ambilQtydouble = Convert.ToDouble(row.Cells["Kebutuhan (Kg)"].Value);
+                    int ambilQty = Convert.ToInt32(ambilQtydouble);
+
+                    // Tembak kolom Estimasi Biaya (Rp)
+                    double ambilTotal = Convert.ToDouble(row.Cells["Estimasi Biaya (Rp)"].Value);
+
+                    listMentah.Add(new DetailTransaksi
+                    {
+                        id_pupuk = ambilIdPupuk,
+                        quantity = ambilQty,
+                        totalHarga = ambilTotal
+                    });
+                }
+
+                var keranjangFinal = listMentah
+                    .GroupBy(x => x.id_pupuk)
+                    .Select(g => new DetailTransaksi
+                    {
+                        id_pupuk = g.Key,
+                        quantity = g.Sum(x => x.quantity),
+                        totalHarga = g.Sum(x => x.totalHarga)
+                    }).ToList();
+
+                FormTransaksi formKasir = new FormTransaksi(keranjangFinal);
+                formKasir.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Gagal memproses data untuk transaksi: " + ex.Message, "Error Sistem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

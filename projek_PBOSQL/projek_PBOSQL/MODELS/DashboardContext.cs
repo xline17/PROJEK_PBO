@@ -37,7 +37,7 @@ namespace projek_PBOSQL.MODELS
         public long ttltransaksi()
         {
             long total = 0;
-            string query = "SELECT COUNT(*) FROM v_historyTansaksi";
+            string query = "select count(*) from transaksi";
 
             using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
             {
@@ -65,7 +65,7 @@ namespace projek_PBOSQL.MODELS
         public long ttlStokPupuk()
         {
             long totalStok = 0;
-            string query = "SELECT SUM(stock) FROM stock_pupuk;";
+            string query = "Select * from v_totalstock";
 
             using (NpgsqlConnection conn = new NpgsqlConnection(connstring))
             {
