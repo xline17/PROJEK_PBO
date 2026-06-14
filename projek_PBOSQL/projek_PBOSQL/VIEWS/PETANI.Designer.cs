@@ -35,6 +35,7 @@
             btnAnalisa = new Button();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            btnLanjutTransaksi = new Button();
             lblTotalBiaya = new Label();
             dgvRekomendasi = new DataGridView();
             btnHitung = new Button();
@@ -109,6 +110,7 @@
             // panel2
             // 
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.Controls.Add(btnLanjutTransaksi);
             panel2.Controls.Add(lblTotalBiaya);
             panel2.Controls.Add(dgvRekomendasi);
             panel2.Controls.Add(btnHitung);
@@ -120,6 +122,18 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1598, 1144);
             panel2.TabIndex = 1;
+            // 
+            // btnLanjutTransaksi
+            // 
+            btnLanjutTransaksi.BackColor = Color.Black;
+            btnLanjutTransaksi.ForeColor = Color.White;
+            btnLanjutTransaksi.Location = new Point(1340, 1018);
+            btnLanjutTransaksi.Name = "btnLanjutTransaksi";
+            btnLanjutTransaksi.Size = new Size(235, 59);
+            btnLanjutTransaksi.TabIndex = 6;
+            btnLanjutTransaksi.Text = "Lanjut Transaksi";
+            btnLanjutTransaksi.UseVisualStyleBackColor = false;
+            btnLanjutTransaksi.Click += btnLanjutTransaksi_Click;
             // 
             // lblTotalBiaya
             // 
@@ -215,5 +229,6 @@
         private Button btnHitung;
         private DataGridView dgvRekomendasi;
         private Label lblTotalBiaya;
+        private Button btnLanjutTransaksi;
     }
 }

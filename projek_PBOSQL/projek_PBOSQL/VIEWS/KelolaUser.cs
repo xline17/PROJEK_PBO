@@ -52,7 +52,6 @@ namespace projek_PBOSQL.VIEWS
                 CONTROLLERS.c_KelolaUser controllerUser = new CONTROLLERS.c_KelolaUser();
                 int totalUser = controllerUser.UserSummary();
                 lblUser.Text = totalUser.ToString();
-                //lblUser.Text = UserSummary().ToString();
 
             }
             catch (Exception ex)
@@ -79,7 +78,6 @@ namespace projek_PBOSQL.VIEWS
 
                 if (DGV_kelUser.Columns[e.ColumnIndex].Name == "btnHapusCol" || DGV_kelUser.Columns[e.ColumnIndex].HeaderText == "Aksi2")
                 {
-                    // Konfirmasi tetap pakai nama username agar user tidak bingung melihat angka ID
                     DialogResult konfirmasi = MessageBox.Show($"Apakah Anda yakin ingin menghapus akun '{usernameTerpilih}' secara permanen?",
                         "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -89,7 +87,6 @@ namespace projek_PBOSQL.VIEWS
                         {
                             CONTROLLERS.c_KelolaUser controllerUser = new CONTROLLERS.c_KelolaUser();
 
-                            // SEKARANG KITA KIRIM idTerpilih (int) BUKAN STRING USERNAME LAGI
                             bool isHapusBerhasil = controllerUser.HapusUser(idTerpilih);
 
                             if (isHapusBerhasil)
@@ -106,14 +103,12 @@ namespace projek_PBOSQL.VIEWS
                 }
                 else if (DGV_kelUser.Columns[e.ColumnIndex].Name == "btnEditCol" || DGV_kelUser.Columns[e.ColumnIndex].HeaderText == "Aksi")
                 {
-                    // 1. Panggil form pop-up EditAkun yang sudah kamu buat
                     VIEWS.EditAkun popUp = new VIEWS.EditAkun();
 
-                    // 2. Lempar data baris terpilih ke pop-up
                     popUp.IdAkunTerpilih = idTerpilih;
                     popUp.txtEditUsername.Text = usernameTerpilih;
                     popUp.txtEditNotelp.Text = noTelpTerpilih;
-                    popUp.txtEditPass.Text = ""; // Biarkan kosong demi keamanan
+                    popUp.txtEditPass.Text = ""; 
 
                     // 3. Munculkan pop-up di tengah layar
                     if (popUp.ShowDialog() == DialogResult.OK)
@@ -122,14 +117,9 @@ namespace projek_PBOSQL.VIEWS
                         TampilkanDataUser();
                     }
                 }
-            } // Penutup if (e.RowIndex >= 0)
+            }
 
         }
-
-
-
-
-
 
         private void btnTambahAkun_Click(object sender, EventArgs e)
         {

@@ -54,12 +54,10 @@ namespace projek_PBOSQL.VIEWS
 
                 if (_isEditMode)
                 {
-                    // Jika sedang edit, panggil Method Function langkah 1 tadi
                     sukses = _pupukController.UpdatePupuk(_idPupukUntukEdit, nama, hargaKonversi);
                 }
                 else
                 {
-                    // Jika tidak, panggil Method Tambah data biasa (Stored Procedure kemarin)
                     sukses = _pupukController.TambahPupuk(nama, hargaKonversi);
                 }
 

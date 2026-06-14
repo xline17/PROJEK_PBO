@@ -13,7 +13,6 @@ namespace projek_PBOSQL.VIEWS
 {
     public partial class KelolaPupuk : Form
     {
-        // Tambahkan baris ini sebagai penampung objek controller pupuk
         private readonly c_Pupuk _pupukController = new c_Pupuk();
         public KelolaPupuk()
         {
@@ -92,7 +91,6 @@ namespace projek_PBOSQL.VIEWS
             projek_PBOSQL.VIEWS.TambahPupuk addpupuk = new projek_PBOSQL.VIEWS.TambahPupuk();
             if (addpupuk.ShowDialog() == DialogResult.OK)
             {
-                // Segarkan data pada DataGridView secara otomatis
                 TampilkanDataPupuk();
             }
             addpupuk.Show();
@@ -118,7 +116,7 @@ namespace projek_PBOSQL.VIEWS
 
                 if (formPopUpEdit.ShowDialog() == DialogResult.OK)
                 {
-                    // 4. Refresh DataGridView agar baris abu-abu langsung kembali berwarna hitam (Aktif)
+                    // Refresh DataGridView agar baris abu-abu langsung kembali berwarna hitam (Aktif)
                     TampilkanDataPupuk();
                 }
             }

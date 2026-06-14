@@ -14,7 +14,7 @@ namespace projek_PBOSQL.MODELS
         {
             List<Pupuk> list = new List<Pupuk>();
 
-            string query = @"SELECT * from v_allpupukstock";
+            string query = @"SELECT * from v_Getpupukstock";
             try
             {
                 using (var conn = ConnectDB.GetConn())
@@ -24,14 +24,14 @@ namespace projek_PBOSQL.MODELS
                     {
                         while (reader.Read())
                         {
-                            Pupuk pupuk = new Pupuk
-                            {
-                                nama_pupuk = reader.GetString(reader.GetOrdinal("nama_pupuk")),
-                                Stock = reader.GetInt32(reader.GetOrdinal("stock")),
-                                HargaKg = reader.GetDouble(reader.GetOrdinal("harga_kg"))
-                            };
+                            Pupuk p = new Pupuk();
+                            p.id_pupuk = Convert.ToInt32(reader["id_pupuk"]);
 
-                            list.Add(pupuk);
+                            p.nama_pupuk = reader["nama_pupuk"].ToString();
+                            p.Stock = Convert.ToInt32(reader["stock"]);
+                            p.HargaKg = Convert.ToDouble(reader["harga_kg"]);
+
+                            list.Add(p);
                         }
                     }
                 }

@@ -48,7 +48,6 @@ namespace projek_PBOSQL
                 }
                 else
                 {
-                    // Jika validasi_login mengembalikan nilai null
                     MessageBox.Show("Username atau Password salah. Silakan coba lagi!", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtPassword.Clear();
                     txtUsername.Focus();

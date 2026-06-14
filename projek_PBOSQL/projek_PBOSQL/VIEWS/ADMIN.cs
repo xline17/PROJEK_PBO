@@ -88,7 +88,7 @@ namespace projek_PBOSQL.VIEWS
             try
             {
                 CONTROLLERS.c_Dashboard totalStockPupuk = new CONTROLLERS.c_Dashboard();
-                long jumlah = totalStockPupuk.ttlStokPupuk(); // Garis merah akan hilang
+                long jumlah = totalStockPupuk.ttlStokPupuk(); 
                 lblTotalStokPupuk.Text = jumlah.ToString("N0");
             }
             catch (Exception ex)
@@ -102,7 +102,7 @@ namespace projek_PBOSQL.VIEWS
             try
             {
                 CONTROLLERS.c_Dashboard totalJenisPupuk = new CONTROLLERS.c_Dashboard();
-                long jumlah = totalJenisPupuk.ttlJenisPupuk(); // Garis merah akan hilang
+                long jumlah = totalJenisPupuk.ttlJenisPupuk(); 
                 lblTotalJenisPupuk.Text = jumlah.ToString("N0");
             }
             catch (Exception ex)
@@ -203,7 +203,6 @@ namespace projek_PBOSQL.VIEWS
 
             if (result == DialogResult.Yes)
             {
-                // Kalau pilih Yes → arahkan ke FormLogin
                 projek_PBOSQL.VIEWS.ROLE Logout = new projek_PBOSQL.VIEWS.ROLE();
                 Logout.Show();
                 this.Hide();

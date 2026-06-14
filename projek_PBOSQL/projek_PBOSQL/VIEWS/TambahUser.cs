@@ -18,20 +18,18 @@ namespace projek_PBOSQL.VIEWS
 
         private void Simpan_Click(object sender, EventArgs e)
         {
-            // 1. Ambil data dari TextBox yang ADA DI FORM POP-UP INI
             string usernameInput = txtUsername.Text.Trim();
             string passwordInput = txtPassword.Text.Trim();
             string noTelpInput = txtNoTelp.Text.Trim();
 
-            // SESUAIKAN LOGIKA RADIO BUTTON DENGAN ISI ID_ROLE DATABASE
             string roleInput = "";
             if (RbAdmin.Checked)
             {
-                roleInput = "1"; // 1 berarti Admin sesuai database Anda
+                roleInput = "1"; 
             }
             else if (RbPetani.Checked)
             {
-                roleInput = "2"; // 2 berarti Petani sesuai database Anda
+                roleInput = "2"; 
             }
             else
             {
@@ -47,10 +45,8 @@ namespace projek_PBOSQL.VIEWS
 
             try
             {
-                // 2. Panggil Controller
                 CONTROLLERS.c_KelolaUser controllerUser = new CONTROLLERS.c_KelolaUser();
 
-                // Mengirimkan nilai roleInput ("1" atau "2") ke fungsi TambahUser Anda
                 bool isBerhasil = controllerUser.TambahUser(usernameInput, passwordInput, noTelpInput, roleInput);
 
                 if (isBerhasil)
