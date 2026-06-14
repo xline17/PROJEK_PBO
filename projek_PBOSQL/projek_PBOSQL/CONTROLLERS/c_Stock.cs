@@ -20,10 +20,10 @@ namespace projek_PBOSQL.CONTROLLERS
         {
             if (string.IsNullOrWhiteSpace(kataKunci))
             {
-                return _stockcontext.GetAllStock(); // Memanggil versi default (Bentuk 1)
+                return _stockcontext.GetAllStock(); // Memanggil versi default
             }
 
-            // Jika ada kata kunci, panggil fungsi Overload yang menggunakan parameter (Bentuk 2)
+            // Overloard
             return _stockcontext.GetAllStock(kataKunci);
         }
 

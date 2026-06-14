@@ -43,7 +43,6 @@ namespace projek_PBOSQL.VIEWS
             {
                 if (row.IsNewRow) continue;
 
-                // 🔥 Ubah dari Cells[4] ke nama kolomnya langsung
                 if (row.Cells["Estimasi Biaya (Rp)"].Value != null)
                 {
                     string nilaiString = row.Cells["Estimasi Biaya (Rp)"].Value.ToString();
@@ -58,7 +57,9 @@ namespace projek_PBOSQL.VIEWS
         }
         private void btnTransaksi_Click(object sender, EventArgs e)
         {
-
+            projek_PBOSQL.VIEWS.FormTransaksi transaksi = new projek_PBOSQL.VIEWS.FormTransaksi();
+            transaksi.Show();
+            this.Hide();
         }
 
         private void btnHistory_Click(object sender, EventArgs e)
@@ -89,7 +90,6 @@ namespace projek_PBOSQL.VIEWS
                     dgvRekomendasi.DataSource = tabelHasil;
                     dgvRekomendasi.Columns["id_pupuk"].Visible = false;
 
-                    // Panggilan fungsi hitung total setelah data sukses tampil
                     HitungTotalBiayaRekomendasi();
                 }
                 else
@@ -121,14 +121,11 @@ namespace projek_PBOSQL.VIEWS
                 {
                     if (row.IsNewRow) continue;
 
-                    // 🔥 KUNCI: Panggil pakai nama kolom persis seperti di query C#-mu!
                     int ambilIdPupuk = Convert.ToInt32(row.Cells["id_pupuk"].Value);
 
-                    // Tembak kolom Kebutuhan (Kg)
                     double ambilQtydouble = Convert.ToDouble(row.Cells["Kebutuhan (Kg)"].Value);
                     int ambilQty = Convert.ToInt32(ambilQtydouble);
 
-                    // Tembak kolom Estimasi Biaya (Rp)
                     double ambilTotal = Convert.ToDouble(row.Cells["Estimasi Biaya (Rp)"].Value);
 
                     listMentah.Add(new DetailTransaksi

@@ -23,7 +23,6 @@ namespace projek_PBOSQL.VIEWS
         {
             try
             {
-                // 1. Isi ComboBox Pupuk mengambil dari controller pupuk yang sudah kamu buat
                 var daftarPupuk = _pupukController.GetAllPupuk(false); // Ambil yang aktif saja
                 cbPupuk.DataSource = daftarPupuk;
                 cbPupuk.DisplayMember = "nama_pupuk"; // Yang tampil di layar teksnya
@@ -68,7 +67,7 @@ namespace projek_PBOSQL.VIEWS
                 if (sukses)
                 {
                     MessageBox.Show("Pengadaan stok berhasil disimpan, Stok Pupuk otomatis bertambah!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.DialogResult = DialogResult.OK; // Sinyal sukses ke Form Utama
+                    this.DialogResult = DialogResult.OK; 
                     this.Close();
                 }
             }

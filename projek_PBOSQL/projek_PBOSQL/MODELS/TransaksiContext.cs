@@ -11,7 +11,7 @@ namespace projek_PBOSQL.MODELS
         private string connstring = "Host=localhost;Username=postgres;Password=1111;Database=KancaTani";
         public bool EksekusiTransaksiProsedur(int id_akun, int id_toko, List<DetailTransaksi> keranjang)
         {
-            // Pecah data List keranjang menjadi bentuk Array agar bisa dibaca oleh Stored Procedure PostgreSQL
+            // Memecah data List keranjang menjadi bentuk Array 
             int[] arrIdPupuk = new int[keranjang.Count];
             int[] arrQty = new int[keranjang.Count];
 
@@ -31,7 +31,6 @@ namespace projek_PBOSQL.MODELS
                 using (var conn = new NpgsqlConnection(connstring))
                 {
                     conn.Open();
-                    // Memanggil perintah CALL untuk menjalankan Stored Procedure
                     using (var cmd = new NpgsqlCommand("CALL insert_transaksi_kancatani(@p_id_akun, @p_id_toko, @p_id_pupuk, @p_quantity, @p_total_harga)", conn))
                     {
                         cmd.Parameters.AddWithValue("@p_id_akun", id_akun);

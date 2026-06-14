@@ -18,7 +18,7 @@ namespace projek_PBOSQL.VIEWS
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public string nama_pupuk { get; set; } = string.Empty; // Ditambah '= string.Empty' untuk hilangkan warning CS8618
+        public string nama_pupuk { get; set; } = string.Empty; 
 
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -42,7 +42,6 @@ namespace projek_PBOSQL.VIEWS
             lblHarga.Text = "Rp " + harga.ToString("N0") + " /Kg";
             lblStok.Text = "Stok: " + stok + " Kg";
 
-            // Batasi batas maksimal input sesuai stok yang tersedia di database
             nudQty.Maximum = stok == 0 ? 1 : stok;
             if (stok == 0)
             {
@@ -55,10 +54,8 @@ namespace projek_PBOSQL.VIEWS
         {
             int jumlahBeli = Convert.ToInt32(nudQty.Value);
 
-            // Memicu event callback untuk melempar data ke DataGridView Form Utama
             OnTambahKlik?.Invoke(id_pupuk, nama_pupuk, HargaKg, jumlahBeli);
 
-            // Reset quantity ke angka 1 setelah berhasil ditambah
             nudQty.Value = 1;
         }
     }

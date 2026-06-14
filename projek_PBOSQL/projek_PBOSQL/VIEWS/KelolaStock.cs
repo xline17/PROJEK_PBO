@@ -27,22 +27,18 @@ namespace projek_PBOSQL.VIEWS
             try
             {
                 var daftarPupuk = _stockcontext.GetAllStock();
-
-                // KUNCI PERBAIKAN: Hapus semua kolom lama agar tidak menumpuk ke kanan
                 dgvPupuk.DataSource = null;
                 dgvPupuk.Columns.Clear();
 
-                // Biarkan DataSource membuat kolom yang fresh dan bersih
                 dgvPupuk.DataSource = daftarPupuk;
 
-                // Baru setelah itu rapikan judul atasnya (Header)
                 if (dgvPupuk.Columns.Count > 0)
                 {
                     dgvPupuk.Columns["nama_pupuk"].HeaderText = "Nama Pupuk";
                     dgvPupuk.Columns["Stock"].HeaderText = "Stok (Kg)";
                     dgvPupuk.Columns["HargaKg"].HeaderText = "Harga Per Kg";
 
-                    // Sembunyikan kolom ID atau status jika ikut terbawa dari database
+                    // Menyembunyikan kolom ID atau status jika ikut terbawa dari database
                     if (dgvPupuk.Columns["id_pupuk"] != null) dgvPupuk.Columns["id_pupuk"].Visible = false;
                     if (dgvPupuk.Columns["status"] != null) dgvPupuk.Columns["status"].Visible = false;
                 }
@@ -70,10 +66,8 @@ namespace projek_PBOSQL.VIEWS
         {
             TambahStock formPopUp = new TambahStock();
 
-            // Jika user sukses klik simpan di dalam pop-up
             if (formPopUp.ShowDialog() == DialogResult.OK)
             {
-                // Segarkan data DataGridView utama pengadaan stok kamu
                 TampilkanDataPupuk();
             }
         }
@@ -137,15 +131,12 @@ namespace projek_PBOSQL.VIEWS
         {
             try
             {
-                // 1. Ambil teks kata kunci dari TextBox dan bersihkan spasi di ujungnya
                 string kataKunci = txtCariStok.Text.Trim();
 
-                // 2. Panggil metode pencarian dari controller
                 List<Pupuk> hasilPencarian = _stockcontext.CariStokPupuk(kataKunci);
 
-                // 3. Perbarui sumber data DataGridView stok dengan hasil yang baru
-                dgvPupuk.DataSource = null; // Reset binding lama
-                dgvPupuk.DataSource = hasilPencarian; // Pasang data hasil filter
+                dgvPupuk.DataSource = null; 
+                dgvPupuk.DataSource = hasilPencarian; 
 
                 if (dgvPupuk.Columns["id_pupuk"] != null)
                 {

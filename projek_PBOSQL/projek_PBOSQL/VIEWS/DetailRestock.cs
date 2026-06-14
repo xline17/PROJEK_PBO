@@ -23,10 +23,7 @@ namespace projek_PBOSQL.VIEWS
         {
             try
             {
-                // Ambil data langsung berbentuk DataTable, tanpa mapping manual satu per satu
                 DataTable dtRestock = _stockcontext.GetDetailRestockDataTable();
-
-                // Lempar langsung ke DataGridView
                 dgvDetail.DataSource = dtRestock;
 
                 // Mengatur nama header kolom berdasarkan nama kolom SQL di VIEW

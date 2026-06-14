@@ -10,7 +10,7 @@ namespace projek_PBOSQL.CONTROLLERS
         private readonly TransaksiContext _transaksiContext = new TransaksiContext();
         public bool ValidasiDanSimpan(int id_akun, int id_toko, List<DetailTransaksi> daftarBelanja)
         {
-            // Validasi Bisnis Aturan Aplikasi
+            // Validasi 
             if (daftarBelanja == null || daftarBelanja.Count == 0)
             {
                 throw new Exception("Gagal Checkout! Keranjang belanja kosong.");
@@ -21,7 +21,7 @@ namespace projek_PBOSQL.CONTROLLERS
                 throw new Exception("Silakan pilih cabang toko terlebih dahulu!");
             }
 
-            // Jika validasi lolos, lemparkan ke lapisan model data
+            // Jika validasi lolos dilanjutkan ke lapisan model data
             return _transaksiContext.EksekusiTransaksiProsedur(id_akun, id_toko, daftarBelanja);
         }
     }
